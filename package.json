@@ -1,0 +1,26 @@
+{
+  "name": "evonnel",
+  "version": "1.0.0",
+  "description": "personal site",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "grunt": "^1.4.1",
+    "grunt-contrib-connect": "^3.0.0",
+    "grunt-contrib-uglify": "^5.0.1",
+    "grunt-contrib-watch": "^1.1.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vonlau/evonnel.git"
+  },
+  "author": "evonne",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vonlau/evonnel/issues"
+  },
+  "homepage": "https://github.com/vonlau/evonnel#readme"
+}
