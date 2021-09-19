@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "personal site",
   "main": "index.html",
-  "dependencies": {},
+  "dependencies": {
+    "tailwindcss": "^2.2.15"
+  },
   "devDependencies": {
     "grunt": "^1.4.1",
     "grunt-contrib-connect": "^3.0.0",
