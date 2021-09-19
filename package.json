@@ -1,8 +1,8 @@
 {
-  "name": "evonnel",
+  "name": "vonlau",
   "version": "1.0.0",
   "description": "personal site",
-  "main": "index.js",
+  "main": "index.html",
   "dependencies": {},
   "devDependencies": {
     "grunt": "^1.4.1",
@@ -15,12 +15,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vonlau/evonnel.git"
+    "url": "git+https://github.com/vonlau/vonlau.github.io.git"
   },
   "author": "evonne",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/vonlau/evonnel/issues"
+    "url": "https://github.com/vonlau/vonlau.github.io/issues"
   },
-  "homepage": "https://github.com/vonlau/evonnel#readme"
+  "homepage": "https://github.com/vonlau/vonlau.github.io#readme"
 }
