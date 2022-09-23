@@ -5,6 +5,7 @@
   "main": "index.html",
   "dependencies": {
     "bootstrap": "^5.1.1",
+    "mjml": "^4.11.0",
     "tailwindcss": "^2.2.15"
   },
   "devDependencies": {
@@ -25,5 +26,6 @@
   "bugs": {
     "url": "https://github.com/vonlau/vonlau.github.io/issues"
   },
-  "homepage": "https://github.com/vonlau/vonlau.github.io#readme"
+  "homepage": "https://github.com/vonlau/vonlau.github.io#readme",
+  "keywords": []
 }
