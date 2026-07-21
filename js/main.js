@@ -35,6 +35,34 @@
     });
   }
 
+  /* ---------- hero name flip (cycles through the name-flip-img slides) ---------- */
+
+  var nameFlipImgs = document.querySelectorAll(".name-flip-img");
+
+  if (!reducedMotion && nameFlipImgs.length > 1) {
+    var nameFlipIndex = 0;
+    Array.prototype.forEach.call(nameFlipImgs, function (img, i) {
+      img.classList.toggle("is-active", i === 0);
+    });
+
+    setInterval(function () {
+      var current = nameFlipImgs[nameFlipIndex];
+      var nextIndex = (nameFlipIndex + 1) % nameFlipImgs.length;
+      var next = nameFlipImgs[nextIndex];
+
+      current.classList.remove("is-active");
+      current.classList.add("is-leaving");
+
+      next.classList.add("is-active");
+
+      setTimeout(function () {
+        current.classList.remove("is-leaving");
+      }, 500);
+
+      nameFlipIndex = nextIndex;
+    }, 2600);
+  }
+
   /* ---------- parallax on tile imagery and case cover ---------- */
 
   var parallaxImgs = [];
@@ -70,7 +98,7 @@
 
   /* ---------- hide site nav while the hero is in view ---------- */
 
-  var heroPanel = document.querySelector(".hero-panel");
+  var heroPanel = document.querySelector(".page-home .hero-panel");
   var siteNav = document.querySelector(".site-nav");
   var siteHeader = document.querySelector(".site-header");
 
