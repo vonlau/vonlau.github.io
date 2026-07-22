@@ -438,7 +438,7 @@ h1, h2, h3 { text-wrap: balance; }
 
 .about-statement-inner {
   display: grid;
-  grid-template-columns: minmax(0, 24rem) 1fr;
+  grid-template-columns: minmax(0, 26rem) 1fr;
   gap: clamp(2rem, 6vw, 4rem);
   /* max-width: 68rem; */
   margin: 0;
@@ -472,6 +472,61 @@ h1, h2, h3 { text-wrap: balance; }
 }
 
 .statement-body p:last-child { margin-bottom: 0; }
+
+/* ---------- about experience ---------- */
+
+.about-experience {
+  padding: clamp(1.5rem, 4vw, 2.5rem) var(--edge-pad) clamp(4rem, 9vw, 7rem);
+}
+
+.about-experience h2 {
+  max-width: 68rem;
+  margin: 0 auto clamp(1.5rem, 3vw, 2.5rem);
+  font-size: clamp(1.5rem, 2.6vw, 2rem);
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+.experience-table-wrap {
+  max-width: 68rem;
+  margin: 0 auto;
+  overflow-x: auto;
+}
+
+.experience-table {
+  width: 100%;
+  min-width: 30rem;
+  border-collapse: collapse;
+}
+
+.experience-table th,
+.experience-table td {
+  padding: clamp(0.9rem, 2vw, 1.15rem) 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--line);
+}
+
+.experience-table th:first-child,
+.experience-table td:first-child { padding-left: 0; }
+
+.experience-table th:last-child,
+.experience-table td:last-child { padding-right: 0; }
+
+.experience-table th {
+  border-top: 1px solid var(--line);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.experience-table td {
+  font-size: 0.95rem;
+}
+
+.experience-table td:first-child { color: var(--muted); }
+.experience-table td:last-child { font-weight: 600; }
 
 /* ---------- hero sticky notes ---------- */
 
@@ -1142,6 +1197,13 @@ h1, h2, h3 { text-wrap: balance; }
     flex-direction: column;
     text-align: center;
     gap: 0.4rem;
+  }
+
+  .experience-table th,
+  .experience-table td {
+    padding: 0.85rem 0.75rem;
+    font-size: 0.88rem;
+    white-space: nowrap;
   }
 
   .about-tagline-row {
