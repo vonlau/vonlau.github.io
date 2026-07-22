@@ -16,10 +16,14 @@
       function (entries) {
         var delay = 0;
         entries.forEach(function (entry) {
-          if (!entry.isIntersecting) return;
+          var repeats = entry.target.hasAttribute("data-reveal-repeat");
+          if (!entry.isIntersecting) {
+            if (repeats) entry.target.classList.remove("revealed");
+            return;
+          }
           entry.target.style.setProperty("--reveal-delay", delay + "ms");
           entry.target.classList.add("revealed");
-          observer.unobserve(entry.target);
+          if (!repeats) observer.unobserve(entry.target);
           delay += 90;
         });
       },
@@ -33,6 +37,36 @@
       }
       observer.observe(el);
     });
+  }
+
+  /* ---------- about statement: lines activate in order scrolling down, deactivate in reverse scrolling up ---------- */
+
+  var statementLines = document.querySelectorAll(".statement-text p");
+
+  if (statementLines.length) {
+    var updateStatementLines = function () {
+      var triggerY = window.innerHeight * 0.55;
+      statementLines.forEach(function (p) {
+        p.classList.toggle("is-active", p.getBoundingClientRect().top < triggerY);
+      });
+    };
+
+    var statementTicking = false;
+    window.addEventListener(
+      "scroll",
+      function () {
+        if (!statementTicking) {
+          statementTicking = true;
+          window.requestAnimationFrame(function () {
+            updateStatementLines();
+            statementTicking = false;
+          });
+        }
+      },
+      { passive: true }
+    );
+
+    updateStatementLines();
   }
 
   /* ---------- hero name flip (cycles through the name-flip-img slides) ---------- */
