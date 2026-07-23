@@ -1090,7 +1090,7 @@ h1, h2, h3 { text-wrap: balance; }
 
 .footer-col-pair {
   display: flex;
-  gap: 1rem;
+  gap: 5rem;
   flex-wrap: wrap;
 }
 
