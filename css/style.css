@@ -56,6 +56,7 @@
   --z-sticky: 50;
 
   --edge-pad: clamp(1.25rem, 4vw, 2.5rem);
+  --footer-gap: 20px;
 
   --triangle-x: 30%;
   --triangle-y: -180px;
@@ -418,7 +419,7 @@ h1, h2, h3 { text-wrap: balance; }
 
 .statement-text {
   margin: 0 auto clamp(4rem, 9vw, 7rem);
-  max-width: 58rem;
+  /* max-width: 58rem; */
   text-align: center;
   font-size: clamp(2.8rem, 7.5vw, 5.5rem);
   font-weight: 600;
@@ -480,7 +481,7 @@ h1, h2, h3 { text-wrap: balance; }
 }
 
 .about-experience h2 {
-  max-width: 68rem;
+  /* max-width: 68rem; */
   margin: 0 auto clamp(1.5rem, 3vw, 2.5rem);
   font-size: clamp(1.5rem, 2.6vw, 2rem);
   font-weight: 600;
@@ -488,7 +489,7 @@ h1, h2, h3 { text-wrap: balance; }
 }
 
 .experience-table-wrap {
-  max-width: 68rem;
+  /* max-width: 68rem; */
   margin: 0 auto;
   overflow-x: auto;
 }
@@ -522,11 +523,11 @@ h1, h2, h3 { text-wrap: balance; }
 }
 
 .experience-table td {
-  font-size: 0.95rem;
+  font-size: 1rem;
 }
 
 .experience-table td:first-child { color: var(--muted); }
-.experience-table td:last-child { font-weight: 600; }
+.experience-table td:last-child { font-weight: 500; text-align: right; }
 
 /* ---------- hero sticky notes ---------- */
 
@@ -1063,22 +1064,127 @@ h1, h2, h3 { text-wrap: balance; }
 
 /* ---------- footer ---------- */
 
-.site-footer { padding: 0 clamp(1.25rem, 4vw, 2.5rem) 1.5rem; }
+.site-footer { padding: 0 var(--footer-gap) 1.5rem; }
 
 .site-footer .inner {
   border-radius: var(--radius-lg);
   background: #3D65FF;
-  padding: 1.5rem clamp(1.5rem, 4vw, 2.5rem);
+  padding: clamp(1.75rem, 4vw, 2.5rem) max(2.5rem, calc(var(--edge-pad) - var(--footer-gap)));
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 1rem;
-  font-size: 0.85rem;
-  font-weight: 400;
+  flex-direction: column;
+  /* gap: clamp(0.75rem, 4vw, 2.5rem); */
+  font-size: 14px;
+  font-weight: 500;
   color: #ffffff;
 }
 
 .site-footer a { color: inherit; }
+
+.footer-columns {
+  display: flex;
+  justify-content: space-between;
+  gap: 3rem;
+  flex-wrap: wrap;
+  padding-right: 200px;
+}
+
+.footer-col-pair {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.footer-col { min-width: 10rem; }
+
+.footer-wordmark {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin: 0 0 0.6rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.footer-description {
+  max-width: 30rem;
+  margin: 0 0 1.25rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+.footer-heading {
+  margin: 0 0 0.9rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  /* text-transform: uppercase; */
+  letter-spacing: 0.06em;
+}
+
+.footer-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.footer-links a {
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.footer-links a:hover,
+.footer-links a:focus-visible {
+  text-decoration: underline;
+}
+
+.footer-links.footer-social {
+  flex-direction: row;
+  align-items: center;
+  gap: 0.9rem;
+}
+
+.footer-social a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border: 1.2px solid rgba(255, 255, 255, 0.35);
+  border-radius: var(--radius-pill);
+  text-decoration: none;
+  transition: border-color 200ms var(--ease-out), background 200ms var(--ease-out), transform 200ms var(--ease-out);
+}
+
+.footer-social a:hover,
+.footer-social a:focus-visible {
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.6);
+  transform: translateY(-2px);
+}
+
+.footer-social img {
+  display: block;
+  width: 20px;
+  height: 20px;
+  filter: brightness(0) invert(1);
+}
+
+.footer-bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: left;
+  gap: 1rem;
+  padding-top: clamp(1.5rem, 4vw, 2rem);
+  font-size: 0.80rem;
+  /* border-top: 1px solid rgba(255, 255, 255, 0.2); */
+}
 
 /* ---------- scroll reveal (JS adds .will-reveal, then .revealed) ---------- */
 
@@ -1155,7 +1261,9 @@ h1, h2, h3 { text-wrap: balance; }
 @media (min-width: 64rem) {
   :root {
     --edge-pad: 100px;
+    
   }
+
 }
 
 @media (max-width: 47rem) {
@@ -1193,10 +1301,38 @@ h1, h2, h3 { text-wrap: balance; }
 
   .case-nav a { max-width: 48%; }
 
-  .site-footer .inner {
+  /* .site-footer .inner{
+    padding: clamp(1.75rem, 4vw, 2.5rem) max(2.5rem, calc(var(--edge-pad) - var(--footer-gap)));
+  } */
+
+  .footer-columns {
     flex-direction: column;
-    text-align: center;
+    align-items: flex-start;
+    text-align: left;
+    gap: 2.75rem;
+    padding-right: 0;
+    
+  }
+
+  .footer-col-pair {
+    flex-direction: column;
+    gap: 1.75rem;
+  }
+
+  .footer-col { min-width: 0; }
+
+  .footer-description {
+    max-width: none;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
     gap: 0.4rem;
+    padding-top: clamp(2.5rem, 4vw, 2rem);
+      font-size: 0.70rem;
+
   }
 
   .experience-table th,

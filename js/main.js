@@ -5,6 +5,17 @@
 
   var reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
+  /* ---------- shared footer (fetched from /footer.html so it's edited in one place) ---------- */
+
+  var footerMount = document.getElementById("footer-mount");
+
+  if (footerMount) {
+    fetch("/footer.html")
+      .then(function (res) { return res.text(); })
+      .then(function (html) { footerMount.outerHTML = html; })
+      .catch(function () { /* footer just stays empty if the fetch fails */ });
+  }
+
   /* ---------- scroll reveals ---------- */
 
   var revealTargets = document.querySelectorAll(
