@@ -406,7 +406,7 @@ h1, h2, h3 { text-wrap: balance; }
 
 .about-hero .tagline {
   margin: 0;
-  max-width: 80ch;
+  max-width: 68ch;
   font-size: 1rem;
   flex: 1 1 auto;
 }
