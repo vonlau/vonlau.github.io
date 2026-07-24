@@ -600,6 +600,21 @@ h1, h2, h3 { text-wrap: balance; }
   line-height: 1;
 }
 
+.note-icon {
+  display: block;
+  width: 65%;
+  height: 65%;
+}
+
+.note-scroll-hint {
+  position: absolute;
+  bottom: -0.5rem;
+  right: 0.1rem;
+  width: 55%;
+  height: auto;
+  pointer-events: none;
+}
+
 .note-label { letter-spacing: 0.01em; }
 
 .sticky-note:hover,
@@ -1085,7 +1100,7 @@ h1, h2, h3 { text-wrap: balance; }
   justify-content: space-between;
   gap: 3rem;
   flex-wrap: wrap;
-  padding-right: 200px;
+  /* padding-right: 100px; */
 }
 
 .footer-col-pair {
@@ -1285,6 +1300,11 @@ h1, h2, h3 { text-wrap: balance; }
 
   .note-emoji { font-size: 1.7rem; }
 
+  .note-icon {
+    width: 2.3rem;
+    height: 2.3rem;
+  }
+
   .tile { aspect-ratio: 4 / 4.4; }
 
   .tile-media { inset: 1.1rem 1.1rem 6.2rem; }
@@ -1310,7 +1330,7 @@ h1, h2, h3 { text-wrap: balance; }
     align-items: flex-start;
     text-align: left;
     gap: 2.75rem;
-    padding-right: 0;
+    /* padding-right: 0; */
     
   }
 

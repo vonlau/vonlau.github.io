@@ -247,15 +247,36 @@
 
       document.body.appendChild(sideNav);
 
+      var pastCover = false;
+      var beforeCaseNav = true;
+      var updateSideNavVisibility = function () {
+        sideNav.classList.toggle("is-visible", pastCover && beforeCaseNav);
+      };
+
       var coverObserver = new IntersectionObserver(
         function (entries) {
           entries.forEach(function (entry) {
-            sideNav.classList.toggle("is-visible", !entry.isIntersecting);
+            pastCover = !entry.isIntersecting;
+            updateSideNavVisibility();
           });
         },
         { threshold: 0 }
       );
       coverObserver.observe(caseCover);
+
+      var caseNavEl = document.querySelector(".case-nav");
+      if (caseNavEl) {
+        var caseNavObserver = new IntersectionObserver(
+          function (entries) {
+            entries.forEach(function (entry) {
+              beforeCaseNav = !entry.isIntersecting;
+              updateSideNavVisibility();
+            });
+          },
+          { threshold: 0 }
+        );
+        caseNavObserver.observe(caseNavEl);
+      }
 
       var headerHeightForSpy = siteHeader ? siteHeader.offsetHeight : 0;
       var spyObserver = new IntersectionObserver(
