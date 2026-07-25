@@ -82,7 +82,7 @@ body {
 }
 
 body.page-home {
-  background-image: url("../img/yellow-triangle.png");
+  background-image: url("../img/yellow-triangle-1.png");
   background-repeat: no-repeat;
   background-position: right var(--triangle-x) top var(--triangle-y);
   background-size: 100%;
