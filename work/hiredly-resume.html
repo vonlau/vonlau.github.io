@@ -3,34 +3,42 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hiredly’s Resume Builder (w. User Profile Redesign) — Enn-wen</title>
-  <meta name="description" content="UX/UI case study: designing a resume builder for Hiredly, supported by a redesigned user profile, so jobseekers can apply for jobs right away.">
+  <title data-zh="Hiredly 的履歷產生器(含個人檔案重新設計)— Enn-wen">Hiredly’s Resume Builder (w. User Profile Redesign) — Enn-wen</title>
+  <meta name="description" data-zh="UX/UI 案例分享:為 Hiredly 設計履歷產生器,並搭配重新設計的個人檔案,讓求職者能立即申請職缺。" content="UX/UI case study: designing a resume builder for Hiredly, supported by a redesigned user profile, so jobseekers can apply for jobs right away.">
   <link rel="icon" type="image/png" href="../img/header-icon.png">
   <link rel="stylesheet" href="../css/style.css">
+  <script>(function(){try{if(localStorage.getItem("site-lang")==="zh")document.documentElement.setAttribute("data-lang","zh");}catch(e){}})();</script>
   <script src="../js/main.js" defer></script>
 </head>
 <body>
 
   <header class="site-header">
     <a class="wordmark pill" href="../index.html">Evonne L&nbsp;<img class="bloom" src="../img/header-icon.png" alt="" width="289" height="270" loading="lazy"></a>
-    <nav class="site-nav" aria-label="Main">
-      <details class="nav-dropdown">
-        <summary class="pill nav-dropdown-toggle">Work<svg class="dropdown-arrow" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m19.5 8.25-7.5 7.5-7.5-7.5"/></svg></summary>
-        <div class="nav-dropdown-menu">
-          <a href="../index.html#work" class="is-current" aria-current="page">Work</a>
-          <a href="../about.html">About Me</a>
-          <a href="../photography.html">Photography</a>
-          <a href="../side-projects.html">Side Projects</a>
-        </div>
-      </details>
-    </nav>
+    <div class="site-header-actions">
+      <nav class="site-nav" aria-label="Main">
+        <details class="nav-dropdown">
+          <summary class="pill nav-dropdown-toggle"><span class="i18n-en">Work</span><span class="i18n-zh">作品</span><svg class="dropdown-arrow" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m19.5 8.25-7.5 7.5-7.5-7.5"/></svg></summary>
+          <div class="nav-dropdown-menu">
+            <a href="../index.html#work" class="is-current" aria-current="page"><span class="i18n-en">Work</span><span class="i18n-zh">作品</span></a>
+            <a href="../about.html"><span class="i18n-en">About Me</span><span class="i18n-zh">關於我</span></a>
+            <a href="../photography.html"><span class="i18n-en">Photography</span><span class="i18n-zh">攝影</span></a>
+            <a href="../side-projects.html"><span class="i18n-en">Side Projects</span><span class="i18n-zh">個人專案</span></a>
+          </div>
+        </details>
+      </nav>
+      <button type="button" class="lang-toggle" aria-pressed="false" aria-label="Switch language / 切換語言">
+        <span class="lang-toggle-knob" aria-hidden="true"></span>
+        <span class="lang-toggle-option lang-toggle-option-en">EN</span>
+        <span class="lang-toggle-option lang-toggle-option-zh">中</span>
+      </button>
+    </div>
   </header>
 
   <main>
     <section class="case-hero">
-      <span class="category">UX/UI · Web</span>
-      <h1>Hiredly’s Resume Builder (w. User Profile Redesign)</h1>
-      <p class="lede">Helping jobseekers create a professional resume from their profile, so they can start applying right away.</p>
+      <span class="category"><span class="i18n-en">UX/UI · Web</span><span class="i18n-zh">UX/UI・網頁</span></span>
+      <h1><span class="i18n-en">Hiredly’s Resume Builder (w. User Profile Redesign)</span><span class="i18n-zh">Hiredly 的履歷產生器(含個人檔案重新設計)</span></h1>
+      <p class="lede"><span class="i18n-en">Helping jobseekers create a professional resume from their profile, so they can start applying right away.</span><span class="i18n-zh">幫助求職者透過個人檔案建立專業履歷,立即開始申請職缺。</span></p>
     </section>
 
     <div class="case-cover">
@@ -39,80 +47,93 @@
 
     <dl class="meta">
       <div>
-        <dt>Team &amp; Role</dt>
-        <dd>2 UI/UX Designers, 1 Developer, 1 Product Manager</dd>
+        <dt><span class="i18n-en">Team &amp; Role</span><span class="i18n-zh">團隊與角色</span></dt>
+        <dd><span class="i18n-en">2 UI/UX Designers, 1 Developer, 1 Product Manager</span><span class="i18n-zh">2 位 UI/UX 設計師、1 位工程師、1 位產品經理</span></dd>
       </div>
       <div>
-        <dt>Tools</dt>
+        <dt><span class="i18n-en">Tools</span><span class="i18n-zh">工具</span></dt>
         <dd>Figma, Freeform</dd>
       </div>
       <div>
-        <dt>Timeline</dt>
-        <dd>2 weeks</dd>
+        <dt><span class="i18n-en">Timeline</span><span class="i18n-zh">專案時程</span></dt>
+        <dd><span class="i18n-en">2 weeks</span><span class="i18n-zh">2 週</span></dd>
       </div>
       <div>
-        <dt>Key Skills</dt>
-        <dd>User Research, Wireframing, Prototyping, UI Design</dd>
+        <dt><span class="i18n-en">Key Skills</span><span class="i18n-zh">關鍵技能</span></dt>
+        <dd><span class="i18n-en">User Research, Wireframing, Prototyping, UI Design</span><span class="i18n-zh">使用者研究、線框稿設計、原型製作、介面設計</span></dd>
       </div>
     </dl>
 
     <article class="case-body">
-      <h2>About the Company</h2>
-      <p><strong>Hiredly</strong> (previously known as WOBB) is the leading hybrid recruitment platform for junior to mid-management talent. Consisting of both a job portal and a headhunting recruitment solution, it’s a discovery platform that helps people discover any job with any employer in the market.</p>
+      <h2><span class="i18n-en">About the Company</span><span class="i18n-zh">關於公司</span></h2>
+      <p class="i18n-en"><strong>Hiredly</strong> (previously known as WOBB) is the leading hybrid recruitment platform for junior to mid-management talent. Consisting of both a job portal and a headhunting recruitment solution, it’s a discovery platform that helps people discover any job with any employer in the market.</p>
+      <p class="i18n-zh"><strong>Hiredly</strong>(前身為 WOBB)是專為初階至中階管理人才打造的領先混合型招聘平台。結合求職網站與獵頭招聘服務,是一個幫助求職者發掘市場上各種雇主與職缺的探索平台。</p>
 
-      <h2>Project Brief</h2>
-      <p>To design a Resume Builder to allow users to easily create a professional-looking resume so they can start their job application journey. To accompany this feature, a redesign of the User Profile is also required to allow users to fill in more information about their work experiences, education, skills and so on, which can then be translated into the creation of their resume.</p>
+      <h2><span class="i18n-en">Project Brief</span><span class="i18n-zh">專案簡介</span></h2>
+      <p class="i18n-en">To design a Resume Builder to allow users to easily create a professional-looking resume so they can start their job application journey. To accompany this feature, a redesign of the User Profile is also required to allow users to fill in more information about their work experiences, education, skills and so on, which can then be translated into the creation of their resume.</p>
+      <p class="i18n-zh">設計一款履歷產生器,讓使用者能輕鬆建立專業美觀的履歷,展開求職之旅。為了配合這項功能,個人檔案也需要重新設計,讓使用者能填寫更多工作經歷、學歷、技能等資訊,並將這些資訊轉化為履歷內容。</p>
 
-      <h2>Challenges</h2>
-      <ol>
+      <h2><span class="i18n-en">Challenges</span><span class="i18n-zh">挑戰</span></h2>
+      <ol class="i18n-en">
         <li>Many jobseekers are discouraged by the need to provide a resume to apply for jobs. Often, this is because they either have not created their own resumes, or the resumes uploaded were not approved; hence, this negatively affects the job application rate.</li>
         <li>The current user profile only allows users to include limited information, which is insufficient to create a resume for job applications.</li>
       </ol>
+      <ol class="i18n-zh">
+        <li>許多求職者因為申請職缺需要提供履歷而卻步。這通常是因為他們還沒有自己的履歷,或是上傳的履歷未獲通過,進而影響了求職申請率。</li>
+        <li>現有的個人檔案僅能填寫有限的資訊,不足以用來建立求職所需的履歷。</li>
+      </ol>
 
-      <h2>Objectives</h2>
-      <ol>
+      <h2><span class="i18n-en">Objectives</span><span class="i18n-zh">目標</span></h2>
+      <ol class="i18n-en">
         <li>To close the gap between users uploading their resumes and their job application journey by creating a resume with their provided information. Users can then start applying for jobs right after.</li>
         <li>To collect more relevant user information via the User Profile to support the Resume Builder feature.</li>
+      </ol>
+      <ol class="i18n-zh">
+        <li>透過使用者提供的資訊建立履歷,縮短使用者上傳履歷與展開求職之間的落差,讓使用者能在建立履歷後立即開始申請職缺。</li>
+        <li>透過個人檔案收集更多相關的使用者資訊,以支援履歷產生器功能。</li>
       </ol>
 
       <hr>
 
-      <h2>The Process</h2>
-      <h3>Starting with the User Profile</h3>
-      <p>Creating a resume requires more relevant information from the candidate. Hence, the project started off with increasing the sections and user fields for users to fill in. With increased fields, there was also a need to revisit the UI of the user profile to help users identify sections and entries more easily.</p>
+      <h2><span class="i18n-en">The Process</span><span class="i18n-zh">執行過程</span></h2>
+      <h3><span class="i18n-en">Starting with the User Profile</span><span class="i18n-zh">從個人檔案開始</span></h3>
+      <p class="i18n-en">Creating a resume requires more relevant information from the candidate. Hence, the project started off with increasing the sections and user fields for users to fill in. With increased fields, there was also a need to revisit the UI of the user profile to help users identify sections and entries more easily.</p>
+      <p class="i18n-zh">建立履歷需要求職者提供更多相關資訊,因此專案一開始便著手增加使用者可填寫的區塊與欄位。隨著欄位增加,個人檔案的介面也需要重新檢視,幫助使用者更容易辨識各個區塊與項目。</p>
 
-      <h3>Research</h3>
-      <p>To determine what is required to create a good resume, whilst catering to the needs of both fresh grads and experienced jobseekers.</p>
+      <h3><span class="i18n-en">Research</span><span class="i18n-zh">研究</span></h3>
+      <p class="i18n-en">To determine what is required to create a good resume, whilst catering to the needs of both fresh grads and experienced jobseekers.</p>
+      <p class="i18n-zh">確認打造一份好履歷所需的要素,同時兼顧應屆畢業生與有經驗求職者的需求。</p>
       <figure>
         <img src="img/hiredly-resume-12135c0663.png" alt="Research into what makes a good resume for fresh graduates and experienced jobseekers" loading="lazy">
       </figure>
 
-      <h3>Information Architecture for User Fields</h3>
+      <h3><span class="i18n-en">Information Architecture for User Fields</span><span class="i18n-zh">使用者欄位的資訊架構</span></h3>
       <figure>
         <img src="img/hiredly-resume-dcef05879f.png" alt="Information architecture diagram of the user profile fields" loading="lazy">
       </figure>
 
-      <h3>Final Mockup</h3>
+      <h3><span class="i18n-en">Final Mockup</span><span class="i18n-zh">最終視覺稿</span></h3>
       <figure>
         <img src="img/hiredly-resume-67a94982ce.png" alt="Final mockup of the redesigned user profile" loading="lazy">
       </figure>
 
       <hr>
 
-      <h2>Resume Template</h2>
-      <p>With the User Profile design ready, the entry fields available there are then incorporated into a resume template. This template is used to reflect the information provided by the user on the User Profile when they use the Resume Builder to create their resume.</p>
+      <h2><span class="i18n-en">Resume Template</span><span class="i18n-zh">履歷範本</span></h2>
+      <p class="i18n-en">With the User Profile design ready, the entry fields available there are then incorporated into a resume template. This template is used to reflect the information provided by the user on the User Profile when they use the Resume Builder to create their resume.</p>
+      <p class="i18n-zh">個人檔案設計完成後,其中的欄位內容便會被納入履歷範本中。使用者透過履歷產生器建立履歷時,這份範本會呈現他們在個人檔案中填寫的資訊。</p>
       <figure>
         <img src="img/hiredly-resume-822ab7a998.png" alt="Resume template generated from user profile information" loading="lazy">
       </figure>
 
       <hr>
 
-      <h3>Final User Flow</h3>
+      <h3><span class="i18n-en">Final User Flow</span><span class="i18n-zh">最終使用者流程</span></h3>
       <figure>
         <img src="img/hiredly-resume-5e2d224dc4.png" alt="Final user flow for the resume builder" loading="lazy">
       </figure>
 
-      <h3>Mockup for Resume Preview</h3>
+      <h3><span class="i18n-en">Mockup for Resume Preview</span><span class="i18n-zh">履歷預覽視覺稿</span></h3>
       <figure>
         <img src="img/hiredly-resume-5b02c9fcbb.png" alt="Mockup of the resume preview screen" loading="lazy">
       </figure>
@@ -120,12 +141,12 @@
 
     <nav class="case-nav" aria-label="Project navigation">
       <a href="hiredly-onboarding.html" class="prev">
-        <span class="label">← Previous</span>
-        <span class="title">Redesigning Hiredly’s Onboarding Flow</span>
+        <span class="label"><span class="i18n-en">← Previous</span><span class="i18n-zh">← 上一篇</span></span>
+        <span class="title"><span class="i18n-en">Redesigning Hiredly’s Onboarding Flow</span><span class="i18n-zh">重新設計 Hiredly 的新手導覽流程</span></span>
       </a>
       <a href="funhub-deals.html" class="next">
-        <span class="label">Next →</span>
-        <span class="title">Revamping the Funhub App’s Deals and Voucher Pages</span>
+        <span class="label"><span class="i18n-en">Next →</span><span class="i18n-zh">下一篇 →</span></span>
+        <span class="title"><span class="i18n-en">Revamping the Funhub App’s Deals and Voucher Pages</span><span class="i18n-zh">重新設計 Funhub App 的優惠與票券頁面</span></span>
       </a>
     </nav>
   </main>

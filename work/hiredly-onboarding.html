@@ -3,34 +3,42 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Redesigning Hiredly’s Onboarding Flow — Enn-wen</title>
-  <meta name="description" content="UX/UI case study: designing an interactive onboarding experience for the Hiredly jobseeking website across desktop, tablet, and mobile.">
+  <title data-zh="重新設計 Hiredly 的新手導覽流程 — Enn-wen">Redesigning Hiredly’s Onboarding Flow — Enn-wen</title>
+  <meta name="description" data-zh="UX/UI 案例分享:為 Hiredly 求職網站設計橫跨電腦、平板與手機的互動式新手導覽體驗。" content="UX/UI case study: designing an interactive onboarding experience for the Hiredly jobseeking website across desktop, tablet, and mobile.">
   <link rel="icon" type="image/png" href="../img/header-icon.png">
   <link rel="stylesheet" href="../css/style.css">
+  <script>(function(){try{if(localStorage.getItem("site-lang")==="zh")document.documentElement.setAttribute("data-lang","zh");}catch(e){}})();</script>
   <script src="../js/main.js" defer></script>
 </head>
 <body>
 
   <header class="site-header">
     <a class="wordmark pill" href="../index.html">Evonne L&nbsp;<img class="bloom" src="../img/header-icon.png" alt="" width="289" height="270" loading="lazy"></a>
-    <nav class="site-nav" aria-label="Main">
-      <details class="nav-dropdown">
-        <summary class="pill nav-dropdown-toggle">Work<svg class="dropdown-arrow" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m19.5 8.25-7.5 7.5-7.5-7.5"/></svg></summary>
-        <div class="nav-dropdown-menu">
-          <a href="../index.html#work" class="is-current" aria-current="page">Work</a>
-          <a href="../about.html">About Me</a>
-          <a href="../photography.html">Photography</a>
-          <a href="../side-projects.html">Side Projects</a>
-        </div>
-      </details>
-    </nav>
+    <div class="site-header-actions">
+      <nav class="site-nav" aria-label="Main">
+        <details class="nav-dropdown">
+          <summary class="pill nav-dropdown-toggle"><span class="i18n-en">Work</span><span class="i18n-zh">作品</span><svg class="dropdown-arrow" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m19.5 8.25-7.5 7.5-7.5-7.5"/></svg></summary>
+          <div class="nav-dropdown-menu">
+            <a href="../index.html#work" class="is-current" aria-current="page"><span class="i18n-en">Work</span><span class="i18n-zh">作品</span></a>
+            <a href="../about.html"><span class="i18n-en">About Me</span><span class="i18n-zh">關於我</span></a>
+            <a href="../photography.html"><span class="i18n-en">Photography</span><span class="i18n-zh">攝影</span></a>
+            <a href="../side-projects.html"><span class="i18n-en">Side Projects</span><span class="i18n-zh">個人專案</span></a>
+          </div>
+        </details>
+      </nav>
+      <button type="button" class="lang-toggle" aria-pressed="false" aria-label="Switch language / 切換語言">
+        <span class="lang-toggle-knob" aria-hidden="true"></span>
+        <span class="lang-toggle-option lang-toggle-option-en">EN</span>
+        <span class="lang-toggle-option lang-toggle-option-zh">中</span>
+      </button>
+    </div>
   </header>
 
   <main>
     <section class="case-hero">
-      <span class="category">UX/UI · Web · 3 Breakpoints</span>
-      <h1>Redesigning Hiredly’s Onboarding Flow</h1>
-      <p class="lede">An interactive onboarding experience that is engaging and informative to jobseekers on desktop, tablet, and mobile.</p>
+      <span class="category"><span class="i18n-en">UX/UI · Web · 3 Breakpoints</span><span class="i18n-zh">UX/UI・網頁・3 種螢幕尺寸</span></span>
+      <h1><span class="i18n-en">Redesigning Hiredly’s Onboarding Flow</span><span class="i18n-zh">重新設計 Hiredly 的新手導覽流程</span></h1>
+      <p class="lede"><span class="i18n-en">An interactive onboarding experience that is engaging and informative to jobseekers on desktop, tablet, and mobile.</span><span class="i18n-zh">一套互動式新手導覽體驗,在電腦、平板與手機上都能為求職者提供有趣且實用的資訊。</span></p>
     </section>
 
     <div class="case-cover">
@@ -39,87 +47,106 @@
 
     <dl class="meta">
       <div>
-        <dt>Team &amp; Role</dt>
-        <dd>2 UI/UX Designers, 1 Developer, 1 Product Manager</dd>
+        <dt><span class="i18n-en">Team &amp; Role</span><span class="i18n-zh">團隊與角色</span></dt>
+        <dd><span class="i18n-en">2 UI/UX Designers, 1 Developer, 1 Product Manager</span><span class="i18n-zh">2 位 UI/UX 設計師、1 位工程師、1 位產品經理</span></dd>
       </div>
       <div>
-        <dt>Tools</dt>
+        <dt><span class="i18n-en">Tools</span><span class="i18n-zh">工具</span></dt>
         <dd>Figma, Freeform</dd>
       </div>
       <div>
-        <dt>Timeline</dt>
-        <dd>1.5 months</dd>
+        <dt><span class="i18n-en">Timeline</span><span class="i18n-zh">專案時程</span></dt>
+        <dd><span class="i18n-en">1.5 months</span><span class="i18n-zh">1.5 個月</span></dd>
       </div>
       <div>
-        <dt>Key Skills</dt>
-        <dd>User Research, Wireframing, Prototyping, UI Design</dd>
+        <dt><span class="i18n-en">Key Skills</span><span class="i18n-zh">關鍵技能</span></dt>
+        <dd><span class="i18n-en">User Research, Wireframing, Prototyping, UI Design</span><span class="i18n-zh">使用者研究、線框稿設計、原型製作、介面設計</span></dd>
       </div>
     </dl>
 
     <article class="case-body">
-      <h2>About the Company</h2>
-      <p><strong>Hiredly</strong> (previously known as WOBB) is the leading hybrid recruitment platform for junior to mid-management talent. Consisting of both a job portal and a headhunting recruitment solution, it’s a discovery platform that helps people discover any job with any employer in the market.</p>
+      <h2><span class="i18n-en">About the Company</span><span class="i18n-zh">關於公司</span></h2>
+      <p class="i18n-en"><strong>Hiredly</strong> (previously known as WOBB) is the leading hybrid recruitment platform for junior to mid-management talent. Consisting of both a job portal and a headhunting recruitment solution, it’s a discovery platform that helps people discover any job with any employer in the market.</p>
+      <p class="i18n-zh"><strong>Hiredly</strong>(前身為 WOBB)是專為初階至中階管理人才打造的領先混合型招聘平台。結合求職網站與獵頭招聘服務,是一個幫助求職者發掘市場上各種雇主與職缺的探索平台。</p>
 
-      <h2>Project Brief</h2>
-      <p>To design an interactive onboarding experience for the Hiredly jobseeking website that is engaging and informative to jobseekers on 3 breakpoints (desktop, tablet &amp; mobile).</p>
+      <h2><span class="i18n-en">Project Brief</span><span class="i18n-zh">專案簡介</span></h2>
+      <p class="i18n-en">To design an interactive onboarding experience for the Hiredly jobseeking website that is engaging and informative to jobseekers on 3 breakpoints (desktop, tablet &amp; mobile).</p>
+      <p class="i18n-zh">為 Hiredly 求職網站設計一套互動式新手導覽體驗,在電腦、平板與手機這 3 種螢幕尺寸上,都能為求職者提供有趣且實用的資訊。</p>
 
-      <h2>The Challenges</h2>
-      <ol>
+      <h2><span class="i18n-en">The Challenges</span><span class="i18n-zh">挑戰</span></h2>
+      <ol class="i18n-en">
         <li>Through user research &amp; analysis, high bounce rates were determined at different stages of the onboarding experience.</li>
         <li>This caused insufficient information collected from users and therefore an inability to provide the best job recommendations to jobseekers, lowering the retention rate.</li>
       </ol>
+      <ol class="i18n-zh">
+        <li>透過使用者研究與分析,發現新手導覽體驗的不同階段都出現偏高的跳出率。</li>
+        <li>這導致從使用者身上收集到的資訊不足,因而無法為求職者提供最合適的職缺推薦,降低了留存率。</li>
+      </ol>
       <figure>
         <img src="img/hiredly-onboarding-9c1ed545b8.png" alt="Hotjar research and analysis showing user drop-off on long text fields" loading="lazy">
-        <figcaption>Hotjar research &amp; analysis: long text fields that must be filled cause frustration, making users drop off</figcaption>
+        <figcaption><span class="i18n-en">Hotjar research &amp; analysis: long text fields that must be filled cause frustration, making users drop off</span><span class="i18n-zh">Hotjar 研究與分析:必須填寫的長篇文字欄位造成使用者的挫折感,導致流失</span></figcaption>
       </figure>
 
-      <h2>The Objectives</h2>
-      <ul>
+      <h2><span class="i18n-en">The Objectives</span><span class="i18n-zh">目標</span></h2>
+      <ul class="i18n-en">
         <li>To <strong>simplify the onboarding experience</strong> and ensure users are able to immediately apply for jobs after.</li>
         <li>To <strong>gather enough user information</strong> to curate a personalised recommended job list.</li>
       </ul>
+      <ul class="i18n-zh">
+        <li><strong>簡化新手導覽體驗</strong>,確保使用者完成後能立即申請職缺。</li>
+        <li><strong>收集足夠的使用者資訊</strong>,以打造個人化的推薦職缺清單。</li>
+      </ul>
 
-      <h2>The Process</h2>
-      <h3>Brainstorming</h3>
-      <p>We held a brainstorming session, with key discussions focusing on:</p>
-      <ol>
+      <h2><span class="i18n-en">The Process</span><span class="i18n-zh">執行過程</span></h2>
+      <h3><span class="i18n-en">Brainstorming</span><span class="i18n-zh">腦力激盪</span></h3>
+      <p class="i18n-en">We held a brainstorming session, with key discussions focusing on:</p>
+      <p class="i18n-zh">我們舉辦了一場腦力激盪會議,主要討論聚焦於:</p>
+      <ol class="i18n-en">
         <li><strong>Identifying Pain Points</strong></li>
         <li><strong>Conducting Competitive Analysis</strong></li>
         <li><strong>Determining Design Direction</strong></li>
         <li><strong>Researching Insights</strong></li>
       </ol>
+      <ol class="i18n-zh">
+        <li><strong>找出痛點</strong></li>
+        <li><strong>進行競品分析</strong></li>
+        <li><strong>確立設計方向</strong></li>
+        <li><strong>研究洞察</strong></li>
+      </ol>
       <figure>
         <img src="img/hiredly-onboarding-72e9af99eb.png" alt="Brainstorming board covering pain points, competitive analysis, and design direction" loading="lazy">
       </figure>
 
-      <h3>Initial User Flow</h3>
-      <p>We then came out with a first version of the user flow.</p>
+      <h3><span class="i18n-en">Initial User Flow</span><span class="i18n-zh">初步使用者流程</span></h3>
+      <p class="i18n-en">We then came out with a first version of the user flow.</p>
+      <p class="i18n-zh">接著,我們產出了第一版的使用者流程。</p>
       <figure>
         <img src="img/hiredly-onboarding-3919cc2d2c.png" alt="First version of the onboarding user flow" loading="lazy">
       </figure>
 
-      <h3>Final User Flow</h3>
-      <p>After several rounds of discussions and requirement changes, we finalised the user flow.</p>
+      <h3><span class="i18n-en">Final User Flow</span><span class="i18n-zh">最終使用者流程</span></h3>
+      <p class="i18n-en">After several rounds of discussions and requirement changes, we finalised the user flow.</p>
+      <p class="i18n-zh">經過多輪討論與需求變更後,我們確定了最終的使用者流程。</p>
       <figure>
         <img src="img/hiredly-onboarding-96679c9001.png" alt="Finalised onboarding user flow after several rounds of discussion" loading="lazy">
       </figure>
 
-      <h3>Wireframe</h3>
+      <h3><span class="i18n-en">Wireframe</span><span class="i18n-zh">線框稿</span></h3>
       <figure>
         <img src="img/hiredly-onboarding-b6c3026f8d.png" alt="Wireframes of the redesigned onboarding flow" loading="lazy">
       </figure>
 
-      <h3>Final Mockups</h3>
-      <p><strong>User with Work Experience</strong></p>
+      <h3><span class="i18n-en">Final Mockups</span><span class="i18n-zh">最終視覺稿</span></h3>
+      <p><strong><span class="i18n-en">User with Work Experience</span><span class="i18n-zh">有工作經驗的使用者</span></strong></p>
       <figure>
         <img src="img/hiredly-onboarding-f31d47dc8f.gif" alt="Animated walkthrough of the onboarding flow for a user with work experience" loading="lazy">
       </figure>
-      <p><strong>Fresh Graduate</strong></p>
+      <p><strong><span class="i18n-en">Fresh Graduate</span><span class="i18n-zh">應屆畢業生</span></strong></p>
       <figure>
         <img src="img/hiredly-onboarding-d09ec02b01.gif" alt="Animated walkthrough of the onboarding flow for a fresh graduate" loading="lazy">
       </figure>
 
-      <h3>Before &amp; After</h3>
+      <h3><span class="i18n-en">Before &amp; After</span><span class="i18n-zh">前後對比</span></h3>
       <figure>
         <img src="img/hiredly-onboarding-b5d644ba79.png" alt="Side-by-side comparison of the onboarding flow before and after the redesign" loading="lazy">
       </figure>
@@ -127,12 +154,12 @@
 
     <nav class="case-nav" aria-label="Project navigation">
       <a href="funhub-signup.html" class="prev">
-        <span class="label">← Previous</span>
-        <span class="title">Improving the Sign Up Flow for Funhub App</span>
+        <span class="label"><span class="i18n-en">← Previous</span><span class="i18n-zh">← 上一篇</span></span>
+        <span class="title"><span class="i18n-en">Improving the Sign Up Flow for Funhub App</span><span class="i18n-zh">優化 Funhub App 的註冊流程</span></span>
       </a>
       <a href="hiredly-resume.html" class="next">
-        <span class="label">Next →</span>
-        <span class="title">Hiredly’s Resume Builder</span>
+        <span class="label"><span class="i18n-en">Next →</span><span class="i18n-zh">下一篇 →</span></span>
+        <span class="title"><span class="i18n-en">Hiredly’s Resume Builder</span><span class="i18n-zh">Hiredly 的履歷產生器</span></span>
       </a>
     </nav>
   </main>
