@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Revamping the Funhub App’s Deals and Voucher Pages — Enn-wen</title>
+  <meta name="description" content="UX/UI case study: redesigning the Funhub app’s deals and voucher pages to improve deal discovery and boost visibility for lesser-known merchants.">
+  <link rel="icon" type="image/png" href="../img/header-icon.png">
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="../js/main.js" defer></script>
+</head>
+<body>
+
+  <header class="site-header">
+    <a class="wordmark pill" href="../index.html">Evonne L&nbsp;<img class="bloom" src="../img/header-icon.png" alt="" width="289" height="270" loading="lazy"></a>
+    <nav class="site-nav" aria-label="Main">
+      <details class="nav-dropdown">
+        <summary class="pill nav-dropdown-toggle">Work<svg class="dropdown-arrow" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m19.5 8.25-7.5 7.5-7.5-7.5"/></svg></summary>
+        <div class="nav-dropdown-menu">
+          <a href="../index.html#work" class="is-current" aria-current="page">Work</a>
+          <a href="../about.html">About Me</a>
+          <a href="../photography.html">Photography</a>
+          <a href="../side-projects.html">Side Projects</a>
+        </div>
+      </details>
+    </nav>
+  </header>
+
+  <main>
+    <section class="case-hero">
+      <span class="category">UX/UI · Mobile App</span>
+      <h1>Revamping the Funhub App’s Deals and Voucher Pages</h1>
+      <p class="lede">Enhancing usability and organisation so users can navigate a growing number of offers with ease.</p>
+    </section>
+
+    <div class="case-cover">
+      <img src="img/funhub-deals-c891b54adf.png" alt="Final designs of the Funhub deals and voucher pages shown across multiple mobile screens">
+    </div>
+
+    <dl class="meta">
+      <div>
+        <dt>Team &amp; Role</dt>
+        <dd>UX/UI Designer on a cross-functional team with developers and a design lead</dd>
+      </div>
+      <div>
+        <dt>Tools</dt>
+        <dd>Figma, Freeform</dd>
+      </div>
+      <div>
+        <dt>Timeline</dt>
+        <dd>3 weeks</dd>
+      </div>
+      <div>
+        <dt>Key Skills</dt>
+        <dd>User Research, Wireframing, Prototyping, UI Design</dd>
+      </div>
+    </dl>
+
+    <article class="case-body">
+      <h2>Overview</h2>
+      <p>Funhub is Malaysia’s first <strong>Entertainment &amp; Lifestyle Social Circle App</strong>, offering users a variety of vouchers and deals for entertainment, food, travel, and other services. As the platform expanded, so did its selection of available vouchers.</p>
+      <p>However, the existing deals page design struggled to accommodate this growth efficiently. Users found it <strong>challenging to discover relevant offers within a cluttered and overwhelming interface</strong>. This project aimed to <strong>redesign the deals page, enhancing usability</strong> and organisation while ensuring a seamless experience for users navigating the growing number of offers.</p>
+
+      <h2>Problem</h2>
+      <h3>Difficulty Navigating and Discovering Relevant Deals</h3>
+      <p>As the number of available vouchers on Funhub’s platform increased, users found it increasingly <strong>difficult to navigate and discover relevant deals</strong>. The existing layout became inefficient and cluttered, leading to poor user experience and frustration.</p>
+      <h3>Low Visibility &amp; User Confidence for Lesser-Known Merchants</h3>
+      <p>Lesser-known merchants <strong>struggled to sell their vouchers</strong> due to <strong>low visibility</strong> on the platform and lack of user confidence, creating a significant gap in sales performance between well-known and smaller, less-popular vendors.</p>
+
+      <h2>Goal</h2>
+      <h3>Improve Navigation and Deal Discovery</h3>
+      <p>Revamp the layout to provide a more efficient, user-friendly experience, making it easier for users to navigate through the platform and quickly discover relevant vouchers without frustration.</p>
+      <h3>Boost Voucher Purchases and Improve User Confidence</h3>
+      <p>Enhance the platform’s design to give lesser-known merchants more visibility, as well as to gain users’ trust, helping to level the playing field and boost their voucher sales by making their offers easier to find.</p>
+
+      <h2>Discover and Define</h2>
+      <figure>
+        <img src="img/funhub-deals-e6095678fc.png" alt="Summary of feedback received from merchants and users about the deals page" loading="lazy">
+      </figure>
+
+      <h3>Feedback Received</h3>
+      <p>We’ve been receiving feedback from both merchants and users regarding the deals page. Both groups have different concerns. Based on feedback from both users and merchants, we identified 2 key findings:</p>
+      <p><strong>➡️ Merchants have expressed concerns about low voucher sales</strong><br>
+      Merchants experienced low visibility for their vouchers, particularly newer or less popular ones, resulting in reduced sales. This led to a notable gap between well-known brands and lesser-known merchants in terms of sales performance.</p>
+      <p><strong>➡️ Users have been complaining about the usability of the voucher page</strong><br>
+      Users struggled to find specific deals due to a cluttered layout and inadequate search options. Many found scrolling through irrelevant offers time-consuming and frustrating.</p>
+
+      <h3>What We Want to Achieve</h3>
+      <p>From the feedback we received from both users and merchants, we brainstormed and identified a few items we want to achieve:</p>
+      <p><strong>➡️ Increase user confidence in merchants</strong><br>
+      Especially for lesser-known or non-famous branded merchants. This will help level the playing field and increase visibility for all vendors on the platform.</p>
+      <p><strong>➡️ Improve overall user experience of the deal page</strong><br>
+      Make it easier for users to navigate, find relevant deals, and reduce frustration caused by information overload.</p>
+      <p><strong>➡️ Increase purchase rate of vouchers</strong><br>
+      We aim to boost overall voucher purchases by enhancing user experience and increasing merchant visibility. We’ll also improve the deals detail page, ensuring users can easily access key information for informed purchasing decisions.</p>
+
+      <div class="callout">
+        <span class="icon" aria-hidden="true">💡</span>
+        <div>
+          <p><strong>How might we</strong></p>
+          <p>Increase user confidence in lesser-known merchants, improve the overall usability of the deals page, and ensure users can easily access key information, in order to boost voucher purchase rates and enhance visibility for all vendors on the platform?</p>
+        </div>
+      </div>
+
+      <h2>Solution Exploration</h2>
+      <h3>UI/UX Audit</h3>
+      <p>We analysed the current UI as well as the whole user experience of the page, identifying strengths to retain and weaknesses to address.</p>
+      <figure>
+        <img src="img/funhub-deals-6936299602.png" alt="UI/UX audit of the existing Funhub deals page with annotated strengths and weaknesses" loading="lazy">
+      </figure>
+
+      <h3>Competitive Analysis</h3>
+      <p>I conducted a competitive analysis to understand how other deal platforms organise and present their vouchers, gaining insights into industry best practices and potential areas for improvement.</p>
+      <figure>
+        <img src="img/funhub-deals-dac801f239.png" alt="Competitive analysis comparing deal platforms and how they organise vouchers" loading="lazy">
+      </figure>
+
+      <h3>User Flow</h3>
+      <p>I created user flows to map out the journey from when a user lands on the deals page to when they purchase a voucher. This helped me visualise the entire process and identify potential pain points or areas for improvement in the user experience.</p>
+      <figure>
+        <img src="img/funhub-deals-bf456342a4.png" alt="User flow diagram from landing on the deals page to purchasing a voucher" loading="lazy">
+      </figure>
+
+      <h3>Initial Concept Exploration</h3>
+      <p>During the brainstorming stage, I developed two key ideas:</p>
+      <ol>
+        <li>
+          <strong>Voucher-Focused Exploration</strong><br>
+          Primarily aimed at selling vouchers, this approach also allowed users to explore vouchers by merchant, either by directly browsing vouchers or discovering merchants first and checking their offers.<br>
+          ➡️ <a href="https://www.figma.com/proto/Mv3bdHXmoCySuQpPZ3wwqm/Funhub-App-%7C-Deal-Page-Revamp?page-id=0%3A1&type=design&node-id=295-3369&viewport=-308%2C-300%2C0.57&t=3bArHv4hoMSbFwFX-1&scaling=scale-down&starting-point-node-id=295%3A3369&show-proto-sidebar=1" target="_blank" rel="noopener">Prototype</a>
+        </li>
+        <li>
+          <strong>Exploration Guide</strong><br>
+          Starting from a play guide, users could explore nearby spots for dining, entertainment, and leisure, while simultaneously being presented with relevant vouchers. This concept included detailed merchant information and services.<br>
+          ➡️ <a href="https://www.figma.com/proto/Mv3bdHXmoCySuQpPZ3wwqm/Funhub-App-%7C-Deal-Page-Revamp?page-id=0%3A1&type=design&node-id=295-4395&viewport=-308%2C-300%2C0.57&t=3bArHv4hoMSbFwFX-1&scaling=scale-down&starting-point-node-id=295%3A4395&show-proto-sidebar=1" target="_blank" rel="noopener">Prototype</a>
+        </li>
+      </ol>
+      <figure>
+        <img src="img/funhub-deals-3c7e330de5.png" alt="Early concept mockups of the voucher-focused exploration and exploration guide ideas" loading="lazy">
+      </figure>
+      <p>Initially, the team was excited about the ideas, especially the exploration guide, and decided to proceed with this approach. While the mockup stage was almost done, I was informed to re-do it due to a change in requirements from the management. With the limited development time, we decided to prioritise a simpler solution that aligned with our goals and was easier to implement for developers, putting the original ideas on hold.</p>
+
+      <h3>Wireframe Stage, Again</h3>
+      <p>Following our decision for a simpler solution, the wireframes prioritised an intuitive filtering system to help users find relevant deals. We also highlighted nearby lesser-known merchants, increasing their visibility and encouraging users to explore new offers in their area. This approach aimed to enhance user experience while supporting non-famous brands.</p>
+
+      <h4><strong>Deals List Page</strong></h4>
+      <div class="callout">
+        <span class="icon" aria-hidden="true">💭</span>
+        <p>If there’s more than 10 merchants, what is the best way to display them?</p>
+      </div>
+      <figure>
+        <img src="img/funhub-deals-82ae278493.png" alt="Wireframes of the deals list page exploring filtering and merchant display" loading="lazy">
+      </figure>
+
+      <h4><strong>Voucher Page</strong></h4>
+      <div class="callout">
+        <span class="icon" aria-hidden="true">💭</span>
+        <p>What information is useful for users to make a decision about purchasing a voucher?</p>
+      </div>
+      <figure>
+        <img src="img/funhub-deals-cc035308b5.png" alt="Wireframes of the voucher page exploring information hierarchy for purchase decisions" loading="lazy">
+      </figure>
+
+      <h3>Iteration Process</h3>
+      <p>After the wireframe got approved, I started to work on the UI. I tried out a few options to discuss with the Design Lead during Design Review.</p>
+      <figure>
+        <img src="img/funhub-deals-cabb0b534b.png" alt="UI iterations of the deals page explored during design review" loading="lazy">
+      </figure>
+
+      <p><strong>Deals List Page</strong><br>
+      I designed several options for the card layout and encountered a few challenges during the design process:</p>
+      <ul>
+        <li>Balancing design for both Chinese and English text presented challenges, as the varying text lengths affected the layout.</li>
+        <li>We had to ensure the design was flexible enough to accommodate both languages without compromising readability or aesthetics.</li>
+      </ul>
+      <p>While designing, we also tried to identify what would be useful to attract users to click into the voucher.</p>
+      <figure>
+        <img src="img/funhub-deals-afcdd1e033.png" alt="Card layout options for the deals list page in English and Chinese" loading="lazy">
+      </figure>
+      <p>Feedback from the Design Lead and testing the UI internally helped refine the design, and after several iterations, we decided to go with option 3.</p>
+      <figure>
+        <img src="img/funhub-deals-0a8eb58700.png" alt="Comparison of card design options with option 3 selected" loading="lazy">
+      </figure>
+
+      <p><strong>Voucher Page</strong><br>
+      The first iteration featured a more eye-catching design with a timer, giving users a sense of urgency to purchase the ticket. However, due to time constraints in development, we decided to proceed with a simpler design. The initial, more dynamic iteration will be considered for future implementations when resources allow.</p>
+      <figure>
+        <img src="img/funhub-deals-5382bc77f6.png" alt="Voucher page iterations, from a timer-driven design to a simpler layout" loading="lazy">
+      </figure>
+      <p>The layout placement is strategically designed, informed by insights from competitive analysis, to optimise user engagement and ease of navigation.</p>
+      <figure>
+        <img src="img/funhub-deals-9c212ebd44.png" alt="Annotated voucher page layout showing strategic placement of key information" loading="lazy">
+      </figure>
+
+      <h2>Final Design</h2>
+      <p>After multiple iterations and refinements, the final design has been completed and is ready for handover to the development team.</p>
+
+      <h3>Deals List Page</h3>
+      <figure>
+        <img src="img/funhub-deals-0ef3a6722f.png" alt="Final deals list page design" loading="lazy">
+      </figure>
+
+      <p><strong>Key Screens</strong></p>
+      <div class="feature-row">
+        <figure>
+          <img src="img/funhub-deals-0c2bfdc8d3.png" alt="Final card design showing imagery, title, rating, distance, price, and remaining vouchers" loading="lazy">
+        </figure>
+        <div>
+          <h4>New Card Design</h4>
+          <ul>
+            <li>Redesigned with a card-based layout that allowed users to see more deals at once.</li>
+            <li>Each card featured clear imagery, titles, rating, distance, price, and remaining vouchers.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="feature-row">
+        <div>
+          <h4>Nearby Deals Section</h4>
+          <p>A new “Nearby Deals” section was introduced to improve visibility for local and lesser-known merchants.</p>
+        </div>
+        <figure>
+          <img src="img/funhub-deals-1cb60cdf7c.png" alt="Nearby deals section highlighting local and lesser-known merchants" loading="lazy">
+        </figure>
+      </div>
+
+      <div class="feature-row">
+        <figure>
+          <img src="img/funhub-deals-6315fede68.png" alt="Category tabs at the top of the deals page for filtering vouchers" loading="lazy">
+        </figure>
+        <div>
+          <h4>Category System</h4>
+          <p>Users can filter vouchers using category tabs at the top of the page, making it easier to find specific types of deals.</p>
+        </div>
+      </div>
+
+      <hr>
+
+      <h3>Voucher Page</h3>
+      <figure>
+        <img src="img/funhub-deals-54a9ce2605.png" alt="Final voucher page design" loading="lazy">
+      </figure>
+
+      <p><strong>Key Screen</strong></p>
+      <div class="feature-row">
+        <figure>
+          <img src="img/funhub-deals-c24087c9e0.gif" alt="Animated prototype of the final voucher page interaction" loading="lazy">
+        </figure>
+        <div>
+          <h4>Key Features</h4>
+          <ul>
+            <li>Position merchant information at the top to enhance visibility</li>
+            <li>Add information summary section to provide key decision-making details</li>
+            <li>Include clear pricing information, terms and conditions, and usage instructions</li>
+            <li>Display user ratings and reviews prominently to build trust</li>
+            <li>Highlight any time-sensitive information (e.g., expiration dates, limited availability)</li>
+          </ul>
+        </div>
+      </div>
+
+      <h2>Developer Handover</h2>
+      <p>What I will usually provide during dev handover:</p>
+      <ul>
+        <li><strong>Annotations</strong>: Detailed explanations of design decisions and functionality.</li>
+        <li><strong>Components</strong>: Provided all reusable components to ensure design consistency.</li>
+        <li><strong>Visual flow</strong>: A comprehensive flowchart to guide developers through user interactions and navigation.</li>
+      </ul>
+      <p>In this case, I’ve also included English and Chinese versions since it’s a dual-language app.</p>
+      <figure>
+        <img src="img/funhub-deals-8d54244a1f.png" alt="Developer handover file with annotations, components, and visual flow in English and Chinese" loading="lazy">
+      </figure>
+
+      <h2>Next Step</h2>
+      <p>We will continue to monitor user interactions with the new design and assess whether voucher sales have improved. This ongoing observation will help us further refine the user experience and measure the redesign’s impact on success metrics.</p>
+      <p>To measure the effectiveness of the Funhub app’s deals and voucher page revamp, we identified several key <strong>success metrics</strong> to be measured:</p>
+      <p><strong>💡 User Engagement</strong><br>
+      By analysing the time spent on the deals page, interactions with filters, and the number of users browsing vouchers and merchants, we can evaluate whether the redesign encourages deeper engagement.</p>
+      <p><strong>💡 Conversion Rate</strong><br>
+      Measuring the percentage of users who purchase vouchers after viewing the deals page helps assess the effectiveness of the new layout and features in driving sales.</p>
+      <p><strong>💡 Voucher Redemption Rate</strong><br>
+      Tracking the percentage of vouchers purchased and redeemed post-revamp helps gauge user engagement. A higher redemption rate signifies increased interaction with the new deals page.</p>
+
+      <h2>What I Learned</h2>
+      <p><strong>➡️ Early User Involvement for Better Insights</strong><br>
+      Effective user research and testing are key to identifying pain points early. In future projects, I’d involve users even earlier in the design phase.</p>
+      <p><strong>➡️ Balancing Simplicity and Functionality in Design</strong><br>
+      Simplifying design without compromising functionality was a challenge, but it taught me the importance of balancing user needs with business goals.</p>
+    </article>
+
+    <nav class="case-nav" aria-label="Project navigation">
+      <a href="hiredly-resume.html" class="prev">
+        <span class="label">← Previous</span>
+        <span class="title">Hiredly’s Resume Builder</span>
+      </a>
+      <a href="funhub-signup.html" class="next">
+        <span class="label">Next →</span>
+        <span class="title">Improving the Sign Up Flow for Funhub App</span>
+      </a>
+    </nav>
+  </main>
+
+  <div id="footer-mount"></div>
+
+</body>
+</html>
