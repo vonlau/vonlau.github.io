@@ -3,27 +3,35 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Me — Enn-wen</title>
-  <meta name="description" content="Evonne Lau, a.k.a. Enn-wen Lau — a product designer based in Kuala Lumpur.">
+  <title data-zh="關於我 — Enn-wen">About Me — Enn-wen</title>
+  <meta name="description" data-zh="Evonne Lau,亦稱 Enn-wen Lau——常駐吉隆坡的產品設計師。" content="Evonne Lau, a.k.a. Enn-wen Lau — a product designer based in Kuala Lumpur.">
   <link rel="icon" type="image/png" href="img/header-icon.png">
   <link rel="stylesheet" href="css/style.css">
+  <script>(function(){try{if(localStorage.getItem("site-lang")==="zh")document.documentElement.setAttribute("data-lang","zh");}catch(e){}})();</script>
   <script src="js/main.js" defer></script>
 </head>
 <body class="page-sub">
 
   <header class="site-header">
     <a class="wordmark pill" href="index.html">Evonne L&nbsp;<img class="bloom" src="img/header-icon.png" alt="" width="289" height="270" loading="lazy"></a>
-    <nav class="site-nav" aria-label="Main">
-      <details class="nav-dropdown">
-        <summary class="pill nav-dropdown-toggle">About Me<svg class="dropdown-arrow" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m19.5 8.25-7.5 7.5-7.5-7.5"/></svg></summary>
-        <div class="nav-dropdown-menu">
-          <a href="index.html#work">Work</a>
-          <a href="about.html" class="is-current" aria-current="page">About Me</a>
-          <a href="photography.html">Photography</a>
-          <a href="side-projects.html">Side Projects</a>
-        </div>
-      </details>
-    </nav>
+    <div class="site-header-actions">
+      <nav class="site-nav" aria-label="Main">
+        <details class="nav-dropdown">
+          <summary class="pill nav-dropdown-toggle"><span class="i18n-en">About Me</span><span class="i18n-zh">關於我</span><svg class="dropdown-arrow" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m19.5 8.25-7.5 7.5-7.5-7.5"/></svg></summary>
+          <div class="nav-dropdown-menu">
+            <a href="index.html#work"><span class="i18n-en">Work</span><span class="i18n-zh">作品</span></a>
+            <a href="about.html" class="is-current" aria-current="page"><span class="i18n-en">About Me</span><span class="i18n-zh">關於我</span></a>
+            <a href="photography.html"><span class="i18n-en">Photography</span><span class="i18n-zh">攝影</span></a>
+            <a href="side-projects.html"><span class="i18n-en">Side Projects</span><span class="i18n-zh">個人專案</span></a>
+          </div>
+        </details>
+      </nav>
+      <button type="button" class="lang-toggle" aria-pressed="false" aria-label="Switch language / 切換語言">
+        <span class="lang-toggle-knob" aria-hidden="true"></span>
+        <span class="lang-toggle-option lang-toggle-option-en">EN</span>
+        <span class="lang-toggle-option lang-toggle-option-zh">中</span>
+      </button>
+    </div>
   </header>
 
   <main>
@@ -31,10 +39,10 @@
       <div class="hero-panel">
         <div class="hero-content">
           <h1 class="fade-in delay-1">Evonne Lau</h1>
-          <p class="about-subtitle fade-in delay-2">a.k.a. Enn-wen Lau — a product designer based in Kuala Lumpur</p>
+          <p class="about-subtitle fade-in delay-2"><span class="i18n-en">a.k.a. Enn-wen Lau — a product designer based in Kuala Lumpur</span><span class="i18n-zh">亦稱 Enn-wen Lau——常駐吉隆坡的產品設計師</span></p>
           <div class="about-tagline-row">
-            <p class="tagline fade-in delay-3">I design clean, friendly interfaces. Cat mom of 3, caffeine-dependent, certified weirdo. I love the outdoors — until I fall down a rabbit hole and vanish indoors for a week straight. Currently in an Arduino-shaped hole. Send help, or spare LEDs.</p>
-            <a class="btn-primary about-cta fade-in delay-3" href="mailto:enn-wen@outlook.com">Get in touch<span class="btn-arrow" aria-hidden="true">→</span></a>
+            <p class="tagline fade-in delay-3"><span class="i18n-en">I design clean, friendly interfaces. Cat mom of 3, caffeine-dependent, certified weirdo. I love the outdoors — until I fall down a rabbit hole and vanish indoors for a week straight. Currently in an Arduino-shaped hole. Send help, or spare LEDs.</span><span class="i18n-zh">我設計乾淨、友善的介面。是 3 隻貓的貓奴,離不開咖啡因,是認證怪咖。熱愛戶外活動——直到一頭栽進某個興趣的兔子洞,整整一週窩在家裡不出門。目前深陷 Arduino 的坑。需要救援,或者多的 LED 燈也行。</span></p>
+            <a class="btn-primary about-cta fade-in delay-3" href="mailto:enn-wen@outlook.com"><span class="i18n-en">Get in touch</span><span class="i18n-zh">聯絡我</span><span class="btn-arrow" aria-hidden="true">→</span></a>
           </div>
         </div>
       </div>
@@ -48,64 +56,68 @@
 
     <section class="about-statement">
       <div class="statement-text" data-reveal data-reveal-repeat>
-        <p>💻 Self-taught</p>
-        <p>Product designer 👩🏻‍💻</p>
-        <p>Ex-web dev 🔨</p>
-        <p>🙌🏻 Merge conflict survivor 🎉</p>
+        <p><span class="i18n-en">💻 Self-taught</span><span class="i18n-zh">💻 自學出身</span></p>
+        <p><span class="i18n-en">Product designer 👩🏻‍💻</span><span class="i18n-zh">產品設計師 👩🏻‍💻</span></p>
+        <p><span class="i18n-en">Ex-web dev 🔨</span><span class="i18n-zh">前網頁工程師 🔨</span></p>
+        <p><span class="i18n-en">🙌🏻 Merge conflict survivor 🎉</span><span class="i18n-zh">🙌🏻 合併衝突倖存者 🎉</span></p>
       </div>
       <div class="about-statement-inner">
         <div class="statement-photo">
           <img src="img/about/IMG_6743.jpeg" alt="Evonne smiling on a pier by the water" loading="lazy">
         </div>
         <div class="statement-body" data-reveal>
-          <p>Evonne comes from my Chinese name, 依雯 — pronounced <i>Yi-wen</i>. Though Enn-Wen is actually my legal name. Confusing even on paper.</p>
-          <p>I started as a web developer, until my first git merge conflict ended in a staring contest I lost badly. That’s the day I decided to make things look right instead of fighting my code for it. Self-taught my way into UIUX in 2020 and never looked back, though I still love coding for fun, most recently trying to make Arduino boards behave.</p>
-          <p>Also did a working holiday in New Zealand, in a town so small it had a population of 114. I basically knew everyone by week two. Worked front of house, made coffees, served customers, and somehow made some genuinely great local friends along the way.</p>
-          <p>Off the clock: chasing good photos, indie games, hoarding stickers, and explaining to my cats why I can’t play right now. </p>
+          <p class="i18n-en">Evonne comes from my Chinese name, 依雯 — pronounced <i>Yi-wen</i>. Though Enn-Wen is actually my legal name. Confusing even on paper.</p>
+          <p class="i18n-zh">Evonne 這個名字來自我的中文名「依雯」,唸作 <i>Yi-wen</i>。不過 Enn-Wen 才是我身分證上的法定名字,連紙本資料都會搞混。</p>
+          <p class="i18n-en">I started as a web developer, until my first git merge conflict ended in a staring contest I lost badly. That’s the day I decided to make things look right instead of fighting my code for it. Self-taught my way into UIUX in 2020 and never looked back, though I still love coding for fun, most recently trying to make Arduino boards behave.</p>
+          <p class="i18n-zh">我一開始是網頁工程師,直到第一次遇到 git merge conflict,跟它大眼瞪小眼,結果慘敗。那天我就決定,與其跟程式碼搏鬥,不如把畫面做得漂漂亮亮。2020 年開始自學 UIUX,從此再也沒回頭,不過我還是喜歡寫程式自娛,最近在跟 Arduino 板子搏鬥,想讓它乖乖聽話。</p>
+          <p class="i18n-en">Also did a working holiday in New Zealand, in a town so small it had a population of 114. I basically knew everyone by week two. Worked front of house, made coffees, served customers, and somehow made some genuinely great local friends along the way.</p>
+          <p class="i18n-zh">我還去紐西蘭打工度假過,待在一個小到只有 114 人的小鎮。第二週我大概就認識全鎮的人了。做過外場、煮過咖啡、招呼過客人,還意外交到幾個真心不錯的當地朋友。</p>
+          <p class="i18n-en">Off the clock: chasing good photos, indie games, hoarding stickers, and explaining to my cats why I can’t play right now. </p>
+          <p class="i18n-zh">下班之後:追逐美照、玩獨立遊戲、囤積貼紙,還有跟我家貓咪解釋為什麼現在不能陪牠們玩。</p>
         </div>
       </div>
     </section>
 
     <section class="about-experience">
-      <h2>Experience</h2>
+      <h2><span class="i18n-en">Experience</span><span class="i18n-zh">工作經歷</span></h2>
       <div class="experience-table-wrap" data-reveal>
       <table class="experience-table">
         <tbody>
           <tr>
-            <td>May 2021 – Present</td>
-            <td>Freelancer</td>
-            <td>UI/UX Designer</td>
+            <td><span class="i18n-en">May 2021 – Present</span><span class="i18n-zh">2021年5月 – 至今</span></td>
+            <td><span class="i18n-en">Freelancer</span><span class="i18n-zh">接案設計師</span></td>
+            <td><span class="i18n-en">UI/UX Designer</span><span class="i18n-zh">UI/UX 設計師</span></td>
           </tr>
           <tr>
-            <td>May 2025 – June 2026</td>
+            <td><span class="i18n-en">May 2025 – June 2026</span><span class="i18n-zh">2025年5月 – 2026年6月</span></td>
             <td>Funhub TV Sdn Bhd</td>
-            <td>Product Designer</td>
+            <td><span class="i18n-en">Product Designer</span><span class="i18n-zh">產品設計師</span></td>
           </tr>
           <tr>
-            <td>Nov 2024 – Apr 2025</td>
+            <td><span class="i18n-en">Nov 2024 – Apr 2025</span><span class="i18n-zh">2024年11月 – 2025年4月</span></td>
             <td>iMoney</td>
-            <td>UI/UX Designer</td>
+            <td><span class="i18n-en">UI/UX Designer</span><span class="i18n-zh">UI/UX 設計師</span></td>
           </tr>
           <tr>
-            <td>Jan 2024 – Sept 2024</td>
-            <td>Working Holiday</td>
-            <td>Career Break</td>
+            <td><span class="i18n-en">Jan 2024 – Sept 2024</span><span class="i18n-zh">2024年1月 – 2024年9月</span></td>
+            <td><span class="i18n-en">Working Holiday</span><span class="i18n-zh">打工度假</span></td>
+            <td><span class="i18n-en">Career Break</span><span class="i18n-zh">職涯空檔</span></td>
           </tr>
           <tr>
-            <td>Mar 2022 – Dec 2023</td>
+            <td><span class="i18n-en">Mar 2022 – Dec 2023</span><span class="i18n-zh">2022年3月 – 2023年12月</span></td>
             <td>Hiredly</td>
-            <td>UX/UI Designer</td>
+            <td><span class="i18n-en">UX/UI Designer</span><span class="i18n-zh">UX/UI 設計師</span></td>
           </tr>
 
           <tr>
-            <td>Nov 2020 – Jan 2022</td>
+            <td><span class="i18n-en">Nov 2020 – Jan 2022</span><span class="i18n-zh">2020年11月 – 2022年1月</span></td>
             <td>Green-i Multimedia Sdn Bhd</td>
-            <td>Web Designer</td>
+            <td><span class="i18n-en">Web Designer</span><span class="i18n-zh">網頁設計師</span></td>
           </tr>
           <tr>
-            <td>May 2019 – Nov 2020</td>
+            <td><span class="i18n-en">May 2019 – Nov 2020</span><span class="i18n-zh">2019年5月 – 2020年11月</span></td>
             <td>GoodPeople Co</td>
-            <td>Junior Web Developer</td>
+            <td><span class="i18n-en">Junior Web Developer</span><span class="i18n-zh">初級網頁工程師</span></td>
           </tr>
         </tbody>
       </table>

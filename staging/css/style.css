@@ -101,6 +101,7 @@ h1, h2, h3 { text-wrap: balance; }
 
 .pill {
   display: inline-flex;
+  flex-shrink: 0;
   align-items: center;
   gap: 0.2rem;
   padding: 0.6rem 1.15rem;
@@ -159,14 +160,15 @@ h1, h2, h3 { text-wrap: balance; }
   top: 0;
   z-index: var(--z-sticky);
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
+  gap: 0.6rem 1rem;
   padding: 1.1rem var(--edge-pad);
   pointer-events: none;
 }
 
 .site-header a,
+.site-header button,
 .site-header .nav-dropdown { pointer-events: auto; }
 
 .wordmark { font-size: 1.025rem; }
@@ -181,8 +183,16 @@ h1, h2, h3 { text-wrap: balance; }
 
 .wordmark:hover .bloom { transform: rotate(180deg) scale(1.15); }
 
+.site-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-left: auto;
+}
+
 .site-nav {
   display: flex;
+  flex-shrink: 0;
   gap: 0.6rem;
   opacity: 1;
   transform: translateY(0);
@@ -198,7 +208,78 @@ h1, h2, h3 { text-wrap: balance; }
 .site-nav.nav-hero-hidden a,
 .site-nav.nav-hero-hidden .nav-dropdown { pointer-events: none; }
 
-.nav-dropdown { position: relative; }
+/* ---------- language toggle ---------- */
+
+.lang-toggle {
+  position: relative;
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  padding: 0.3rem;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  border-radius: var(--radius-pill);
+  background: rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  box-shadow: var(--shadow-pill), inset 0 1px 0 rgba(255, 255, 255, 0.65);
+  font-family: var(--font);
+  cursor: pointer;
+  transition: background 250ms var(--ease-out), border-color 250ms var(--ease-out), transform 250ms var(--ease-out);
+}
+
+.lang-toggle:hover,
+.lang-toggle:focus-visible {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.65);
+  border-color: rgba(255, 255, 255, 0.75);
+}
+
+.lang-toggle-knob {
+  position: absolute;
+  top: 0.3rem;
+  left: 0.3rem;
+  width: 2.15rem;
+  height: 1.7rem;
+  border-radius: var(--radius-pill);
+  background: var(--ink);
+  transition: transform 300ms var(--ease-out);
+}
+
+.lang-toggle[aria-pressed="true"] .lang-toggle-knob {
+  transform: translateX(2.15rem);
+}
+
+.lang-toggle-option {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.15rem;
+  height: 1.7rem;
+  color: var(--ink);
+  opacity: 0.55;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: color 250ms var(--ease-out), opacity 250ms var(--ease-out);
+}
+
+.lang-toggle[aria-pressed="false"] .lang-toggle-option-en,
+.lang-toggle[aria-pressed="true"] .lang-toggle-option-zh {
+  color: #ffffff;
+  opacity: 1;
+}
+
+/* ---------- i18n text swap ----------
+   No base display value is set here on purpose: .i18n-en/.i18n-zh mark both
+   inline spans (inside headings, links, list items) and whole block elements
+   (whole <p>/<li>/<dd> per language), so each must keep its own natural
+   display type. Only the currently-inactive language gets display:none. */
+
+html[data-lang="zh"] .i18n-en { display: none; }
+html:not([data-lang="zh"]) .i18n-zh { display: none; }
+
+.nav-dropdown { position: relative; flex-shrink: 0; }
 
 .nav-dropdown-toggle {
   cursor: pointer;
@@ -1305,7 +1386,9 @@ h1, h2, h3 { text-wrap: balance; }
   .sticky-note,
   .site-nav,
   .case-side-nav,
-  .case-side-nav a { transition: none; }
+  .case-side-nav a,
+  .lang-toggle,
+  .lang-toggle-knob { transition: none; }
 }
 
 /* ---------- responsive ---------- */
@@ -1322,6 +1405,28 @@ h1, h2, h3 { text-wrap: balance; }
   :root {
     --triangle-x: 10%;
     --triangle-y: -40px;
+  }
+
+  .site-header {
+    gap: 0.5rem;
+  }
+
+  .site-header-actions {
+    gap: 0.4rem;
+  }
+
+  .lang-toggle-knob,
+  .lang-toggle-option {
+    width: 1.9rem;
+    height: 1.55rem;
+  }
+
+  .lang-toggle[aria-pressed="true"] .lang-toggle-knob {
+    transform: translateX(1.9rem);
+  }
+
+  .lang-toggle-option {
+    font-size: 0.78rem;
   }
 
   .hero-notes {

@@ -16,6 +16,53 @@
       .catch(function () { /* footer just stays empty if the fetch fails */ });
   }
 
+  /* ---------- language toggle (EN / Traditional Chinese) ---------- */
+
+  var LANG_KEY = "site-lang";
+  var htmlEl = document.documentElement;
+  var titleEl = document.querySelector("title");
+  var descEl = document.querySelector('meta[name="description"]');
+  var titleEn = titleEl ? titleEl.textContent : null;
+  var descEn = descEl ? descEl.getAttribute("content") : null;
+
+  var applyLangMeta = function (lang) {
+    if (titleEl) {
+      var zhTitle = titleEl.getAttribute("data-zh");
+      titleEl.textContent = lang === "zh" && zhTitle ? zhTitle : titleEn;
+    }
+    if (descEl) {
+      var zhDesc = descEl.getAttribute("data-zh");
+      descEl.setAttribute("content", lang === "zh" && zhDesc ? zhDesc : descEn);
+    }
+  };
+
+  var setLang = function (lang, persist) {
+    htmlEl.setAttribute("data-lang", lang);
+    applyLangMeta(lang);
+    document.querySelectorAll(".lang-toggle").forEach(function (btn) {
+      btn.setAttribute("aria-pressed", lang === "zh" ? "true" : "false");
+    });
+    if (persist) {
+      try { localStorage.setItem(LANG_KEY, lang); } catch (e) { /* private mode, ignore */ }
+    }
+    document.dispatchEvent(new CustomEvent("langchange", { detail: { lang: lang } }));
+  };
+
+  var getLangText = function (el) {
+    var lang = htmlEl.getAttribute("data-lang") === "zh" ? "zh" : "en";
+    var match = el.querySelector(".i18n-" + lang);
+    return match ? match.textContent : el.textContent;
+  };
+
+  // sync meta tags + button state with whatever the anti-flicker inline script already applied
+  setLang(htmlEl.getAttribute("data-lang") === "zh" ? "zh" : "en", false);
+
+  document.querySelectorAll(".lang-toggle").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      setLang(htmlEl.getAttribute("data-lang") === "zh" ? "en" : "zh", true);
+    });
+  });
+
   /* ---------- scroll reveals ---------- */
 
   var revealTargets = document.querySelectorAll(
@@ -141,7 +188,7 @@
     applyParallax();
   }
 
-  /* ---------- hide site nav while the hero is in view ---------- */
+  /* ---------- hide site nav while the hero is in view (lang toggle stays visible) ---------- */
 
   var heroPanel = document.querySelector(".page-home .hero-panel");
   var siteNav = document.querySelector(".site-nav");
@@ -236,13 +283,20 @@
         if (h2.id) {
           usedIds[h2.id] = true;
         } else {
-          h2.id = slugify(h2.textContent);
+          var enHeading = h2.querySelector(".i18n-en");
+          h2.id = slugify(enHeading ? enHeading.textContent : h2.textContent);
         }
         var link = document.createElement("a");
         link.href = "#" + h2.id;
-        link.textContent = h2.textContent;
+        link.textContent = getLangText(h2);
         sideNav.appendChild(link);
         sections.push({ link: link, heading: h2 });
+      });
+
+      document.addEventListener("langchange", function () {
+        sections.forEach(function (section) {
+          section.link.textContent = getLangText(section.heading);
+        });
       });
 
       document.body.appendChild(sideNav);
