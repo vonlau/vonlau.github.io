@@ -345,7 +345,7 @@ html:not([data-lang="zh"]) .i18n-zh { display: none; }
 .hero-panel {
   position: relative;
   padding: clamp(4rem, 10vw, 8rem) clamp(1.75rem, 6vw, 5rem);
-  min-height: min(68vh, 620px);
+  /* min-height: min(68vh, 620px); */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -512,7 +512,7 @@ html:not([data-lang="zh"]) .i18n-zh { display: none; }
 
 .about-hero .tagline {
   margin: 0;
-  max-width: 68ch;
+  max-width: 83ch;
   font-size: 1rem;
   flex: 1 1 auto;
 }
@@ -763,6 +763,68 @@ html:not([data-lang="zh"]) .i18n-zh { display: none; }
   font-size: clamp(1.5rem, 2.6vw, 2rem);
   font-weight: 600;
   letter-spacing: 0.01em;
+}
+
+/* ---------- photography page ---------- */
+
+.photo-hero .hero-panel {
+  align-items: stretch;
+  padding-left: var(--edge-pad);
+  padding-right: var(--edge-pad);
+  padding-bottom: clamp(1.2rem, 3.2vw, 2.4rem);
+}
+
+.photo-hero .hero-content {
+  text-align: left;
+  margin: 0;
+}
+
+.photo-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(24rem, 100%), 1fr));
+  column-gap: clamp(2rem, 5vw, 3.5rem);
+  row-gap: clamp(3rem, 6vw, 4.5rem);
+  margin: 0;
+  padding: clamp(2rem, 5vw, 3.5rem) var(--edge-pad) clamp(5rem, 10vw, 7rem);
+}
+
+.photo-item { margin: 0; }
+
+.photo-frame {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 4 / 5;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.photo-frame img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.photo-caption {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  margin: 1rem 0.2rem 0;
+}
+
+.photo-name {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.photo-year {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--muted);
 }
 
 /* ---------- work grid ---------- */
@@ -1533,5 +1595,10 @@ html:not([data-lang="zh"]) .i18n-zh { display: none; }
 
   .statement-photo img {
     /* aspect-ratio: 3 / 4; */
+  }
+
+  .photo-gallery {
+    grid-template-columns: 1fr;
+    row-gap: 2.75rem;
   }
 }
