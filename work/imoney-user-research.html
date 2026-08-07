@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-zh="從問卷到訪談:理解 iMoney 使用者為何留下或離開 — Enn-wen">From Survey to Interview: Why iMoney Users Stay or Leave — Enn-wen</title>
+  <meta name="description" data-zh="UX 研究案例分享:結合全公司問卷調查與使用者訪談,探究使用者為何投入 iMoney,並轉化為人物誌與建議路線圖。" content="UX research case study: combining a company-wide survey with user interviews to uncover why iMoney users stay or leave, translated into personas and a recommendation roadmap.">
+  <link rel="icon" type="image/png" href="../img/header-icon.png">
+  <link rel="stylesheet" href="../css/style.css">
+  <script>(function(){try{if(localStorage.getItem("site-lang")==="zh")document.documentElement.setAttribute("data-lang","zh");}catch(e){}})();</script>
+  <script src="../js/main.js" defer></script>
+</head>
+<body>
+
+  <header class="site-header">
+    <a class="wordmark pill" href="../index.html">Evonne L&nbsp;<img class="bloom" src="../img/header-icon.png" alt="" width="289" height="270" loading="lazy"></a>
+    <div class="site-header-actions">
+      <nav class="site-nav" aria-label="Main">
+        <details class="nav-dropdown">
+          <summary class="pill nav-dropdown-toggle"><span class="i18n-en">Work</span><span class="i18n-zh">作品</span><svg class="dropdown-arrow" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m19.5 8.25-7.5 7.5-7.5-7.5"/></svg></summary>
+          <div class="nav-dropdown-menu">
+            <a href="../index.html#work" class="is-current" aria-current="page"><span class="i18n-en">Work</span><span class="i18n-zh">作品</span></a>
+            <a href="../about.html"><span class="i18n-en">About Me</span><span class="i18n-zh">關於我</span></a>
+            <a href="../photography.html"><span class="i18n-en">Photography</span><span class="i18n-zh">攝影</span></a>
+            <a href="../side-projects.html"><span class="i18n-en">Side Projects</span><span class="i18n-zh">個人專案</span></a>
+          </div>
+        </details>
+      </nav>
+      <button type="button" class="lang-toggle" aria-pressed="false" aria-label="Switch language / 切換語言">
+        <span class="lang-toggle-knob" aria-hidden="true"></span>
+        <span class="lang-toggle-option lang-toggle-option-en">EN</span>
+        <span class="lang-toggle-option lang-toggle-option-zh">中</span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="case-hero">
+      <span class="category"><span class="i18n-en">UX Research · Fintech</span><span class="i18n-zh">UX 研究・金融科技</span></span>
+      <h1><span class="i18n-en">From Survey to Interview: Why iMoney Users Stay or Leave</span><span class="i18n-zh">從問卷到訪談:理解 iMoney 使用者為何留下或離開</span></h1>
+      <p class="lede"><span class="i18n-en">Combining a company-wide survey with 1:1 interviews to uncover why users engage with iMoney — or don’t — and turning the findings into personas and a recommendation roadmap.</span><span class="i18n-zh">結合全公司問卷調查與一對一訪談,探究使用者為何投入 iMoney——或選擇不再使用,並將研究結果轉化為人物誌與建議路線圖。</span></p>
+    </section>
+
+    <div class="case-cover">
+      <img src="img/imoney-user-research-thumbnail.jpg" alt="Laptop screen showing a presentation titled &quot;iMoney — User Research Insights: Survey to User Interviews&quot;">
+    </div>
+
+    <article class="case-body">
+      <h2><span class="i18n-en">Overview</span><span class="i18n-zh">專案概述</span></h2>
+      <p class="i18n-en">iMoney is a Malaysian platform for financial products and services — loans, credit cards, comparison tools, financial guides. I joined as iMoney’s first UI/UX designer, and no user research or personas existed yet — product and design decisions were being made on assumption rather than evidence, with no shared understanding of who we were actually designing for.</p>
+      <p class="i18n-zh">iMoney 是一個馬來西亞的金融產品與服務平台——提供貸款、信用卡、比較工具與理財指南。我是 iMoney 的第一位 UI/UX 設計師,加入時公司尚未有任何使用者研究或人物誌——產品與設計決策大多基於假設而非證據,團隊對「我們究竟在為誰設計」也缺乏共識。</p>
+
+      <hr>
+      <dl class="meta">
+        <div>
+          <dt><span class="i18n-en">Team</span><span class="i18n-zh">團隊</span></dt>
+          <dd><span class="i18n-en">UX/UI Designer leading end-to-end research — survey design, recruitment, moderation, synthesis, and stakeholder presentation</span><span class="i18n-zh">UX/UI 設計師,主導端到端研究——問卷設計、招募、主持、資料統整與利害關係人簡報</span></dd>
+        </div>
+        <div>
+          <dt><span class="i18n-en">Tools</span><span class="i18n-zh">工具</span></dt>
+          <dd>Google Forms, Google Calendar, Google Meet, PowerPoint</dd>
+        </div>
+        <div>
+          <dt><span class="i18n-en">Timeline</span><span class="i18n-zh">專案時程</span></dt>
+          <dd><span class="i18n-en">~9 weeks (15 Jan – 14 Mar)</span><span class="i18n-zh">約 9 週(1 月 15 日 – 3 月 14 日)</span></dd>
+        </div>
+      </dl>
+      <hr>
+
+      <h2><span class="i18n-en">Setting It Up</span><span class="i18n-zh">專案的起點</span></h2>
+      <p class="i18n-en">I proposed closing that gap to my manager. She agreed, and let me own the project end-to-end — to understand user behavior, pain points, and expectations, and turn that into personas and a prioritised list of fixes the team could design around.</p>
+      <p class="i18n-zh">我向主管提案來補上這個缺口。她同意了,並讓我端到端主導整個專案——目標是理解使用者的行為、痛點與期待,並將其轉化為人物誌與一份團隊能據以設計、具優先順序的改善清單。</p>
+
+      <div class="steps">
+        <div class="step">
+          <div class="step-num" aria-hidden="true">1</div>
+          <div class="step-body">
+            <h4><span class="i18n-en">Drafted the plan</span><span class="i18n-zh">擬定研究計畫</span></h4>
+            <p class="i18n-en">Objectives, timeline, target participants, interview structure.</p>
+            <p class="i18n-zh">研究目標、時程、目標受訪者與訪談架構。</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num" aria-hidden="true">2</div>
+          <div class="step-body">
+            <h4><span class="i18n-en">Reviewed with my manager</span><span class="i18n-zh">與主管審核討論</span></h4>
+            <p class="i18n-en">Revised the plan based on her feedback.</p>
+            <p class="i18n-zh">根據她的回饋修訂計畫。</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num" aria-hidden="true">3</div>
+          <div class="step-body">
+            <h4><span class="i18n-en">Looped in stakeholders</span><span class="i18n-zh">串聯利害關係人</span></h4>
+            <p class="i18n-en"><strong>Finance</strong> for the incentive, <strong>Data</strong> for the participant name list, <strong>Marketing</strong> for the EDM and web push.</p>
+            <p class="i18n-zh"><strong>財務部</strong>負責獎勵金、<strong>數據團隊</strong>提供受訪者名單、<strong>行銷團隊</strong>協助 EDM 與網頁推播。</p>
+          </div>
+        </div>
+      </div>
+
+      <figure>
+        <img src="img/imoney-planning.png" alt="Research plan board in FigJam covering objectives, timeline, target participants, and interview structure" loading="lazy">
+      </figure>
+
+      <h2><span class="i18n-en">The Research Process</span><span class="i18n-zh">研究流程</span></h2>
+      <p class="i18n-en">Two phases: a survey to understand <em>what</em> was happening at scale, then interviews to understand <em>why</em>.</p>
+      <p class="i18n-zh">研究分為兩個階段:先透過問卷大規模了解「發生了什麼事」,再透過訪談深入理解「為什麼」。</p>
+
+      <figure>
+        <img src="img/research-process.png" alt="Four-phase timeline: survey (15–28 Jan, 130 responses via EDM and web push), recruit (17–21 Feb, invite opted-in respondents), interviews (24 Feb–7 Mar, 4 participants, 30-minute video calls), and synthesis (10–14 Mar, themes, personas and recommendations)" loading="lazy">
+      </figure>
+
+      <p class="i18n-en"><strong>The survey</strong> ran for two weeks (15–28 Jan) via 2 EDMs and 2 web pushes, closing with 130 responses across 9 questions on brand awareness, usage, satisfaction, and demographics. The last question doubled as recruitment — <em>open to a follow-up interview?</em> — so Phase 2 needed no separate campaign.</p>
+      <p class="i18n-zh"><strong>問卷調查</strong>為期兩週(1 月 15 日至 28 日),透過 2 次 EDM 與 2 次網頁推播發送,最終收到 130 份回覆,涵蓋品牌認知、使用情形、滿意度與人口屬性共 9 道題目。最後一題同時肩負招募任務——是否願意接受後續訪談?——因此第二階段完全不需要另外進行招募。</p>
+
+      <h3><span class="i18n-en">What the Survey Showed</span><span class="i18n-zh">問卷告訴我們的事</span></h3>
+      <p class="i18n-en">Loans and credit cards topped what people used iMoney for, but comparison and content weren’t far behind.</p>
+      <p class="i18n-zh">貸款與信用卡是使用者使用 iMoney 的首要原因,但比較與內容也緊追在後。</p>
+
+      <figure>
+        <img src="img/survey-usage-chart.png" alt="What do users use iMoney for - bar chart" loading="lazy">
+      </figure>
+
+      <p class="i18n-en">Engagement was mostly infrequent — 63% used iMoney monthly or less.</p>
+      <p class="i18n-zh">使用頻率大多不高——63% 的使用者每月使用一次或更少。</p>
+
+      <figure>
+        <img src="img/survey-engagement-chart.png" alt="How often do users engage with iMoney - donut chart" loading="lazy">
+      </figure>
+
+      <div class="compare-grid">
+        <div class="compare-card compare-card-outline">
+          <h4><span class="i18n-en">What’s Working</span><span class="i18n-zh">做得好的部分</span></h4>
+          <ul class="i18n-en">
+            <li>Good <strong>financial guidance / tips</strong></li>
+            <li>Ability to <strong>compare</strong> financial products</li>
+            <li>The credit card <strong>comparison tool</strong></li>
+          </ul>
+          <ul class="i18n-zh">
+            <li>實用的<strong>理財指南與貼士</strong></li>
+            <li>能夠<strong>比較</strong>各種金融產品</li>
+            <li>信用卡<strong>比較工具</strong></li>
+          </ul>
+        </div>
+        <div class="compare-card compare-card-outline">
+          <h4><span class="i18n-en">What Needs Improvement</span><span class="i18n-zh">待改善的部分</span></h4>
+          <ul class="i18n-en">
+            <li><strong>Faster response</strong> to applications</li>
+            <li><strong>Status updates</strong> on applications</li>
+            <li><strong>Better deals</strong> to motivate applying</li>
+          </ul>
+          <ul class="i18n-zh">
+            <li><strong>更快回應</strong>申請</li>
+            <li>申請進度的<strong>狀態更新</strong></li>
+            <li><strong>更吸引人的優惠</strong>以提高申請意願</li>
+          </ul>
+        </div>
+      </div>
+
+      <h3><span class="i18n-en">Then, Digging Into the Why</span><span class="i18n-zh">接著,深入探究原因</span></h3>
+      <p class="i18n-en">The survey told us people wanted faster responses, clearer status updates, and better deals — not why those mattered enough to leave over. So I followed up with four 30-minute video interviews (24 Feb–7 Mar), branched by usage frequency. The three most comprehensive respondents received a RM50 Touch ’n Go e-credit as thanks.</p>
+      <p class="i18n-zh">問卷告訴我們使用者想要更快的回應、更清楚的狀態更新、更好的優惠——卻沒告訴我們這些事情為什麼重要到足以讓人離開。於是我進行了四場 30 分鐘的視訊訪談(2 月 24 日至 3 月 7 日),依據使用頻率分流。回答最完整的三位受訪者獲得 RM50 Touch 'n Go 電子錢包回饋金作為感謝。</p>
+
+      <div class="callout">
+        <div>
+          <p class="callout-title"><strong><span class="i18n-en">How might we</span><span class="i18n-zh">我們可以如何</span></strong></p>
+          <p class="i18n-en">help users feel proactively supported, build trust through accurate content, and reduce friction — so they return not just when they need a product, but because they trust it?</p>
+          <p class="i18n-zh">讓使用者感受到主動的支持、透過準確的內容建立信任,並降低阻力——讓他們回訪不只是因為需要某項產品,而是因為信任這個平台?</p>
+        </div>
+      </div>
+
+      <h2><span class="i18n-en">Meet the Users Behind the Numbers</span><span class="i18n-zh">認識數字背後的使用者</span></h2>
+      <p class="i18n-en">Four interviews, layered on 130 survey responses, surfaced four distinct relationships with iMoney.</p>
+      <p class="i18n-zh">四場訪談疊加在 130 份問卷回覆之上,浮現出四種截然不同的「與 iMoney 的關係」。</p>
+
+      <figure>
+        <img src="img/persona-cards.png" alt="Four user personas: Kelly the Deal Seeker, Sarah the Urgent Borrower, Iskandar the First-Time Borrower, and John the Financial Planner" loading="lazy">
+      </figure>
+
+      <p class="i18n-en">From here, the team could design around <em>Sarah</em> or <em>John</em> instead of arguing about what “the user” wanted.</p>
+      <p class="i18n-zh">從此以後,團隊可以直接針對 <em>Sarah</em> 或 <em>John</em> 來設計,而不必再爭論「使用者」到底想要什麼。</p>
+
+      <h2><span class="i18n-en">Findings & Actions</span><span class="i18n-zh">我們的發現——以及我們的因應之道</span></h2>
+      <p class="i18n-en">iMoney didn’t have a formal roadmap for this area yet, so each proposal needed to make its own case. Each finding below pairs a user’s voice with a proposed fix — so the report doubled as a starting roadmap.</p>
+      <p class="i18n-zh">iMoney 在這個領域尚未有正式的路線圖,因此每項提案都得自己站得住腳。以下每項發現都以使用者的聲音搭配對應的解方——讓這份報告同時也是一份起始路線圖。</p>
+
+      <div class="findings-grid">
+        <div class="finding finding-a">
+          <div class="finding-voice">
+            <p class="finding-quote i18n-en">“I never heard back.”</p>
+            <p class="finding-quote i18n-zh">「我後來都沒收到回覆。」</p>
+            <p class="finding-attrib"><span class="i18n-en">— Interview participant</span><span class="i18n-zh">—— 受訪者</span></p>
+          </div>
+          <div class="finding-body">
+            <div class="finding-block">
+              <span class="finding-label i18n-en">Finding</span>
+              <span class="finding-label i18n-zh">發現</span>
+              <p class="i18n-en">Users expected iMoney to follow up after showing intent; silence read as neglect.</p>
+              <p class="i18n-zh">使用者在展現意願後,期待 iMoney 主動跟進;沉默則被解讀為忽視。</p>
+            </div>
+            <div class="finding-block">
+              <span class="finding-label i18n-en">Fix</span>
+              <span class="finding-label i18n-zh">解方</span>
+              <p class="i18n-en">An improved application tracker with real-time status updates.</p>
+              <p class="i18n-zh">升級版申請進度追蹤器,提供即時狀態更新。</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="finding finding-b">
+          <div class="finding-voice">
+            <p class="finding-quote i18n-en">“The content felt so outdated, I wasn’t sure if I was looking at the right info.”</p>
+            <p class="finding-quote i18n-zh">「內容感覺好過時,我都不確定自己看到的資訊是不是正確的。」</p>
+            <p class="finding-attrib"><span class="i18n-en">— Interview participant</span><span class="i18n-zh">—— 受訪者</span></p>
+          </div>
+          <div class="finding-body">
+            <div class="finding-block">
+              <span class="finding-label i18n-en">Finding</span>
+              <span class="finding-label i18n-zh">發現</span>
+              <p class="i18n-en">Stale content made people doubt the rest of the platform too.</p>
+              <p class="i18n-zh">過時的內容也讓使用者開始懷疑平台上其他資訊。</p>
+            </div>
+            <div class="finding-block">
+              <span class="finding-label i18n-en">Fix</span>
+              <span class="finding-label i18n-zh">解方</span>
+              <p class="i18n-en">Keep product details current — treat accuracy as a trust feature.</p>
+              <p class="i18n-zh">讓產品資訊保持時效性——將準確度視為一項信任功能。</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="finding finding-a">
+          <div class="finding-voice">
+            <p class="finding-quote i18n-en">“I visit iMoney more than [a competitor] — for the articles.”</p>
+            <p class="finding-quote i18n-zh">「我造訪 iMoney 的頻率比〔某競品〕還高——是為了文章。」</p>
+            <p class="finding-attrib"><span class="i18n-en">— Interview participant</span><span class="i18n-zh">—— 受訪者</span></p>
+          </div>
+          <div class="finding-body">
+            <div class="finding-block">
+              <span class="finding-label i18n-en">Finding</span>
+              <span class="finding-label i18n-zh">發現</span>
+              <p class="i18n-en">A strength to protect: editorial content was quietly driving repeat visits.</p>
+              <p class="i18n-zh">這是需要守護的優勢:編輯內容本身默默帶動了不少回訪。</p>
+            </div>
+            <div class="finding-block">
+              <span class="finding-label i18n-en">Fix</span>
+              <span class="finding-label i18n-zh">解方</span>
+              <p class="i18n-en">More accurate article recommendations.</p>
+              <p class="i18n-zh">優化文章推薦的精準度。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h3><span class="i18n-en">Also on the Roadmap</span><span class="i18n-zh">路線圖上的其他項目</span></h3>
+
+      <div class="compare-grid">
+        <div class="compare-card compare-card-outline">
+          <h4><span class="i18n-en">Quick Wins</span><span class="i18n-zh">快速見效</span></h4>
+          <ul class="i18n-en">
+            <li>One-click reapplication using stored data</li>
+            <li>Comparison tool expansion to products like personal loans</li>
+            <li>Reevaluating the end-to-end journey for drop-off points</li>
+          </ul>
+          <ul class="i18n-zh">
+            <li>使用已儲存資料的一鍵重新申請</li>
+            <li>比較工具擴充至個人貸款等產品</li>
+            <li>重新檢視端到端旅程,找出流失節點</li>
+          </ul>
+        </div>
+        <div class="compare-card compare-card-outline">
+          <h4><span class="i18n-en">Longer-Term Bets</span><span class="i18n-zh">長期投資</span></h4>
+          <ul class="i18n-en">
+            <li>Personalised recommendations based on spending habits and goals</li>
+            <li>Seamless e-KYC to cut application friction</li>
+          </ul>
+          <ul class="i18n-zh">
+            <li>根據消費習慣與目標提供的個人化推薦</li>
+            <li>能降低申請阻力的無縫 e-KYC</li>
+          </ul>
+        </div>
+      </div>
+
+      <h3><span class="i18n-en">Prioritising the Fixes: Impact vs. Effort</span><span class="i18n-zh">決定優先順序:影響力 vs. 投入成本</span></h3>
+      <p class="i18n-en">To make the case for what to act on first, I mapped every proposal against impact and effort:</p>
+      <p class="i18n-zh">為了說明應該先從哪裡著手,我將每項提案依影響力與投入成本進行了評估:</p>
+
+      <figure>
+        <img src="img/imoney-impact-matrix.png" alt="Impact vs. effort matrix mapping the recommended fixes into quadrants" loading="lazy">
+      </figure>
+
+      <h2><span class="i18n-en">Where Things Stand Now</span><span class="i18n-zh">目前的進展</span></h2>
+      <p class="i18n-en">I presented the findings and recommendations to the product team, and the quick wins became the first items on what’s now iMoney’s roadmap for this area. Movement has been gradual — some are progressing, others are still being weighed against engineering priorities.</p>
+      <p class="i18n-zh">我將研究發現與建議提案回報給產品團隊,快速見效方案也成為 iMoney 在這個領域路線圖上的首批項目。進展是漸進式的——部分已在推進,其餘則仍在與工程優先順序權衡中。</p>
+
+      <p class="i18n-en">Going forward, I’m watching return visit rate, application completion rate, and article engagement to see if the trust gap has narrowed.</p>
+      <p class="i18n-zh">接下來,我會持續關注回訪率、申請完成率與文章互動率,了解信任缺口是否已有所縮小。</p>
+
+      <h2><span class="i18n-en">What I’d Do Differently</span><span class="i18n-zh">下次我會怎麼做</span></h2>
+
+      <div class="takeaways-grid">
+        <div class="takeaway">
+          <h3><span class="i18n-en">Small Samples Still Move Things Forward, If You Pair Them Right</span><span class="i18n-zh">小樣本只要搭配得當,依然能推動事情前進</span></h3>
+          <p class="i18n-en">Four interviews felt thin alone, but layered on survey data they surfaced sharp themes fast.</p>
+          <p class="i18n-zh">單看四場訪談確實單薄,但疊加在問卷數據之上,卻能快速浮現出清晰的主題。</p>
+        </div>
+        <div class="takeaway">
+          <h3><span class="i18n-en">Incentive Design Shapes the Data, Not Just the Turnout</span><span class="i18n-zh">誘因設計影響的不只是參與率,還有資料本身</span></h3>
+          <p class="i18n-en">Rewarding “most comprehensive” over “participated” nudged more thoughtful answers.</p>
+          <p class="i18n-zh">獎勵「回答最完整」而非「有參與」,促使受訪者給出更深思熟慮的回答。</p>
+        </div>
+        <div class="takeaway">
+          <h3><span class="i18n-en">Don’t Let the Fixes Crowd Out the Wins</span><span class="i18n-zh">別讓「待改善」淹沒了「做得好」的部分</span></h3>
+          <p class="i18n-en">Naming what already worked — iMoney’s editorial content — gave the team something to protect, not just problems to solve.</p>
+          <p class="i18n-zh">特別點名已經奏效的部分——iMoney 的編輯內容——讓團隊除了要解決的問題之外,也有值得守護的成果。</p>
+        </div>
+      </div>
+
+      <hr>
+
+      <p class="i18n-en" style="font-size: 0.95rem; color: var(--muted);"><em>Note: participant identities and raw contact details have been kept confidential; all figures and quotes above are drawn directly from the original survey and interview data.</em></p>
+      <p class="i18n-zh" style="font-size: 0.95rem; color: var(--muted);"><em>備註:受訪者身分與原始聯絡資訊均已保密;以上所有數據與引述皆直接取自原始問卷與訪談資料。</em></p>
+    </article>
+
+    <nav class="case-nav" aria-label="Project navigation">
+      <a href="hiredly-resume.html" class="prev">
+        <span class="label"><span class="i18n-en">← Previous</span><span class="i18n-zh">← 上一篇</span></span>
+        <span class="title"><span class="i18n-en">Hiredly’s Resume Builder</span><span class="i18n-zh">Hiredly 的履歷產生器</span></span>
+      </a>
+      <a href="funhub-deals.html" class="next">
+        <span class="label"><span class="i18n-en">Next →</span><span class="i18n-zh">下一篇 →</span></span>
+        <span class="title"><span class="i18n-en">Revamping the Funhub App’s Deals and Voucher Pages</span><span class="i18n-zh">重新設計 Funhub App 的優惠與票券頁面</span></span>
+      </a>
+    </nav>
+  </main>
+
+  <div id="footer-mount"></div>
+
+</body>
+</html>

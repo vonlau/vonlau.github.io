@@ -3,54 +3,62 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Evonne Lau's Portfolio</title>
-  <meta name="description" content="Evonne's portfolio">
+  <title data-zh="Evonne Lau 的作品集">Evonne Lau's Portfolio</title>
+  <meta name="description" data-zh="Evonne 的作品集" content="Evonne's portfolio">
   <link rel="icon" type="image/png" href="img/header-icon.png">
   <link rel="stylesheet" href="css/style.css">
+  <script>(function(){try{if(localStorage.getItem("site-lang")==="zh")document.documentElement.setAttribute("data-lang","zh");}catch(e){}})();</script>
   <script src="js/main.js" defer></script>
 </head>
 <body class="page-home">
 
   <header class="site-header">
     <a class="wordmark pill" href="index.html">Evonne L&nbsp;<img class="bloom" src="img/header-icon.png" alt="" width="289" height="270" loading="lazy"></a>
-    <nav class="site-nav" aria-label="Main">
-      <details class="nav-dropdown">
-        <summary class="pill nav-dropdown-toggle">Work<svg class="dropdown-arrow" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m19.5 8.25-7.5 7.5-7.5-7.5"/></svg></summary>
-        <div class="nav-dropdown-menu">
-          <a href="#work" class="is-current" aria-current="page">Work</a>
-          <a href="about.html">About Me</a>
-          <a href="photography.html">Photography</a>
-          <a href="side-projects.html">Side Projects</a>
-        </div>
-      </details>
-    </nav>
+    <div class="site-header-actions">
+      <nav class="site-nav" aria-label="Main">
+        <details class="nav-dropdown">
+          <summary class="pill nav-dropdown-toggle"><span class="i18n-en">Work</span><span class="i18n-zh">作品</span><svg class="dropdown-arrow" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m19.5 8.25-7.5 7.5-7.5-7.5"/></svg></summary>
+          <div class="nav-dropdown-menu">
+            <a href="#work" class="is-current" aria-current="page"><span class="i18n-en">Work</span><span class="i18n-zh">作品</span></a>
+            <a href="about.html"><span class="i18n-en">About Me</span><span class="i18n-zh">關於我</span></a>
+            <a href="photography.html"><span class="i18n-en">Photography</span><span class="i18n-zh">攝影</span></a>
+            <a href="side-projects.html"><span class="i18n-en">Side Projects</span><span class="i18n-zh">個人專案</span></a>
+          </div>
+        </details>
+      </nav>
+      <button type="button" class="lang-toggle" aria-pressed="false" aria-label="Switch language / 切換語言">
+        <span class="lang-toggle-knob" aria-hidden="true"></span>
+        <span class="lang-toggle-option lang-toggle-option-en">EN</span>
+        <span class="lang-toggle-option lang-toggle-option-zh">中</span>
+      </button>
+    </div>
   </header>
 
   <main>
     <section class="hero">
       <div class="hero-panel">
         <div class="hero-content">
-          <h1 class="fade-in delay-1">Hello! I’m Evonne</h1>
-          <p class="tagline fade-in delay-2"> I design experiences people love using, shoot anything from food to skies to my cats mid-judgment, and doodle badly but with real enthusiasm.</p>
+          <h1 class="fade-in delay-1"><span class="i18n-en">Hello! I’m Evonne</span><span class="i18n-zh">哈囉！我是 Evonne</span></h1>
+          <p class="tagline fade-in delay-2"><span class="i18n-en"> I design experiences people love using, shoot anything from food to skies to my cats mid-judgment, and doodle badly but with real enthusiasm.</span><span class="i18n-zh">我設計讓人愛不釋手的使用體驗,鏡頭下什麼都拍——美食、天空,還有我家貓咪一臉嫌棄的瞬間,偶爾也會充滿熱忱地畫些不怎麼樣的塗鴉。</span></p>
         </div>
 
         <nav class="hero-notes" aria-label="Explore the portfolio">
           <a class="sticky-note note-b" href="#work">
             <img class="note-icon" src="img/icon-work.png" alt="" width="434" height="434" loading="lazy">
-            <span class="note-label">Work</span>
+            <span class="note-label"><span class="i18n-en">Work</span><span class="i18n-zh">作品</span></span>
             <img class="note-scroll-hint" src="img/scroll.png" alt="" width="372" height="153" loading="lazy">
           </a>
           <a class="sticky-note note-a" href="about.html">
             <img class="note-icon" src="img/icon-aboutme.png" alt="" width="434" height="434" loading="lazy">
-            <span class="note-label">About Me</span>
+            <span class="note-label"><span class="i18n-en">About Me</span><span class="i18n-zh">關於我</span></span>
           </a>
           <a class="sticky-note note-c" href="photography.html">
             <img class="note-icon" src="img/icon-photo.png" alt="" width="434" height="434" loading="lazy">
-            <span class="note-label">Photography</span>
+            <span class="note-label"><span class="i18n-en">Photography</span><span class="i18n-zh">攝影</span></span>
           </a>
           <a class="sticky-note note-d" href="side-projects.html">
             <img class="note-icon" src="img/icon-sideprojects.png" alt="" width="434" height="434" loading="lazy">
-            <span class="note-label">Side Projects</span>
+            <span class="note-label"><span class="i18n-en">Side Projects</span><span class="i18n-zh">個人專案</span></span>
           </a>
         </nav>
       </div>
@@ -58,8 +66,20 @@
     </section>
 
     <section class="work" id="work">
-      <h2>Selected Works</h2>
+      <h2><span class="i18n-en">Selected Works</span><span class="i18n-zh">精選作品</span></h2>
       <div class="work-grid">
+
+         <a class="tile tile-b" href="work/imoney-user-research.html" data-reveal>
+          <figure class="tile-media">
+            <img src="work/img/imoney-user-research-thumbnail.jpg" alt="From Survey to Interview: understanding why iMoney users stay or leave — placeholder thumbnail" loading="lazy">
+          </figure>
+          <div class="tile-caption">
+            <div>
+              <h3><span class="i18n-en">From Survey to Interview: Why iMoney Users Stay or Leave</span><span class="i18n-zh">從問卷到訪談:理解 iMoney 使用者為何留下或離開</span></h3>
+            </div>
+            <span class="tile-arrow" aria-hidden="true">→</span>
+          </div>
+        </a>
 
         <a class="tile tile-a" href="work/funhub-deals.html" data-reveal>
           <figure class="tile-media">
@@ -67,7 +87,7 @@
           </figure>
           <div class="tile-caption">
             <div>
-              <h3>Revamping the Funhub App’s Deals and Voucher Pages</h3>
+              <h3><span class="i18n-en">Revamping the Funhub App’s Deals and Voucher Pages</span><span class="i18n-zh">重新設計 Funhub App 的優惠與票券頁面</span></h3>
             </div>
             <span class="tile-arrow" aria-hidden="true">→</span>
           </div>
@@ -79,23 +99,23 @@
           </figure>
           <div class="tile-caption">
             <div>
-              <h3>Improving the Sign Up Flow for Funhub App</h3>
+              <h3><span class="i18n-en">Improving the Sign Up Flow for Funhub App</span><span class="i18n-zh">優化 Funhub App 的註冊流程</span></h3>
             </div>
             <span class="tile-arrow" aria-hidden="true">→</span>
           </div>
         </a>
 
-        <a class="tile tile-b" href="work/hiredly-onboarding.html" data-reveal>
+        <!-- <a class="tile tile-b" href="work/hiredly-onboarding.html" data-reveal>
           <figure class="tile-media">
             <img src="work/img/hiredly-onboarding-338bb98c79.jpg" alt="Hiredly onboarding flow redesign — hero visual" loading="lazy">
           </figure>
           <div class="tile-caption">
             <div>
-              <h3>Redesigning Hiredly’s Onboarding Flow</h3>
+              <h3><span class="i18n-en">Redesigning Hiredly’s Onboarding Flow</span><span class="i18n-zh">重新設計 Hiredly 的新手導覽流程</span></h3>
             </div>
             <span class="tile-arrow" aria-hidden="true">→</span>
           </div>
-        </a>
+        </a> -->
 
         <a class="tile tile-a" href="work/hiredly-resume.html" data-reveal>
           <figure class="tile-media">
@@ -103,11 +123,13 @@
           </figure>
           <div class="tile-caption">
             <div>
-              <h3>Hiredly’s Resume Builder (w. User Profile Redesign)</h3>
+              <h3><span class="i18n-en">Hiredly’s Resume Builder (w. User Profile Redesign)</span><span class="i18n-zh">Hiredly 的履歷產生器(含個人檔案重新設計)</span></h3>
             </div>
             <span class="tile-arrow" aria-hidden="true">→</span>
           </div>
         </a>
+
+       
 
       </div>
     </section>
