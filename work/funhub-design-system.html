@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-zh="在改版途中重建 Funhub 的設計系統 — Enn-wen">Rebuilding Funhub’s Design System, Mid-Revamp — Enn-wen</title>
+  <meta name="description" data-zh="設計系統案例分享:在全站改版進行中,獨自將一套數值全寫死的元件庫,從變數、原子元件到完整元件重建為以變數驅動的設計系統。" content="Design system case study: rebuilding a hard-coded component library into a variable-driven system — variables, atoms, then components — solo, mid-revamp.">
+  <link rel="icon" type="image/png" href="../img/header-icon.png">
+  <link rel="stylesheet" href="../css/style.css">
+  <script>(function(){try{if(localStorage.getItem("site-lang")==="zh")document.documentElement.setAttribute("data-lang","zh");}catch(e){}})();</script>
+  <script src="../js/main.js" defer></script>
+</head>
+<body>
+
+  <header class="site-header">
+    <a class="wordmark pill" href="../index.html">Evonne L&nbsp;<img class="bloom" src="../img/header-icon.png" alt="" width="289" height="270" loading="lazy"></a>
+    <div class="site-header-actions">
+      <nav class="site-nav" aria-label="Main">
+        <details class="nav-dropdown">
+          <summary class="pill nav-dropdown-toggle"><span class="i18n-en">Work</span><span class="i18n-zh">作品</span><svg class="dropdown-arrow" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m19.5 8.25-7.5 7.5-7.5-7.5"/></svg></summary>
+          <div class="nav-dropdown-menu">
+            <a href="../index.html#work" class="is-current" aria-current="page"><span class="i18n-en">Work</span><span class="i18n-zh">作品</span></a>
+            <a href="../about.html"><span class="i18n-en">About Me</span><span class="i18n-zh">關於我</span></a>
+            <a href="../photography.html"><span class="i18n-en">Photography</span><span class="i18n-zh">攝影</span></a>
+            <a href="../side-projects.html"><span class="i18n-en">Side Projects</span><span class="i18n-zh">個人專案</span></a>
+          </div>
+        </details>
+      </nav>
+      <button type="button" class="lang-toggle" aria-pressed="false" aria-label="Switch language / 切換語言">
+        <span class="lang-toggle-knob" aria-hidden="true"></span>
+        <span class="lang-toggle-option lang-toggle-option-en">EN</span>
+        <span class="lang-toggle-option lang-toggle-option-zh">中</span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="case-hero">
+      <span class="category"><span class="i18n-en">Design System · Mobile App</span><span class="i18n-zh">設計系統・行動應用程式</span></span>
+      <h1><span class="i18n-en">Rebuilding Funhub’s Design System, Mid-Revamp</span><span class="i18n-zh">在改版途中重建 Funhub 的設計系統</span></h1>
+      <p class="lede"><span class="i18n-en">How I rebuilt a broken, hard-coded component library into a variable-driven system — solo, while the whole app was being redesigned around me.</span><span class="i18n-zh">我如何在全公司進行 App 改版的同時,獨自將一套破碎、數值全寫死的元件庫,重建成以變數驅動的設計系統。</span></p>
+    </section>
+
+    <div class="case-cover">
+      <div class="figure-placeholder">
+        <p><strong><span class="i18n-en">Hero Image</span><span class="i18n-zh">主視覺圖片</span></strong><br>
+        <span class="i18n-en">Overview page of the rebuilt component library in Figma — a clean, organised grid of core components.</span><span class="i18n-zh">重建後的 Figma 元件庫總覽頁面——整齊有序的核心元件排列。</span></p>
+      </div>
+    </div>
+
+    <article class="case-body">
+      <h2><span class="i18n-en">Overview</span><span class="i18n-zh">專案概述</span></h2>
+      <p class="i18n-en">Funhub TV is a Malaysian entertainment and social commerce app — a content feed with a built-in shop and a virtual credit system called <strong>Funbox</strong>, earned by topping up (buying a FunCard) or completing missions in campaigns and events.</p>
+      <p class="i18n-zh">Funhub TV 是一款馬來西亞的娛樂與社交電商 App——內容動態牆結合內建商城,以及名為 <strong>Funbox</strong> 的虛擬點數系統,使用者可透過儲值(購買 FunCard)或完成活動任務來獲得。</p>
+      <p class="i18n-en">As a small startup racing toward a full app revamp, there was one designer on the team: me. The existing design system had been built by a junior designer earlier on — and it was quietly holding everyone back. This project was about <strong>rebuilding it from the foundation up</strong>: variables first, then atoms, then components — right-sized for a one-designer startup rather than a textbook system.</p>
+      <p class="i18n-zh">作為一間正全力衝刺 App 全面改版的小型新創,團隊裡只有一位設計師:我。原有的設計系統是由一位資淺設計師早期建立的——而它正悄悄拖慢所有人的進度。這個專案的目標,是<strong>從最底層重新打造它</strong>:先變數、再原子元件、最後才是完整元件——並且是為「只有一位設計師的新創」量身打造,而不是照搬教科書上的做法。</p>
+
+      <hr>
+      <dl class="meta">
+        <div>
+          <dt><span class="i18n-en">Role</span><span class="i18n-zh">角色</span></dt>
+          <dd><span class="i18n-en">Sole Product Designer · Design System Lead</span><span class="i18n-zh">唯一產品設計師・設計系統負責人</span></dd>
+        </div>
+        <div>
+          <dt><span class="i18n-en">Team</span><span class="i18n-zh">團隊</span></dt>
+          <dd><span class="i18n-en">1 designer, 1 developer, 1 PM</span><span class="i18n-zh">1 位設計師、1 位工程師、1 位產品經理</span></dd>
+        </div>
+        <div>
+          <dt><span class="i18n-en">Tools</span><span class="i18n-zh">工具</span></dt>
+          <dd><span class="i18n-en">Figma (variables, components)</span><span class="i18n-zh">Figma(變數、元件)</span></dd>
+        </div>
+      </dl>
+      <hr>
+
+      <h2><span class="i18n-en">Problem</span><span class="i18n-zh">問題</span></h2>
+      <!-- <h3><span class="i18n-en">No Foundation — So the System Fought Back</span><span class="i18n-zh">沒有地基,所以系統反過來扯後腿</span></h3> -->
+      <p class="i18n-en">When I picked up the project, the broken parts were immediate:</p>
+      <p class="i18n-zh">接手這個專案時,問題幾乎一眼就能看見:</p>
+      <div class="takeaways-grid takeaways-grid-2">
+        <div class="takeaway">
+          <h3><span class="i18n-en">Out of Date</span><span class="i18n-zh">內容過時</span></h3>
+          <p class="i18n-en">Components no longer matched what was live in the app, so the library couldn’t be trusted as a reference.</p>
+          <p class="i18n-zh">元件已經與線上實際的 App 對不上,導致元件庫無法被當作可信的參考依據。</p>
+        </div>
+        <div class="takeaway">
+          <h3><span class="i18n-en">Awkward Variant Structure</span><span class="i18n-zh">變體結構混亂</span></h3>
+          <p class="i18n-en">Swapping states and editing properties in Figma was clumsy and slow — friction on every single screen.</p>
+          <p class="i18n-zh">在 Figma 中切換狀態、修改屬性既笨拙又緩慢——每一個畫面都得付出這樣的摩擦成本。</p>
+        </div>
+        <div class="takeaway">
+          <h3><span class="i18n-en">Never Shared</span><span class="i18n-zh">從未共享</span></h3>
+          <p class="i18n-en">The library lived in one design file, so engineering and the PM never touched it.</p>
+          <p class="i18n-zh">元件庫只存在於單一設計檔案中,工程師與產品經理因此從未使用過它。</p>
+        </div>
+         <div class="takeaway">
+          <h3><span class="i18n-en">No Variables</span><span class="i18n-zh">沒有使用變數</span></h3>
+          <p class="i18n-en">Colour, type, and spacing were hard-coded into every component. There was no single place to change anything.</p>
+          <p class="i18n-zh">顏色、字體與間距全部寫死在每個元件裡,沒有任何一個地方能統一修改。</p>
+        </div>
+      </div>
+      <p class="i18n-en">The first three were visible. The fourth was underneath all of them — and it was the one that mattered. <strong>Without variables, nothing in the system could change at scale.</strong> A design system is meant to make the work faster; this one did the opposite.</p>
+      <p class="i18n-zh">前三項是看得見的問題,第四項則潛藏在它們底下——而那才是真正關鍵的一項。<strong>沒有變數,系統裡的任何東西都無法一次性地被改動。</strong>設計系統的存在是為了讓工作更快,但這一套做的正好相反。</p>
+
+      <!-- <div class="callout">
+        <div>
+          <p class="callout-title"><strong><span class="i18n-en">The Breaking Point</span><span class="i18n-zh">壓垮駱駝的那一刻</span></strong></p>
+          <p class="i18n-en">When we decided to give the app a fresh look and <strong>change the font</strong>, there was nowhere to change it once. It would have meant editing every component by hand, one at a time. That was the moment the cost of the old structure became undeniable.</p>
+          <p class="i18n-zh">當我們決定為 App 換上新面貌、<strong>更換字體</strong>時,卻找不到任何一個地方可以一次改完——只能一個一個打開元件手動修改。那一刻,舊結構的代價再也無法忽視。</p>
+        </div>
+      </div> -->
+      <!-- <figure>
+        <div class="figure-placeholder">
+          <p><strong><span class="i18n-en">Before</span><span class="i18n-zh">改版前</span></strong><br>
+          <span class="i18n-en">Annotated screenshot of the old variant panel and messy layer structure — the tangled “before” state.</span><span class="i18n-zh">標註過的舊版變體面板與雜亂圖層結構截圖——混亂的「改版前」狀態。</span></p>
+        </div>
+      </figure> -->
+
+      <h2><span class="i18n-en">Goal</span><span class="i18n-zh">目標</span></h2>
+      <div class="takeaways-grid takeaways-grid-2">
+        <div class="takeaway">
+          <h3><span class="i18n-en">Build the Foundation It Never Had</span><span class="i18n-zh">補上它從來沒有的地基</span></h3>
+          <p class="i18n-en">Put variables underneath everything, so a system-wide change — a colour, a spacing rule, a typeface — is one edit instead of a component-by-component slog.</p>
+          <p class="i18n-zh">先把變數鋪在所有東西底下,讓任何全域性的調整——換顏色、改間距、換字體——都只需要一次修改,而不是一個一個元件慢慢改。</p>
+        </div>
+        <div class="takeaway">
+          <h3><span class="i18n-en">Right-Size It So the Team Actually Uses It</span><span class="i18n-zh">規模要剛好,團隊才會真的用</span></h3>
+          <p class="i18n-en">Keep the scope to what a lean team mid-delivery can absorb, turn the library from a private design file into something engineering and the PM can reference, and document it so it survives whoever joins next.</p>
+          <p class="i18n-zh">把範圍控制在「正在趕交付的精實團隊」能承受的程度,把元件庫從設計師的私人檔案變成工程師與產品經理都能查閱的資源,並留下文件,讓它能延續到下一位加入的人。</p>
+        </div>
+      </div>
+
+      <h2><span class="i18n-en">Discover and Define</span><span class="i18n-zh">探索與定義</span></h2>
+      <h3><span class="i18n-en">A Fast-Moving App With a Slow-Moving Library</span><span class="i18n-zh">快速前進的 App,追不上的元件庫</span></h3>
+      <p class="i18n-en">I audited the component library — checking what was stale, duplicated, or most-used — and found the real problem: too many hard-coded values instead of shared tokens. That turned this from a cleanup into a full rebuild.</p>
+      <p class="i18n-zh">我以 App 實際上線的內容為基準盤點現有元件庫:哪些元件已經過期、哪些在不同檔案中重複、團隊最常使用哪些元件——以及最底層的那一項:有多少數值是直接寫死、而非引用而來的。最後這項發現改變了整個專案的定位:這不是一次整理,而是一次從地基開始的重建。</p>
+      <figure>
+        <img src="img/design-system-product-context.png" alt="The old variant panel beside the rebuilt properties panel for the same button component" loading="lazy">
+      </figure>
+
+      <h3><span class="i18n-en">The Real Question</span><span class="i18n-zh">真正的問題</span></h3>
+      <p class="i18n-en">A fully code-tokenized system is the end goal — but not the right move for where we were: a lean startup mid-revamp, delivering fast, with a developer who'd never worked with design systems. The real question wasn't <em>how much system to build, but how much the team could actually absorb right now.</em></p>
+      <p class="i18n-zh">教科書上的做法,是先暫停一切,打造一套完整、連程式碼 token 都到位的系統。但在這裡那是錯的判斷。我們是正在交付中的精實新創,而且工程師從未使用過設計系統。真正的問題從來不是<em>要建多大的系統</em>,而是<em>這個團隊能吸收多少</em>。</p>
+
+      <div class="callout">
+        <div>
+          <p class="callout-title"><strong><span class="i18n-en">How Might We</span><span class="i18n-zh">我們可以如何</span></strong></p>
+          <p class="i18n-en">Give the system a real foundation, so system-wide changes take one edit, without pausing the revamp or overloading a team still new to design systems</p>
+          <p class="i18n-zh">在不中斷正在進行的改版、也不要求一個初次接觸設計系統的團隊承擔過多流程的前提下,如何補上系統從未擁有的地基,讓全域性的調整只需要改一次?</p>
+        </div>
+      </div>
+
+      <h2><span class="i18n-en">The Process</span><span class="i18n-zh">解決方案探索</span></h2>
+      <!-- <h3><span class="i18n-en">Scoping to What the Team Could Absorb</span><span class="i18n-zh">依團隊的承受度決定範圍</span></h3> -->
+      <p class="i18n-en">I scoped the system to what the team actually needed, and used the timing to my advantage: with every screen already being redesigned in the revamp, building the system alongside it cost far less than doing it separately.</p>
+      <p class="i18n-zh">我刻意把系統的範圍收斂到團隊真正需要的程度——並善用了時機。既然改版期間每個畫面本來就要重新設計,<em>順著改版一起</em>重建系統,成本遠低於把它當成獨立專案來做。</p>
+
+      <!-- <div class="callout">
+        <div>
+          <p class="callout-title"><strong><span class="i18n-en">Trade-Off, on Purpose</span><span class="i18n-zh">刻意做出的取捨</span></strong></p>
+          <p class="i18n-en">I built the foundation as <strong>Figma variables</strong> — the design-side source of truth — but deliberately deferred implementing them as <strong>tokens in code</strong>. The dev team wasn’t ready for token workflows, and forcing them would have added friction, not removed it. That’s the next maturity step, not this one.</p>
+          <p class="i18n-zh">我把地基建成 <strong>Figma 變數</strong>——也就是設計端的單一真實來源——但刻意暫緩把它落實為<strong>程式碼中的 tokens</strong>。開發團隊還沒準備好使用 token 工作流,硬推只會增加摩擦,而不是減少。那是下一個成熟度階段的事,不是現在。</p>
+        </div>
+      </div> -->
+
+      <h3><span class="i18n-en">Foundation First: Variables → Atoms → Components</span><span class="i18n-zh">地基優先:變數 → 原子元件 → 完整元件</span></h3>
+      <p class="i18n-en">I rebuilt the system in the order a system should be built: foundations before surface. That way, flexibility was designed in from the start instead of patched on later.</p>
+      <p class="i18n-zh">我依照一套系統本來就該有的順序重建它——先地基、後表層——讓彈性從一開始就被設計進去,而不是事後補救。</p>
+      <ol class="moves">
+        <li class="move">
+          <h4><span class="i18n-en">Variables</span><span class="i18n-zh">變數</span></h4>
+          <p class="i18n-en">Colour, type, and spacing defined as Figma variables — one source of truth for every value in the system.</p>
+          <p class="i18n-zh">將顏色、字體與間距定義為 Figma 變數——系統中每一個數值都只有一個來源。</p>
+        </li>
+        <li class="move">
+          <h4><span class="i18n-en">Atoms</span><span class="i18n-zh">原子元件</span></h4>
+          <p class="i18n-en">The smallest pieces built first, in every state — so larger components inherit from them and stay in sync by construction.</p>
+          <p class="i18n-zh">先把最小的單位連同所有狀態一起做好——這樣較大的元件是繼承而來的,結構上自然保持同步。</p>
+        </li>
+        <li class="move">
+          <h4><span class="i18n-en">Components</span><span class="i18n-zh">完整元件</span></h4>
+          <p class="i18n-en">Composed from atoms, configured through properties. Variation happens in the panel — no detaching, no drift.</p>
+          <p class="i18n-zh">由原子元件組合而成,透過屬性設定變化。所有變化都在面板中完成——不需要 detach,也不會走樣。</p>
+        </li>
+      </ol>
+
+      <figure>
+        <img src="img/design-system-process.png" alt="" loading="lazy">
+      </figure>
+
+      <div class="callout">
+        <div>
+          <p class="callout-title"><strong><span class="i18n-en">The Payoff</span><span class="i18n-zh">回報</span></strong></p>
+          <p class="i18n-en">With every value in a variable, changes are one edit — font, colour, spacing all update everywhere from a single source. The font swap that broke the old system became a non-issue.</p>
+          <p class="i18n-zh">變數就位之後,原本得一個一個元件慢慢改的換字體工程,變成<strong>只要改一個字體變數</strong>——所有元件與畫面立刻同步更新。地基替我把工作做完了。</p>
+        </div>
+      </div>
+
+      <h2><span class="i18n-en">Before and After</span><span class="i18n-zh">改版前後對照</span></h2>
+      <p class="i18n-en">The rebuild wasn’t visual — it was structural. The clearest way to show it is one component, before and after.</p>
+      <p class="i18n-zh">這次重建改的不是外觀,而是結構。要說明這一點,最清楚的方式就是拿同一個元件來做前後對照。</p>
+      <figure>
+        <img src="img/design-system-the-improvements.png" alt="" loading="lazy">
+      </figure>
+
+      <h3><span class="i18n-en">From Fixed Types to One Configurable Component</span><span class="i18n-zh">從固定款式,到單一可設定的元件</span></h3>
+
+      <figure>
+        <img src="img/design-system-before-after.png" alt="The old variant panel beside the rebuilt properties panel for the same button component" loading="lazy">
+      </figure>
+      <!-- <div class="compare-grid">
+        <div class="compare-card compare-card-outline">
+          <h4><span class="i18n-en">Before — Vague and Limited</span><span class="i18n-zh">改版前——含糊且受限</span></h4>
+          <p class="i18n-en">Style, role, and state bundled into loose dropdowns (note the “Varient” typo), a single on/off icon toggle, and no way to change the label without detaching.</p>
+          <p class="i18n-zh">樣式、用途與狀態全混在幾個含糊的下拉選單裡(注意「Varient」的拼字錯誤),圖示只有一個開關,而且不 detach 就無法修改按鈕文字。</p>
+        </div>
+        <div class="compare-card compare-card-outline">
+          <h4><span class="i18n-en">After — Structured and Self-Serve</span><span class="i18n-zh">改版後——結構清楚,可自行取用</span></h4>
+          <p class="i18n-en">Single-purpose properties for type, size, and state; separate leading and trailing icon toggles; an editable text field; and a built-in description, so the component documents itself.</p>
+          <p class="i18n-zh">類型、尺寸、狀態各自有單一用途的屬性;前置與後置圖示分開控制;文字可直接編輯;並內建說明文字,讓元件自己就是文件。</p>
+        </div>
+      </div> -->
+
+      <div class="callout">
+        <div>
+          <p class="callout-title"><strong><span class="i18n-en">Why It Matters</span><span class="i18n-zh">為什麼這件事重要</span></strong></p>
+          <p class="i18n-en">Detaching severs an instance from its master, so every detached button became dead weight that no longer received updates. Making variation a <em>property</em> instead of a workaround is the whole point of a design system, and it’s what the old setup couldn’t do.</p>
+          <p class="i18n-zh">Detach 會切斷實例與主元件的連結,因此每一個被 detach 的按鈕都成了不再接收更新的死角。把「變化」變成一種<em>屬性</em>、而不是一種變通做法,正是設計系統存在的意義——而這恰恰是舊架構做不到的事。</p>
+        </div>
+      </div>
+
+      <!-- <h3><span class="i18n-en">Atoms Up, in Practice</span><span class="i18n-zh">由原子往上,實際怎麼做</span></h3>
+      <p class="i18n-en">To build the Tab component, I first created every tab item in all its states — the atoms. Only then did I compose them into the full tab bar. Build the pieces once, assemble many times — and every assembly stays linked to its source.</p>
+      <p class="i18n-zh">以 Tab 元件為例,我先把單一 tab 項目的所有狀態都做出來——也就是原子元件,接著才把它們組合成完整的 tab bar。零件只做一次,可以組裝無數次——而且每一次組裝都仍然連結回原始來源。</p>
+      <figure>
+        <div class="figure-placeholder">
+          <p><strong><span class="i18n-en">Atomic Build</span><span class="i18n-zh">原子化組建</span></strong><br>
+          <span class="i18n-en">The Tab component sheet — the matrix of tab-item states (the atoms) above, and the composed tab bar below.</span><span class="i18n-zh">Tab 元件說明頁——上方是單一 tab 項目的各種狀態(原子元件),下方是組合完成的 tab bar。</span></p>
+        </div>
+      </figure> -->
+      <h2><span class="i18n-en">The Challenges</span><span class="i18n-zh">挑戰</span></h2>
+      <h3><span class="i18n-en">Challenge 1: Two Jobs at Once</span><span class="i18n-zh">同時做兩份工</span></h3>
+      <p class="i18n-en">Throughout, I was building the system <em>and</em> delivering the revamp mockups in parallel — the foundation had to come together without stalling active design work.</p>
+      <p class="i18n-zh">整個過程中,我一邊建系統,一邊還要<em>同時</em>產出改版的視覺稿——地基必須在不拖慢當下設計工作的前提下逐步成形。</p>
+      <p class="i18n-en">That’s exactly why the build order mattered. Variables and core atoms first meant the revamp screens could start consuming the system immediately, even as the rest of it was still being built. Shipping and systematising at the same time.</p>
+      <p class="i18n-zh">這正是建構順序如此重要的原因。先做好變數與核心原子元件,改版畫面就能立刻開始使用這套系統,即使其餘部分還在建置中。一邊交付,一邊把它系統化。</p>
+
+      <h3><span class="i18n-en">Challenge 2: The Hard Part Wasn’t the Components — It Was the People</span><span class="i18n-zh">最難的不是元件,而是人</span></h3>
+      <div class="note-cards">
+        <div class="sticky-note sticky-note-card note-b">
+          <img class="note-doodle" src="img/design-system-engineer.png" alt="" width="500" height="500" loading="lazy">
+          <h4 class="note-role"><span class="i18n-en">The Developer</span><span class="i18n-zh">工程師</span></h4>
+          <p class="i18n-en">Had never used a design system. I introduced it gradually — basic guidelines first, not full adoption on day one.</p>
+          <p class="i18n-zh">從來沒用過設計系統。我採取漸進式導入——先從基本規範開始,而不是第一天就要求全面採用。</p>
+        </div>
+        <div class="sticky-note sticky-note-card note-a">
+          <!-- swap for: <img class="note-doodle" src="img/…" alt="" loading="lazy"> -->
+          <div class="note-doodle note-doodle-empty"><span class="i18n-en">Doodle</span><span class="i18n-zh">手繪插圖</span></div>
+          <h4 class="note-role"><span class="i18n-en">The PM</span><span class="i18n-zh">產品經理</span></h4>
+          <p class="i18n-en">Saw it as low priority against delivery pressure. I made the efficiency case and won the space to keep building it in.</p>
+          <p class="i18n-zh">在交付壓力下認為這件事優先度不高。我從效率的角度說服他,爭取到繼續把系統做進去的空間。</p>
+        </div>
+      </div>
+      <p class="i18n-en">Alongside that, I published the library so it was referable from every design file, and wrote a usage flow and guidelines so a future designer can pick it up and keep it current without me walking them through it.</p>
+      <p class="i18n-zh">除此之外,我也把元件庫發佈出去,讓每個設計檔案都能引用,並撰寫了使用流程與規範——讓未來的設計師不需要我一步步帶,也能接手並持續維護。</p>
+
+      
+
+      <h2><span class="i18n-en">Outcome</span><span class="i18n-zh">成果</span></h2>
+      <div class="takeaways-grid takeaways-grid-3">
+        <div class="takeaway">
+          <img class="card-doodle" src="img/design-system-designer.png" alt="" width="500" height="500" loading="lazy">
+          <h3><span class="i18n-en">For the Designer</span><span class="i18n-zh">對設計師</span></h3>
+          <p class="i18n-en">A font swap went from hours of manual edits to one variable update.</p>
+          <p class="i18n-zh">換字體從數小時的手動修改,變成只改一個變數。</p>
+        </div>
+        <div class="takeaway">
+          <img class="card-doodle" src="img/design-system-dev.png" alt="" width="500" height="500" loading="lazy">
+          <h3><span class="i18n-en">For Engineering</span><span class="i18n-zh">對工程</span></h3>
+          <p class="i18n-en">Fewer design clarifications — the developer self-serves from the guidelines.</p>
+          <p class="i18n-zh">設計確認的往返變少——工程師能自行查閱規範。</p>
+        </div>
+        <div class="takeaway">
+          <img class="card-doodle" src="img/design-system-teams.png" alt="" width="500" height="500" loading="lazy">
+          <h3><span class="i18n-en">For the Team</span><span class="i18n-zh">對團隊</span></h3>
+          <p class="i18n-en">One source of truth everyone can point to — marketing, product, and engineering all pull from the same library instead of guessing.</p>
+          <p class="i18n-zh">一個所有人都能引用的單一真實來源——行銷、產品與工程都從同一套元件庫取用,不必再各自猜測。</p>
+        </div>
+      </div>
+
+      <h2><span class="i18n-en">Next Step</span><span class="i18n-zh">後續步驟</span></h2>
+      <p class="i18n-en">This was intentionally a first maturity step, not a finish line. The roadmap from here:</p>
+      <p class="i18n-zh">這刻意只是成熟度的第一步,而不是終點。接下來的規劃:</p>
+      <div class="takeaways-grid takeaways-grid-3">
+        <div class="takeaway">
+          <h3><span class="i18n-en">Design Tokens in Code</span><span class="i18n-zh">程式碼中的 Design Tokens</span></h3>
+          <p class="i18n-en">Carry the variables through to the build, once the team is comfortable with the component workflow.</p>
+          <p class="i18n-zh">等團隊熟悉元件工作流後,把變數一路延伸到實作端。</p>
+        </div>
+        <div class="takeaway">
+          <h3><span class="i18n-en">Dev Handoff Automation</span><span class="i18n-zh">自動化開發交接</span></h3>
+          <p class="i18n-en">Tighten the link between the library and what actually ships.</p>
+          <p class="i18n-zh">讓元件庫與實際上線的成果連結更緊密。</p>
+        </div>
+        <div class="takeaway">
+          <h3><span class="i18n-en">A Contribution Process</span><span class="i18n-zh">貢獻流程</span></h3>
+          <p class="i18n-en">So the system can grow with more than one designer maintaining it.</p>
+          <p class="i18n-zh">讓系統能在多位設計師共同維護下持續成長。</p>
+        </div>
+      </div>
+
+      <h2><span class="i18n-en">What I Learned</span><span class="i18n-zh">我學到的</span></h2>
+      <p class="i18n-en"><strong>Right-Sizing Beats Best Practice</strong><br>
+      The "correct" system on paper would have failed here. Scoping to what the team could absorb, and then improving later, was what made it stick.</p>
+      <p class="i18n-zh"><strong>「合適的規模」勝過「最佳實務」</strong><br>
+      紙上「正確」的系統,在這裡反而會失敗。把範圍收斂到團隊能承受的程度、並刻意把其餘部分往後延,才是讓它真正被用起來的原因。</p>
+      <p class="i18n-en"><strong>Efficiency Starts With the Base</strong><br>
+      A strong base matters: without it, the whole system becomes messy and hard to work with, and efficiency suffers. Building variables and atoms early let the revamp screens use the system while it was still being built, and a font change became a one-line fix.</p>
+      <p class="i18n-zh"><strong>建構順序決定了彈性</strong><br>
+      彈性沒辦法事後補上,它取決於你最先做了什麼。先做變數與原子元件,改版畫面才能在系統尚未完工時就開始使用它,而換字體也才會一直是一個「改一次」的決定。</p>
+      <p class="i18n-en"><strong>Adoption Is a Design Problem Too</strong><br>
+      The components were the easy part. Getting a developer and a PM to trust and use the system took gradual onboarding and an efficiency argument — not a mandate.</p>
+      <p class="i18n-zh"><strong>導入本身也是一道設計題</strong><br>
+      元件是相對容易的部分。要讓工程師與產品經理信任並使用這套系統,靠的是漸進式的引導與效率上的說服,而不是命令。</p>
+    </article>
+
+    <nav class="case-nav" aria-label="Project navigation">
+      <a href="hiredly-resume.html" class="prev">
+        <span class="label"><span class="i18n-en">← Previous</span><span class="i18n-zh">← 上一篇</span></span>
+        <span class="title"><span class="i18n-en">Hiredly’s Resume Builder (w. User Profile Redesign)</span><span class="i18n-zh">Hiredly 的履歷產生器(含個人檔案重新設計)</span></span>
+      </a>
+      <a href="imoney-user-research.html" class="next">
+        <span class="label"><span class="i18n-en">Next →</span><span class="i18n-zh">下一篇 →</span></span>
+        <span class="title"><span class="i18n-en">From Survey to Interview: Understanding Why iMoney Users Stay or Leave</span><span class="i18n-zh">從問卷到訪談:理解 iMoney 使用者為何留下或離開</span></span>
+      </a>
+    </nav>
+  </main>
+
+  <div id="footer-mount"></div>
+
+</body>
+</html>
