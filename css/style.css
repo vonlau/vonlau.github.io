@@ -1184,6 +1184,7 @@ body.lightbox-open { overflow: hidden; }
 
 .case-cover img {
   width: 100%;
+  height: auto;
   display: block;
   border-radius: var(--radius-lg);
   /* box-shadow: var(--shadow-tile); */
@@ -1338,6 +1339,7 @@ body.lightbox-open { overflow: hidden; }
 
 .case-body figure img {
   width: 100%;
+  height: auto;
   display: block;
   border-radius: var(--radius-md);
   border: 1px solid var(--line);
@@ -1601,6 +1603,35 @@ body.lightbox-open { overflow: hidden; }
 @media (max-width: 700px) {
   .takeaways-grid-2,
   .takeaways-grid-3 { grid-template-columns: 1fr; }
+}
+
+/* stacked variant — one card per row, doodle beside the copy instead of above it */
+
+.takeaways-grid-stacked { grid-template-columns: 1fr; }
+
+.takeaways-grid-stacked .takeaway {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.case-body .takeaways-grid-stacked .card-doodle {
+  flex: 0 0 6.6rem;
+  width: 6.6rem;
+  max-width: 6.6rem;
+  margin: 0;
+}
+
+@media (max-width: 700px) {
+  .takeaways-grid-stacked .takeaway {
+    display: block;
+  }
+
+  .case-body .takeaways-grid-stacked .card-doodle {
+    width: 4.8rem;
+    max-width: 45%;
+    margin: 0 0 0.75rem;
+  }
 }
 
 .takeaway {

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title data-zh="在改版途中重建 Funhub 的設計系統 — Enn-wen">Rebuilding Funhub’s Design System, Mid-Revamp — Enn-wen</title>
+  <title data-zh="從地基重建一套設計系統 — Enn-wen">Rebuilding a Design System from the Foundation Up — Enn-wen</title>
   <meta name="description" data-zh="設計系統案例分享:在全站改版進行中,獨自將一套數值全寫死的元件庫,從變數、原子元件到完整元件重建為以變數驅動的設計系統。" content="Design system case study: rebuilding a hard-coded component library into a variable-driven system — variables, atoms, then components — solo, mid-revamp.">
   <link rel="icon" type="image/png" href="../img/header-icon.png">
   <link rel="stylesheet" href="../css/style.css">
@@ -37,15 +37,12 @@
   <main>
     <section class="case-hero">
       <span class="category"><span class="i18n-en">Design System · Mobile App</span><span class="i18n-zh">設計系統・行動應用程式</span></span>
-      <h1><span class="i18n-en">Rebuilding Funhub’s Design System, Mid-Revamp</span><span class="i18n-zh">在改版途中重建 Funhub 的設計系統</span></h1>
+      <h1><span class="i18n-en">Rebuilding a Design System from the Foundation Up</span><span class="i18n-zh">從地基重建一套設計系統</span></h1>
       <p class="lede"><span class="i18n-en">How I rebuilt a broken, hard-coded component library into a variable-driven system — solo, while the whole app was being redesigned around me.</span><span class="i18n-zh">我如何在全公司進行 App 改版的同時,獨自將一套破碎、數值全寫死的元件庫,重建成以變數驅動的設計系統。</span></p>
     </section>
 
     <div class="case-cover">
-      <div class="figure-placeholder">
-        <p><strong><span class="i18n-en">Hero Image</span><span class="i18n-zh">主視覺圖片</span></strong><br>
-        <span class="i18n-en">Overview page of the rebuilt component library in Figma — a clean, organised grid of core components.</span><span class="i18n-zh">重建後的 Figma 元件庫總覽頁面——整齊有序的核心元件排列。</span></p>
-      </div>
+      <img src="img/design-systems-cover.png" alt="Overview of Funhub’s rebuilt component library in Figma — an organised grid of core components" width="1600" height="900">
     </div>
 
     <article class="case-body">
@@ -59,15 +56,15 @@
       <dl class="meta">
         <div>
           <dt><span class="i18n-en">Role</span><span class="i18n-zh">角色</span></dt>
-          <dd><span class="i18n-en">Sole Product Designer · Design System Lead</span><span class="i18n-zh">唯一產品設計師・設計系統負責人</span></dd>
+          <dd><span class="i18n-en">Sole Product Designer, Design System Lead</span><span class="i18n-zh">唯一產品設計師・設計系統負責人</span></dd>
         </div>
-        <div>
+        <!-- <div>
           <dt><span class="i18n-en">Team</span><span class="i18n-zh">團隊</span></dt>
           <dd><span class="i18n-en">1 designer, 1 developer, 1 PM</span><span class="i18n-zh">1 位設計師、1 位工程師、1 位產品經理</span></dd>
-        </div>
+        </div> -->
         <div>
           <dt><span class="i18n-en">Tools</span><span class="i18n-zh">工具</span></dt>
-          <dd><span class="i18n-en">Figma (variables, components)</span><span class="i18n-zh">Figma(變數、元件)</span></dd>
+          <dd><span class="i18n-en">Figma</span><span class="i18n-zh">Figma(變數、元件)</span></dd>
         </div>
       </dl>
       <hr>
@@ -254,7 +251,7 @@
         </div>
         <div class="sticky-note sticky-note-card note-a">
           <!-- swap for: <img class="note-doodle" src="img/…" alt="" loading="lazy"> -->
-          <div class="note-doodle note-doodle-empty"><span class="i18n-en">Doodle</span><span class="i18n-zh">手繪插圖</span></div>
+          <img class="note-doodle" src="img/design-system-pm.png" alt="" width="500" height="500" loading="lazy">
           <h4 class="note-role"><span class="i18n-en">The PM</span><span class="i18n-zh">產品經理</span></h4>
           <p class="i18n-en">Saw it as low priority against delivery pressure. I made the efficiency case and won the space to keep building it in.</p>
           <p class="i18n-zh">在交付壓力下認為這件事優先度不高。我從效率的角度說服他,爭取到繼續把系統做進去的空間。</p>
@@ -266,26 +263,39 @@
       
 
       <h2><span class="i18n-en">Outcome</span><span class="i18n-zh">成果</span></h2>
-      <div class="takeaways-grid takeaways-grid-3">
+      <div class="takeaways-grid takeaways-grid-stacked">
         <div class="takeaway">
           <img class="card-doodle" src="img/design-system-designer.png" alt="" width="500" height="500" loading="lazy">
-          <h3><span class="i18n-en">For the Designer</span><span class="i18n-zh">對設計師</span></h3>
-          <p class="i18n-en">A font swap went from hours of manual edits to one variable update.</p>
-          <p class="i18n-zh">換字體從數小時的手動修改,變成只改一個變數。</p>
+          <div class="takeaway-body">
+            <h3><span class="i18n-en">For the Designer</span><span class="i18n-zh">對設計師</span></h3>
+            <p class="i18n-en">Design changes update everywhere from one place, with documentation on how to use the system.</p>
+            <p class="i18n-zh">設計上的調整只要改一處就會全面更新,並附有系統的使用說明文件。</p>
+          </div>
         </div>
         <div class="takeaway">
           <img class="card-doodle" src="img/design-system-dev.png" alt="" width="500" height="500" loading="lazy">
-          <h3><span class="i18n-en">For Engineering</span><span class="i18n-zh">對工程</span></h3>
-          <p class="i18n-en">Fewer design clarifications — the developer self-serves from the guidelines.</p>
-          <p class="i18n-zh">設計確認的往返變少——工程師能自行查閱規範。</p>
+          <div class="takeaway-body">
+            <h3><span class="i18n-en">For Engineering</span><span class="i18n-zh">對工程</span></h3>
+            <p class="i18n-en">Fewer design clarifications — the developer self-serves from the guidelines.</p>
+            <p class="i18n-zh">設計確認的往返變少——工程師能自行查閱規範。</p>
+          </div>
         </div>
         <div class="takeaway">
           <img class="card-doodle" src="img/design-system-teams.png" alt="" width="500" height="500" loading="lazy">
-          <h3><span class="i18n-en">For the Team</span><span class="i18n-zh">對團隊</span></h3>
-          <p class="i18n-en">One source of truth everyone can point to — marketing, product, and engineering all pull from the same library instead of guessing.</p>
-          <p class="i18n-zh">一個所有人都能引用的單一真實來源——行銷、產品與工程都從同一套元件庫取用,不必再各自猜測。</p>
+          <div class="takeaway-body">
+            <h3><span class="i18n-en">For the Team</span><span class="i18n-zh">對團隊</span></h3>
+            <p class="i18n-en">One source of truth everyone can point to — marketing, product, and engineering all pull from the same library instead of guessing.</p>
+            <p class="i18n-zh">一個所有人都能引用的單一真實來源——行銷、產品與工程都從同一套元件庫取用,不必再各自猜測。</p>
+          </div>
         </div>
       </div>
+
+      <!-- <figure>
+        <img src="img/design-system-outcome.png" alt="Overview of Funhub’s rebuilt component library in Figma — an organised grid of core components" loading="lazy">
+      </figure> -->
+      <figure>
+        <img src="img/design-system-outcome.png" alt="Overview of Funhub’s rebuilt component library in Figma — an organised grid of core components" loading="lazy">
+      </figure>
 
       <h2><span class="i18n-en">Next Step</span><span class="i18n-zh">後續步驟</span></h2>
       <p class="i18n-en">This was intentionally a first maturity step, not a finish line. The roadmap from here:</p>
@@ -309,18 +319,20 @@
       </div>
 
       <h2><span class="i18n-en">What I Learned</span><span class="i18n-zh">我學到的</span></h2>
-      <p class="i18n-en"><strong>Right-Sizing Beats Best Practice</strong><br>
-      The "correct" system on paper would have failed here. Scoping to what the team could absorb, and then improving later, was what made it stick.</p>
-      <p class="i18n-zh"><strong>「合適的規模」勝過「最佳實務」</strong><br>
-      紙上「正確」的系統,在這裡反而會失敗。把範圍收斂到團隊能承受的程度、並刻意把其餘部分往後延,才是讓它真正被用起來的原因。</p>
-      <p class="i18n-en"><strong>Efficiency Starts With the Base</strong><br>
-      A strong base matters: without it, the whole system becomes messy and hard to work with, and efficiency suffers. Building variables and atoms early let the revamp screens use the system while it was still being built, and a font change became a one-line fix.</p>
-      <p class="i18n-zh"><strong>建構順序決定了彈性</strong><br>
-      彈性沒辦法事後補上,它取決於你最先做了什麼。先做變數與原子元件,改版畫面才能在系統尚未完工時就開始使用它,而換字體也才會一直是一個「改一次」的決定。</p>
-      <p class="i18n-en"><strong>Adoption Is a Design Problem Too</strong><br>
-      The components were the easy part. Getting a developer and a PM to trust and use the system took gradual onboarding and an efficiency argument — not a mandate.</p>
-      <p class="i18n-zh"><strong>導入本身也是一道設計題</strong><br>
-      元件是相對容易的部分。要讓工程師與產品經理信任並使用這套系統,靠的是漸進式的引導與效率上的說服,而不是命令。</p>
+      <ul>
+        <li class="i18n-en"><strong>Right-Sizing Beats Best Practice</strong><br>
+        The "correct" system on paper would have failed here. Scoping to what the team could absorb, and then improving later, was what made it stick.</li>
+        <li class="i18n-zh"><strong>「合適的規模」勝過「最佳實務」</strong><br>
+        紙上「正確」的系統,在這裡反而會失敗。把範圍收斂到團隊能承受的程度、並刻意把其餘部分往後延,才是讓它真正被用起來的原因。</li>
+        <li class="i18n-en"><strong>Efficiency Starts With the Base</strong><br>
+        A strong base matters: without it, the whole system becomes messy and hard to work with, and efficiency suffers. Building variables and atoms early let the revamp screens use the system while it was still being built, and a font change became a one-line fix.</li>
+        <li class="i18n-zh"><strong>建構順序決定了彈性</strong><br>
+        彈性沒辦法事後補上,它取決於你最先做了什麼。先做變數與原子元件,改版畫面才能在系統尚未完工時就開始使用它,而換字體也才會一直是一個「改一次」的決定。</li>
+        <li class="i18n-en"><strong>Adoption Is a Design Problem Too</strong><br>
+        The components were the easy part. Getting a developer and a PM to trust and use the system took gradual onboarding and an efficiency argument — not a mandate.</li>
+        <li class="i18n-zh"><strong>導入本身也是一道設計題</strong><br>
+        元件是相對容易的部分。要讓工程師與產品經理信任並使用這套系統,靠的是漸進式的引導與效率上的說服,而不是命令。</li>
+      </ul>
     </article>
 
     <nav class="case-nav" aria-label="Project navigation">
