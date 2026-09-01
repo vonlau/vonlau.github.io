@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title data-zh="Hiredly 的履歷產生器(含個人檔案重新設計)— Enn-wen">Hiredly’s Resume Builder (w. User Profile Redesign) — Enn-wen</title>
-  <meta name="description" data-zh="UX/UI 案例分享:為 Hiredly 設計履歷產生器,並搭配重新設計的個人檔案,讓求職者能立即申請職缺。" content="UX/UI case study: designing a resume builder for Hiredly, supported by a redesigned user profile, so jobseekers can apply for jobs right away.">
+  <meta name="description" data-zh="UX/UI 案例分享:為 Hiredly 設計履歷產生器，並搭配重新設計的個人檔案，讓求職者能立即申請職缺。" content="UX/UI case study: designing a resume builder for Hiredly, supported by a redesigned user profile, so jobseekers can apply for jobs right away.">
   <link rel="icon" type="image/png" href="../img/header-icon.png">
   <link rel="stylesheet" href="../css/style.css">
   <script>(function(){try{if(localStorage.getItem("site-lang")==="zh")document.documentElement.setAttribute("data-lang","zh");}catch(e){}})();</script>
@@ -13,7 +13,7 @@
 <body>
 
   <header class="site-header">
-    <a class="wordmark pill" href="../index.html">Enn-wen L&nbsp;<img class="bloom" src="../img/header-icon.png" alt="" width="289" height="270" loading="lazy"></a>
+    <a class="wordmark pill" href="../index.html"><span class="i18n-en">Enn-wen L</span><img class="i18n-zh wordmark-cn" src="../img/name-cn.png" alt="依雯" width="560" height="297" loading="lazy">&nbsp;<img class="bloom" src="../img/header-icon.png" alt="" width="289" height="270" loading="lazy"></a>
     <div class="site-header-actions">
       <nav class="site-nav" aria-label="Main">
         <details class="nav-dropdown">
@@ -36,9 +36,9 @@
 
   <main>
     <section class="case-hero">
-      <span class="category"><span class="i18n-en">UX/UI · Web</span><span class="i18n-zh">UX/UI・網頁</span></span>
+      <span class="category"><span class="i18n-en">Web</span><span class="i18n-zh">Web</span></span>
       <h1><span class="i18n-en">Hiredly’s Resume Builder (w. User Profile Redesign)</span><span class="i18n-zh">Hiredly 的履歷產生器(含個人檔案重新設計)</span></h1>
-      <p class="lede"><span class="i18n-en">Helping jobseekers create a professional resume from their profile, so they can start applying right away.</span><span class="i18n-zh">幫助求職者透過個人檔案建立專業履歷,立即開始申請職缺。</span></p>
+      <p class="lede"><span class="i18n-en">Helping jobseekers create a professional resume from their profile, so they can start applying right away.</span><span class="i18n-zh">幫助求職者透過個人檔案建立專業履歷，立即開始申請職缺。</span></p>
     </section>
 
     <div class="case-cover">
@@ -48,7 +48,7 @@
     <article class="case-body">
       <h2><span class="i18n-en">About the Company</span><span class="i18n-zh">關於公司</span></h2>
       <p class="i18n-en"><strong>Hiredly</strong> (previously known as WOBB) is the leading hybrid recruitment platform for junior to mid-management talent. Consisting of both a job portal and a headhunting recruitment solution, it’s a discovery platform that helps people discover any job with any employer in the market.</p>
-      <p class="i18n-zh"><strong>Hiredly</strong>(前身為 WOBB)是專為初階至中階管理人才打造的領先混合型招聘平台。結合求職網站與獵頭招聘服務,是一個幫助求職者發掘市場上各種雇主與職缺的探索平台。</p>
+      <p class="i18n-zh"><strong>Hiredly</strong>(前身為 WOBB)是專為初階至中階管理人才打造的領先混合型招聘平台。結合求職網站與獵頭招聘服務，是一個幫助求職者發掘市場上各種雇主與職缺的探索平台。</p>
 
       <hr>
       <dl class="meta">
@@ -68,7 +68,7 @@
 
       <h2><span class="i18n-en">Project Brief</span><span class="i18n-zh">專案簡介</span></h2>
       <p class="i18n-en">To design a Resume Builder to allow users to easily create a professional-looking resume so they can start their job application journey. To accompany this feature, a redesign of the User Profile is also required to allow users to fill in more information about their work experiences, education, skills and so on, which can then be translated into the creation of their resume.</p>
-      <p class="i18n-zh">設計一款履歷產生器,讓使用者能輕鬆建立專業美觀的履歷,展開求職之旅。為了配合這項功能,個人檔案也需要重新設計,讓使用者能填寫更多工作經歷、學歷、技能等資訊,並將這些資訊轉化為履歷內容。</p>
+      <p class="i18n-zh">設計一款履歷產生器，讓使用者能輕鬆建立專業美觀的履歷，展開求職之旅。為了配合這項功能，個人檔案也需要重新設計，讓使用者能填寫更多工作經歷、學歷、技能等資訊，並將這些資訊轉化為履歷內容。</p>
 
       <h2><span class="i18n-en">Challenges</span><span class="i18n-zh">挑戰</span></h2>
       <ol class="i18n-en">
@@ -76,8 +76,8 @@
         <li>The current user profile only allows users to include limited information, which is insufficient to create a resume for job applications.</li>
       </ol>
       <ol class="i18n-zh">
-        <li>許多求職者因為申請職缺需要提供履歷而卻步。這通常是因為他們還沒有自己的履歷,或是上傳的履歷未獲通過,進而影響了求職申請率。</li>
-        <li>現有的個人檔案僅能填寫有限的資訊,不足以用來建立求職所需的履歷。</li>
+        <li>許多求職者因為申請職缺需要提供履歷而卻步。這通常是因為他們還沒有自己的履歷，或是上傳的履歷未獲通過，進而影響了求職申請率。</li>
+        <li>現有的個人檔案僅能填寫有限的資訊，不足以用來建立求職所需的履歷。</li>
       </ol>
 
       <h2><span class="i18n-en">Objectives</span><span class="i18n-zh">目標</span></h2>
@@ -86,8 +86,8 @@
         <li>To collect more relevant user information via the User Profile to support the Resume Builder feature.</li>
       </ol>
       <ol class="i18n-zh">
-        <li>透過使用者提供的資訊建立履歷,縮短使用者上傳履歷與展開求職之間的落差,讓使用者能在建立履歷後立即開始申請職缺。</li>
-        <li>透過個人檔案收集更多相關的使用者資訊,以支援履歷產生器功能。</li>
+        <li>透過使用者提供的資訊建立履歷，縮短使用者上傳履歷與展開求職之間的落差，讓使用者能在建立履歷後立即開始申請職缺。</li>
+        <li>透過個人檔案收集更多相關的使用者資訊，以支援履歷產生器功能。</li>
       </ol>
 
       <hr>
@@ -95,11 +95,11 @@
       <h2><span class="i18n-en">The Process</span><span class="i18n-zh">執行過程</span></h2>
       <h3><span class="i18n-en">Starting with the User Profile</span><span class="i18n-zh">從個人檔案開始</span></h3>
       <p class="i18n-en">Creating a resume requires more relevant information from the candidate. Hence, the project started off with increasing the sections and user fields for users to fill in. With increased fields, there was also a need to revisit the UI of the user profile to help users identify sections and entries more easily.</p>
-      <p class="i18n-zh">建立履歷需要求職者提供更多相關資訊,因此專案一開始便著手增加使用者可填寫的區塊與欄位。隨著欄位增加,個人檔案的介面也需要重新檢視,幫助使用者更容易辨識各個區塊與項目。</p>
+      <p class="i18n-zh">建立履歷需要求職者提供更多相關資訊，因此專案一開始便著手增加使用者可填寫的區塊與欄位。隨著欄位增加，個人檔案的介面也需要重新檢視，幫助使用者更容易辨識各個區塊與項目。</p>
 
       <h3><span class="i18n-en">Research</span><span class="i18n-zh">研究</span></h3>
       <p class="i18n-en">To determine what is required to create a good resume, whilst catering to the needs of both fresh grads and experienced jobseekers.</p>
-      <p class="i18n-zh">確認打造一份好履歷所需的要素,同時兼顧應屆畢業生與有經驗求職者的需求。</p>
+      <p class="i18n-zh">確認打造一份好履歷所需的要素，同時兼顧應屆畢業生與有經驗求職者的需求。</p>
       <figure>
         <img src="img/hiredly-resume-12135c0663.png" alt="Research into what makes a good resume for fresh graduates and experienced jobseekers" loading="lazy">
       </figure>
@@ -118,7 +118,7 @@
 
       <h2><span class="i18n-en">Resume Template</span><span class="i18n-zh">履歷範本</span></h2>
       <p class="i18n-en">With the User Profile design ready, the entry fields available there are then incorporated into a resume template. This template is used to reflect the information provided by the user on the User Profile when they use the Resume Builder to create their resume.</p>
-      <p class="i18n-zh">個人檔案設計完成後,其中的欄位內容便會被納入履歷範本中。使用者透過履歷產生器建立履歷時,這份範本會呈現他們在個人檔案中填寫的資訊。</p>
+      <p class="i18n-zh">個人檔案設計完成後，其中的欄位內容便會被納入履歷範本中。使用者透過履歷產生器建立履歷時，這份範本會呈現他們在個人檔案中填寫的資訊。</p>
       <figure>
         <img src="img/hiredly-resume-822ab7a998.png" alt="Resume template generated from user profile information" loading="lazy">
       </figure>
