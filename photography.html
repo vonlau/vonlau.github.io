@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title data-zh="攝影 — Enn-wen">Photography — Enn-wen</title>
-  <meta name="description" data-zh="Enn-wen 的個人攝影系列——頁面即將推出。" content="A personal photography series by Enn-wen — page coming soon.">
+  <meta name="description" data-zh="個人攝影系列" content="A personal photography series by Enn-wen">
   <link rel="icon" type="image/png" href="img/header-icon.png">
   <link rel="stylesheet" href="css/style.css">
   <script>(function(){try{if(localStorage.getItem("site-lang")==="zh")document.documentElement.setAttribute("data-lang","zh");}catch(e){}})();</script>
@@ -13,7 +13,7 @@
 <body>
 
   <header class="site-header">
-    <a class="wordmark pill" href="index.html">Enn-wen L&nbsp;<img class="bloom" src="img/header-icon.png" alt="" width="289" height="270" loading="lazy"></a>
+    <a class="wordmark pill" href="index.html"><span class="i18n-en">Enn-wen L</span><img class="i18n-zh wordmark-cn" src="img/name-cn.png" alt="依雯" width="560" height="297" loading="lazy">&nbsp;<img class="bloom" src="img/header-icon.png" alt="" width="289" height="270" loading="lazy"></a>
     <div class="site-header-actions">
       <nav class="site-nav" aria-label="Main">
         <details class="nav-dropdown">
@@ -35,6 +35,8 @@
   </header>
 
   <main>
+
+    <!--WIP Image-->
       <!-- <img src="img/wip-img.png" alt="Cartoon cat holding a Work In Progress sign" width="852" height="972" loading="lazy"> -->
     <!-- <section class="hero photo-hero">
       <div class="hero-panel">
@@ -51,9 +53,11 @@
     <section class="hero about-hero">
       <div class="hero-panel">
         <div class="hero-content">
-          <h1 class="fade-in delay-1"><span class="i18n-en">Photography</span><span class="i18n-zh">攝影</span></h1>
+          <h1 class="fade-in delay-1"><span class="i18n-en">Photography</span><span class="i18n-zh">攝影集</span></h1>
           <div class="about-tagline-row">
-            <p class="tagline fade-in delay-3">Picked up photography in 2023, mostly by accident. One chance to hold a camera and I was hooked. Started with a Sony a6400 and a 50mm 1.8, still shooting the same camera but now paired with a Sigma 18-50mm f/2.8. Wouldn't call myself a photographer, just someone who loves capturing the moment.</p>
+            <p class="tagline fade-in delay-3">
+              <span class="i18n-en">Picked up photography in 2023, mostly by accident. One chance to hold a camera and I was hooked. Started with a Sony a6400 and a 50mm 1.8, still shooting the same camera but now paired with a Sigma 18-50mm f/2.8. Wouldn't call myself a photographer, just someone who loves capturing the moment.</span>
+              <span class="i18n-zh">2023那年，我意外地踏入了攝影的世界，從此愛上了用鏡頭記錄當下、捕捉瞬間的樂趣。一開始我使用的是 Sony a6400 搭配 50mm f/1.8 鏡頭。直到到現在，我依然愛用這台相機，只是換成了 Sigma 18-50mm f/2.8 鏡頭，讓我的拍攝更具彈性。不會稱自己為攝影師，我只是個熱愛攝影，享受透過鏡頭探索世界、捕捉美好瞬間的過程的普通人。</span></p>
             <a class="btn-primary about-cta fade-in delay-3" href="https://www.instagram.com/helloitsew/">Instagram<span class="btn-arrow" aria-hidden="true">→</span></a>
           </div>
         </div>
@@ -61,7 +65,17 @@
     </section>
 
     <section class="photo-gallery" aria-label="Photo showcase">
-      <!-- TODO: update the City, Country / year caption for each photo -->
+
+      <figure class="photo-item" data-reveal>
+        <div class="photo-frame">
+          <img src="img/photography/IMG_4702.jpeg" alt="Moorish-style stone archways and columns viewed from below against a pale sky" width="2056" height="2741" loading="lazy">
+        </div>
+        <figcaption class="photo-caption">
+          <span class="photo-name">Kuala Lumpur, Malaysia</span>
+          <span class="photo-year">2026</span>
+        </figcaption>
+      </figure>
+
       <figure class="photo-item" data-reveal>
         <div class="photo-frame">
           <img src="img/photography/DSC02496.jpeg" alt="Two people fishing off a rocky pier at sunset, silhouetted against a pastel pink and blue sky" width="1153" height="2048" loading="lazy">
@@ -112,15 +126,6 @@
         </figcaption>
       </figure>
 
-      <figure class="photo-item" data-reveal>
-        <div class="photo-frame">
-          <img src="img/photography/IMG_4702.jpeg" alt="Moorish-style stone archways and columns viewed from below against a pale sky" width="2056" height="2741" loading="lazy">
-        </div>
-        <figcaption class="photo-caption">
-          <span class="photo-name">Kuala Lumpur, Malaysia</span>
-          <span class="photo-year">2026</span>
-        </figcaption>
-      </figure>
     </section>
   </main>
 
