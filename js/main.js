@@ -54,6 +54,13 @@
     return match ? match.textContent : el.textContent;
   };
 
+  // side nav label can differ from the heading's own text via data-nav-en / data-nav-zh
+  var getNavLabel = function (el) {
+    var lang = htmlEl.getAttribute("data-lang") === "zh" ? "zh" : "en";
+    var override = el.getAttribute("data-nav-" + lang);
+    return override || getLangText(el);
+  };
+
   // sync meta tags + button state with whatever the anti-flicker inline script already applied
   setLang(htmlEl.getAttribute("data-lang") === "zh" ? "zh" : "en", false);
 
@@ -288,14 +295,14 @@
         }
         var link = document.createElement("a");
         link.href = "#" + h2.id;
-        link.textContent = getLangText(h2);
+        link.textContent = getNavLabel(h2);
         sideNav.appendChild(link);
         sections.push({ link: link, heading: h2 });
       });
 
       document.addEventListener("langchange", function () {
         sections.forEach(function (section) {
-          section.link.textContent = getLangText(section.heading);
+          section.link.textContent = getNavLabel(section.heading);
         });
       });
 

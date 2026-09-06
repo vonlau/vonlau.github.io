@@ -41,6 +41,8 @@
   --yellow: #ffe9a4;
   --blue-soft: #e3eeff;
   --blue: #bed9ff;
+  --green-soft: #e2f3e0;
+  --purple-soft: #ece3fb;
   --link: #2f5fd0;
 
   --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
@@ -221,6 +223,9 @@ h1, h2, h3 { text-wrap: balance; }
 .site-nav.nav-hero-hidden .nav-dropdown { pointer-events: none; }
 
 /* ---------- language toggle ---------- */
+
+/* hidden site-wide for now — remove this rule to bring the toggle back */
+.lang-toggle { display: none !important; }
 
 .lang-toggle {
   position: relative;
@@ -1090,7 +1095,7 @@ body.lightbox-open { overflow: hidden; }
 
 .tile-media {
   position: absolute;
-  inset: clamp(1.4rem, 3.5vw, 2.4rem) clamp(1.4rem, 3.5vw, 2.4rem) 6.5rem;
+  inset: clamp(1.4rem, 3.5vw, 2.4rem) clamp(1.4rem, 3.5vw, 2.4rem) 6.6rem;
   margin: 0;
   z-index: 1;
 }
@@ -1117,17 +1122,35 @@ body.lightbox-open { overflow: hidden; }
   bottom: 1rem;
   z-index: 3;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: space-between;
   gap: 1rem;
   padding: 0.9rem 0.9rem 0.9rem 1.25rem;
 }
 
-.tile-caption .chip {
-  display: inline-block;
-  margin-bottom: 0.35rem;
-  font-size: 0.8rem;
+.tile-tag {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  z-index: 2;
+  display: inline-flex;
+  padding: 0.3rem 0.75rem;
+  border-radius: var(--radius-pill);
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid var(--line);
+  font-size: 0.72rem;
   font-weight: 600;
+  letter-spacing: 0.01em;
+  color: var(--ink);
+}
+
+.tile-desc {
+  margin: 0.3rem 0 0;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.45;
   color: var(--muted);
 }
 
@@ -1180,7 +1203,7 @@ body.lightbox-open { overflow: hidden; }
 
 .case-hero h1 {
   margin: 1.1rem 0 1rem;
-  font-size: clamp(1.75rem, 4.2vw, 2.6rem);
+  font-size: 2.6rem;
   font-weight: 600;
   line-height: 1.15;
   letter-spacing: 0.01em;
@@ -1402,6 +1425,73 @@ body.lightbox-open { overflow: hidden; }
   line-height: 1.35;
 }
 
+/* doodle + speech bubble, used to voice a quote attributed to someone off-page */
+
+.doodle-dialog {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 1.5rem 0 2rem;
+}
+
+.doodle-dialog-avatar {
+  flex-shrink: 0;
+  width: auto;
+  height: 7rem;
+  aspect-ratio: 1;
+  object-fit: contain;
+  margin: 0;
+  font-size: 1.3rem;
+  line-height: 1.2;
+}
+
+.doodle-dialog-bubble {
+  position: relative;
+  flex: 1;
+  padding: 1rem 1.3rem;
+  border-radius: var(--radius-md);
+  background: var(--green-soft);
+}
+
+.doodle-dialog-bubble::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -0.55rem;
+  transform: translateY(-50%);
+  border-style: solid;
+  border-width: 0.5rem 0.6rem 0.5rem 0;
+  border-color: transparent var(--green-soft) transparent transparent;
+}
+
+.doodle-dialog-bubble p {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 500;
+  font-style: italic;
+  line-height: 1.5;
+}
+
+/* .doodle-dialog-attrib {
+  margin-top: 0.5rem !important;
+  font-size: 0.82rem;
+  font-weight: 600 !important;
+  font-style: normal !important;
+  color: var(--muted);
+} */
+
+@media (max-width: 30em) {
+  .doodle-dialog {
+    gap: 0.65rem;
+  }
+
+  .doodle-dialog-avatar {
+    width: 2.6rem;
+    height: 2.6rem;
+    font-size: 1.1rem;
+  }
+}
+
 /* two-column feature rows */
 
 .feature-row {
@@ -1426,6 +1516,25 @@ body.lightbox-open { overflow: hidden; }
 .feature-row ul { padding-left: 1.3em; }
 
 .feature-row.align-start { align-items: start; }
+
+/* list of light-grey boxed items, e.g. paired with an image in a feature-row */
+
+.boxed-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.boxed-list li {
+  margin: 0;
+  padding: 0.9rem 1.15rem;
+  border-radius: var(--radius-md);
+  background: var(--line-soft);
+  color: var(--ink);
+}
 
 /* comparison boxes (what's working vs needs improvement) */
 
@@ -1668,6 +1777,20 @@ body.lightbox-open { overflow: hidden; }
   line-height: 1.35;
 }
 
+.takeaway-tag {
+  display: inline-flex;
+  margin-bottom: 1rem;
+  padding: 0.2rem 0.90rem;
+  border-radius: var(--radius-pill);
+  background: var(--line-soft);
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.takeaway-tag-purple { background: var(--purple-soft); }
+.takeaway-tag-blue { background: var(--blue-soft); }
+
 .takeaway p {
   margin: 0;
   font-size: 0.92rem;
@@ -1820,16 +1943,25 @@ body.lightbox-open { overflow: hidden; }
   margin-bottom: 0.3rem;
 }
 
-.case-nav .title {
-  font-size: 0.95rem;
+.case-nav .title-caption h3 {
+  margin: 0;
+  font-size: 1rem;
   font-weight: 600;
-  line-height: 1.4;
+  line-height: 1.35;
   letter-spacing: 0.01em;
   transition: color 200ms var(--ease-out);
 }
 
-.case-nav a:hover .title,
-.case-nav a:focus-visible .title { color: var(--link); }
+.case-nav a:hover .title-caption h3,
+.case-nav a:focus-visible .title-caption h3 { color: var(--link); }
+
+.case-nav .case-nav-desc {
+  margin: 0.2rem 0 0;
+  font-size: 0.85rem;
+  font-weight: 400;
+  line-height: 1.45;
+  color: var(--muted);
+}
 
 .case-nav .next {
   text-align: right;
@@ -2102,7 +2234,7 @@ body.lightbox-open { overflow: hidden; }
 
   .tile { aspect-ratio: 4 / 4.4; }
 
-  .tile-media { inset: 1.1rem 1.1rem 6.2rem; }
+  .tile-media { inset: 1.1rem 1.1rem 6.5rem; }
 
   .meta {
     gap: 1.25rem;
