@@ -1,0 +1,26 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "gray-on-color",
+        "value": "*",
+        "files": [
+          "work/hiredly-mobile-app.html"
+        ],
+        "createdAt": "2026-09-08T03:45:21.535Z",
+        "reason": "finding-attrib on callout yellow-soft bg: contrast computed ~5.9:1 (#545b66 on #f9eec3), passes WCAG AA; same class already used on blue-soft bg elsewhere in codebase (imoney-user-research.html)"
+      },
+      {
+        "rule": "tight-leading",
+        "value": "*",
+        "files": [
+          "work/hiredly-onboarding.html"
+        ],
+        "createdAt": "2026-09-08T03:52:19.200Z",
+        "reason": "case-nav .title-caption h3 line-height:1.35 is a short heading caption, not body text; identical shared class used unchanged across every case study's prev/next nav (funhub-design-system, funhub-deals, imoney-user-research, this new file too) — pre-existing intentional heading style, not introduced by this edit"
+      }
+    ]
+  }
+}
