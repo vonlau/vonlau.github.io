@@ -785,6 +785,13 @@ html:not([data-lang="zh"]) .i18n-zh { display: none; }
   margin: 2.25rem 0 2rem;
 }
 
+.note-cards-3 { grid-template-columns: repeat(3, 1fr); }
+
+.note-cards .stat-number {
+  text-align: left;
+  font-size: clamp(1.9rem, 4vw, 2.3rem);
+}
+
 .sticky-note.sticky-note-card {
   --note-rotate: 0deg;
   width: auto;
@@ -836,7 +843,8 @@ html:not([data-lang="zh"]) .i18n-zh { display: none; }
 }
 
 @media (max-width: 700px) {
-  .note-cards { grid-template-columns: 1fr; gap: 2rem; }
+  .note-cards,
+  .note-cards-3 { grid-template-columns: 1fr; gap: 2rem; }
 }
 
 /* ---------- section stubs (About / Photography / Side Projects) ---------- */
@@ -1231,6 +1239,8 @@ body.lightbox-open { overflow: hidden; }
   /* box-shadow: var(--shadow-tile); */
 }
 
+.case-cover .figure-placeholder { border-radius: var(--radius-lg); }
+
 /* ---------- case study sticky side nav ---------- */
 
 .case-side-nav {
@@ -1346,7 +1356,7 @@ body.lightbox-open { overflow: hidden; }
 }
 
 .case-body h4 {
-  margin: 1.75rem 0 0.75rem;
+  margin: 3.75rem 0 0.75rem;
   font-size: 1rem;
   font-weight: 600;
 }
@@ -1504,6 +1514,8 @@ body.lightbox-open { overflow: hidden; }
 
 .feature-row figure { margin: 0; }
 
+/* h3 for rows nested directly under an h2, h4 when nested under an h3 section */
+.feature-row h3,
 .feature-row h4 { margin: 0 0 0.5rem; }
 
 .feature-row p,
@@ -1516,6 +1528,15 @@ body.lightbox-open { overflow: hidden; }
 .feature-row ul { padding-left: 1.3em; }
 
 .feature-row.align-start { align-items: start; }
+
+/* full-size body copy for a feature-row whose text is the main narrative, not a short caption */
+.feature-row .feature-row-prose p {
+  margin: 0 0 1rem;
+  color: var(--ink);
+  font-size: 1rem;
+}
+
+.feature-row .feature-row-prose p:last-child { margin-bottom: 0; }
 
 /* list of light-grey boxed items, e.g. paired with an image in a feature-row */
 
@@ -1562,6 +1583,37 @@ body.lightbox-open { overflow: hidden; }
 .compare-card-outline {
   background: #ffffff;
   border: 1px solid var(--line-soft);
+}
+
+/* headline result stats */
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(12rem, 100%), 1fr));
+  gap: 1.5rem;
+  margin: 1.75rem 0 2.25rem;
+}
+
+.stat {
+  padding: 1.75rem 1.5rem;
+  border-radius: var(--radius-md);
+  background: var(--green-soft);
+  text-align: center;
+}
+
+.stat-number {
+  display: block;
+  font-size: clamp(2.2rem, 5vw, 2.8rem);
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1.1;
+}
+
+.stat-label {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--muted);
 }
 
 /* finding cards */
@@ -1683,6 +1735,8 @@ body.lightbox-open { overflow: hidden; }
   justify-content: center;
 }
 
+/* h3 for steps nested directly under an h2, h4 when nested under an h3 section */
+.step-body h3,
 .step-body h4 {
   margin: 0.35rem 0 0.2rem;
   font-size: 1rem;

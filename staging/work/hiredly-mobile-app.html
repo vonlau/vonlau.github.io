@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-zh="重塑 Hiredly 的求職體驗 — Enn-wen">Rebuilding Hiredly's Job Search Experience — Enn-wen</title>
+  <meta name="description" data-zh="UX/UI 案例分享：重新設計 Hiredly 的 iOS 與 Android 求職 App——從滑動配對式列表改為首頁、清單瀏覽與好讀的職缺詳情頁。" content="UX/UI case study: revamping Hiredly's iOS and Android job search app — from a swipe-based feed to a homepage, list view, and readable job details.">
+  <link rel="icon" type="image/png" href="../img/header-icon.png">
+  <link rel="stylesheet" href="../css/style.css">
+  <script>(function(){try{if(localStorage.getItem("site-lang")==="zh")document.documentElement.setAttribute("data-lang","zh");}catch(e){}})();</script>
+  <script src="../js/main.js" defer></script>
+</head>
+<body>
+
+  <header class="site-header">
+    <a class="wordmark pill" href="../index.html"><span class="i18n-en">Enn-wen L</span><img class="i18n-zh wordmark-cn" src="../img/name-cn.png" alt="依雯" width="560" height="297" loading="lazy">&nbsp;<img class="bloom" src="../img/header-icon.png" alt="" width="289" height="270" loading="lazy"></a>
+    <div class="site-header-actions">
+      <nav class="site-nav" aria-label="Main">
+        <details class="nav-dropdown">
+          <summary class="pill nav-dropdown-toggle"><span class="i18n-en">Work</span><span class="i18n-zh">作品</span><svg class="dropdown-arrow" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m19.5 8.25-7.5 7.5-7.5-7.5"/></svg></summary>
+          <div class="nav-dropdown-menu">
+            <a href="../index.html#work" class="is-current" aria-current="page"><span class="i18n-en">Work</span><span class="i18n-zh">作品</span></a>
+            <a href="../about.html"><span class="i18n-en">About Me</span><span class="i18n-zh">關於我</span></a>
+            <a href="../photography.html"><span class="i18n-en">Photography</span><span class="i18n-zh">攝影</span></a>
+            <a href="../side-projects.html"><span class="i18n-en">Side Projects</span><span class="i18n-zh">個人專案</span></a>
+          </div>
+        </details>
+      </nav>
+      <button type="button" class="lang-toggle" aria-pressed="false" aria-label="Switch language / 切換語言">
+        <span class="lang-toggle-knob" aria-hidden="true"></span>
+        <span class="lang-toggle-option lang-toggle-option-en">EN</span>
+        <span class="lang-toggle-option lang-toggle-option-zh">中</span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="case-hero">
+      <span class="category"><span class="i18n-en">Product Design</span><span class="i18n-zh">產品設計・iOS・Android</span></span>
+      <h1><span class="i18n-en">Rebuilding Hiredly's Job Search Experience</span><span class="i18n-zh">重塑 Hiredly 的求職體驗</span></h1>
+      <p class="lede">Hiredly</p>
+    </section>
+
+    <div class="case-cover">
+      <div class="figure-placeholder">
+        <p><strong><span class="i18n-en">Hero placeholder</span><span class="i18n-zh">主視覺待補</span></strong><br>
+        <span class="i18n-en">Final screens — welcome, homepage, and job list — across iOS and Android.</span><span class="i18n-zh">最終畫面——歡迎頁、首頁與職缺列表，涵蓋 iOS 與 Android。</span></p>
+      </div>
+    </div>
+
+    <article class="case-body">
+      <h2><span class="i18n-en">Overview</span><span class="i18n-zh">專案概述</span></h2>
+      <p class="i18n-en">Hiredly is a Malaysian job platform. Most of its app users are fresh grads applying for the first time, or close to it.</p>
+      <p class="i18n-zh">Hiredly 是一個馬來西亞的求職平台，App 使用者多數是應屆畢業生，或是第一次求職不久的人。</p>
+      <p class="i18n-en">The app worked, but people were spending time in it without much of that turning into applications. So we revamped the whole thing, look and feel included.</p>
+      <p class="i18n-zh">App 本身能用，但使用者花了時間在裡面，卻沒有轉化成多少應徵動作。於是我們重新設計了整個 App，連視覺風格也一併翻新。</p>
+
+      <hr>
+      <dl class="meta">
+        <div>
+          <dt><span class="i18n-en">Role</span><span class="i18n-zh">角色</span></dt>
+          <dd><span class="i18n-en">Product Designer (1 of 4) · iOS and Android · Launched</span><span class="i18n-zh">產品設計師（4 位其中一位）・iOS 與 Android・已上線</span></dd>
+        </div>
+        <div>
+          <dt><span class="i18n-en">Team</span><span class="i18n-zh">團隊</span></dt>
+          <dd><span class="i18n-en">4 UI/UX Designers, 1 Product Manager, 2 Front-end Engineers, 1 Back-end Engineer</span><span class="i18n-zh">4 位 UI/UX 設計師、1 位產品經理、2 位前端工程師、1 位後端工程師</span></dd>
+        </div>
+        <div>
+          <dt><span class="i18n-en">Tools</span><span class="i18n-zh">工具</span></dt>
+          <dd>Figma, FigJam, Lottiefiles, Lottielab</dd>
+        </div>
+      </dl>
+      <hr>
+
+      <!-- <h2><span class="i18n-en">The Team</span><span class="i18n-zh">團隊組成</span></h2>
+      <p class="i18n-en">Four UI/UX designers, one PM, two front-end engineers, and one back-end engineer.</p>
+      <p class="i18n-zh">四位 UI/UX 設計師、一位產品經理、兩位前端工程師與一位後端工程師。</p>
+      <p class="i18n-en">We split the app between the designers and worked from a shared direction, with the engineers involved from early on rather than at handoff.</p>
+      <p class="i18n-zh">我們幾位設計師分工負責 App 的不同區塊，但共用同一套設計方向；工程師也從很早期就加入討論，而不是等到交付階段才進場。</p> -->
+
+      <h2><span class="i18n-en">The Problem</span><span class="i18n-zh">問題所在</span></h2>
+
+      <div class="feature-row align-start">
+        <figure>
+          <div class="figure-placeholder">
+            <p><strong><span class="i18n-en">Thumbnail A</span><span class="i18n-zh">縮圖 A</span></strong><br>
+            <span class="i18n-en">Old profile or signup screen, showing how few fields there were — not yet added.</span><span class="i18n-zh">舊版個人檔案或註冊畫面，呈現當時欄位有多少——尚未補上。</span></p>
+          </div>
+        </figure>
+        <div class="feature-row-prose">
+          <h3><span class="i18n-en">Signing Up Was Too Easy</span><span class="i18n-zh">註冊太簡單了</span></h3>
+          <p class="i18n-en">Getting into the app took almost nothing. A few fields, done, you're in.</p>
+          <p class="i18n-zh">進到 App 幾乎不用花什麼力氣，填幾個欄位，完成，就進去了。</p>
+          <p class="i18n-en">That sounds like good onboarding until you see what happens next. The profile we collected was too thin to actually apply with, so users would browse, find something they liked, hit apply, and only then run into what was missing. Nothing along the way told them their profile wasn't ready.</p>
+          <p class="i18n-zh">聽起來像是不錯的新手導覽，直到你看到接下來發生的事。我們收集到的個人檔案太單薄，根本不足以拿去應徵，於是使用者會先瀏覽、看到喜歡的職缺、按下應徵，然後才發現資料不夠完整。整個過程中，沒有任何提示告訴他們自己的檔案還沒準備好。</p>
+          <p class="i18n-en">For fresh grads especially, that's the worst moment to find out. They're already unsure whether they're good enough for the role, and the app adds another obstacle right at the point of commitment.</p>
+          <p class="i18n-zh">對應屆畢業生來說，這是最糟的時間點才發現這件事。他們本來就不確定自己夠不夠格，App 卻在他們終於下定決心的那一刻，又多加了一道阻礙。</p>
+        </div>
+      </div>
+
+      <div class="feature-row align-start">
+        <div class="feature-row-prose">
+          <h3><span class="i18n-en">The Homepage Was a Tinder Swipe</span><span class="i18n-zh">首頁變成了 Tinder 式滑動</span></h3>
+          <p class="i18n-en">Opening the app dropped you straight into a swipe-based job feed. Swipe right to keep, left to reject. No home, no overview, no starting point. The first thing you saw was a decision you had to make.</p>
+          <p class="i18n-zh">打開 App，馬上就進入滑動配對式的職缺列表。往右滑保留，往左滑拒絕。沒有首頁、沒有總覽、沒有一個起點——你看到的第一件事，就是一個必須馬上做的決定。</p>
+          <p class="i18n-en">It was our most distinctive feature, and people didn't want it. 81% of surveyed users said they'd rather scroll a list.</p>
+          <p class="i18n-zh">這是我們最有辨識度的功能，但使用者不買單。81% 的受訪使用者表示，他們寧願用清單瀏覽的方式。</p>
+          <p class="i18n-en">The problem is that it's a pattern borrowed from somewhere else. Dating apps have endless candidates and low stakes per swipe. Job hunting has neither. Rejecting a job felt permanent, and jobs people were only half sure about were gone.</p>
+          <p class="i18n-zh">問題在於，這是從別的地方借來的模式。交友軟體有滑不完的對象，每次滑動的成本都很低；找工作既沒有滑不完的職缺，成本也不低。拒絕一個職缺感覺是永久的，而那些使用者只是還在猶豫的職缺，就這樣消失了。</p>
+        </div>
+        <figure>
+          <div class="figure-placeholder">
+            <p><strong><span class="i18n-en">Thumbnail B</span><span class="i18n-zh">縮圖 B</span></strong><br>
+            <span class="i18n-en">The old swipe card, ideally mid-swipe so the interaction is obvious — not yet added.</span><span class="i18n-zh">舊版滑動卡片，最好是滑動中的畫面，讓互動方式一目了然——尚未補上。</span></p>
+          </div>
+        </figure>
+      </div>
+
+      <div class="callout">
+        <div>
+          <p class="i18n-en"><em>“Some jobs I don't mean to reject, just need some time to consider, and may want to have a second look at after looking at other opportunities.”</em></p>
+          <p class="i18n-zh"><em>「有些職缺我不是真的想拒絕，只是需要時間考慮，看過其他機會後可能還想再回頭看看。」</em></p>
+          <p class="finding-attrib i18n-en">— 2022 user survey</p>
+          <p class="finding-attrib i18n-zh">—— 2022 年使用者調查</p>
+        </div>
+      </div>
+
+      <div class="feature-row align-start">
+        <figure>
+          <div class="figure-placeholder">
+            <p><strong><span class="i18n-en">Thumbnail C</span><span class="i18n-zh">縮圖 C</span></strong><br>
+            <span class="i18n-en">Old detail page, full length, showing the scroll — not yet added.</span><span class="i18n-zh">舊版詳情頁的完整長度，呈現需要捲動的程度——尚未補上。</span></p>
+          </div>
+        </figure>
+        <div class="feature-row-prose">
+          <h3><span class="i18n-en">Job Details Were One Long Scroll</span><span class="i18n-zh">職缺詳情是一長串的捲動頁面</span></h3>
+          <p class="i18n-en">Job info and company info were stacked on a single page, so comparing them meant scrolling up, then down, then up again.</p>
+          <p class="i18n-zh">職缺資訊與公司資訊疊在同一個頁面上，要比對兩者，就得先往下捲，再往上捲，然後再往下捲一次。</p>
+          <p class="i18n-en">That mattered more than it sounds. 67% of users told us company profile and environment were what they cared about most when deciding where to apply, and it was buried at the bottom.</p>
+          <p class="i18n-zh">這件事比聽起來更嚴重。67% 的使用者告訴我們，公司檔案與工作環境是他們決定要不要應徵時最在意的因素，而這些資訊卻被埋在頁面最底部。</p>
+        </div>
+      </div>
+
+      <div class="feature-row align-start">
+        <div class="feature-row-prose">
+          <h3><span class="i18n-en">Applying Left You Hanging</span><span class="i18n-zh">應徵之後就沒下文了</span></h3>
+          <p class="i18n-en">You'd submit, see “pending”, and that was it. No indication that a resume was still needed for the application to actually go anywhere.</p>
+          <p class="i18n-zh">送出申請後只會看到「待處理」，然後就沒了。完全沒有任何提示告訴你，履歷還沒補上，申請根本不會有下文。</p>
+        </div>
+        <figure>
+          <div class="figure-placeholder">
+            <p><strong><span class="i18n-en">Thumbnail D</span><span class="i18n-zh">縮圖 D</span></strong><br>
+            <span class="i18n-en">Old pending status screen — not yet added.</span><span class="i18n-zh">舊版待處理狀態畫面——尚未補上。</span></p>
+          </div>
+        </figure>
+      </div>
+
+      <!-- <p class="i18n-en">The app wasn't broken. It just never told people where they stood.</p>
+      <p class="i18n-zh">App 並沒有真的壞掉，只是從來沒有讓使用者知道自己的進度到哪裡。</p> -->
+
+      <h2><span class="i18n-en">The Process</span><span class="i18n-zh">我們是怎麼走到這裡的</span></h2>
+      <!-- <p class="i18n-en">Three phases: discover through research, ideate on the direction as a team, then design and prototype.</p>
+      <p class="i18n-zh">三個階段：先透過研究探索，接著全員一起定調方向，再進入設計與原型製作。</p> -->
+
+      <figure>
+        <div class="figure-placeholder">
+          <p><strong><span class="i18n-en">Process overview</span><span class="i18n-zh">流程總覽</span></strong><br>
+          <span class="i18n-en">Discover, Ideate, Design — the full process at a glance, not yet added.</span><span class="i18n-zh">探索、發想、設計——完整流程一目了然，尚未補上。</span></p>
+        </div>
+      </figure>
+
+      <h3><span class="i18n-en">Discover</span><span class="i18n-zh">探索</span></h3>
+      <p class="i18n-en">We sent out a user survey through marketing and got 400+ responses back, giving us a clear read on how people actually felt about the app.</p>
+      <p class="i18n-zh">我們透過行銷管道發出使用者問卷，收到超過 400 份回覆，讓我們清楚了解使用者對這個 App 的真實感受。</p>
+
+      <h4><span class="i18n-en">Key Takeaways</span><span class="i18n-zh">重點發現</span></h4>
+      <div class="note-cards note-cards-3">
+        <div class="sticky-note sticky-note-card note-b">
+          <span class="stat-number">81%</span>
+          <p class="i18n-en">prefer a regular scroll list over the swiping motion when looking for jobs.</p>
+          <p class="i18n-zh">的使用者在找工作時，比起滑動配對，更偏好一般的清單捲動瀏覽方式。</p>
+        </div>
+        <div class="sticky-note sticky-note-card note-a">
+          <span class="stat-number">67%</span>
+          <p class="i18n-en">selected company profile and environment as the most helpful feature.</p>
+          <p class="i18n-zh">的使用者認為公司檔案與工作環境是最有幫助的功能。</p>
+        </div>
+        <div class="sticky-note sticky-note-card note-c">
+          <span class="stat-number i18n-en">Hidden features</span>
+          <span class="stat-number i18n-zh">隱藏的功能</span>
+          <p class="i18n-en">Users weren't aware of features we already had, like undo application, notifications, or certain filters.</p>
+          <p class="i18n-zh">使用者根本不知道我們早就有的功能，例如取消應徵、通知，或是某些篩選條件。</p>
+        </div>
+      </div>
+
+      <h4><span class="i18n-en">Design Audit</span><span class="i18n-zh">設計稽核</span></h4>
+      <p class="i18n-en">Alongside the survey, we audited our own app against competitors, mapping every screen and flow in FigJam to see exactly where we stood.</p>
+      <p class="i18n-zh">除了問卷之外，我們也把自己的 App 拿去和競品做比較，在 FigJam 上完整整理每個畫面與流程，清楚看出我們的位置。</p>
+      <figure>
+        <img src="img/hiredly-app-revamp-discover-audit.png" alt="Competitive and UI audit mapping Hiredly's screens against competitor apps in FigJam" loading="lazy">
+      </figure>
+
+      <h4><span class="i18n-en">Key Insights</span><span class="i18n-zh">重點洞察</span></h4>
+      <div class="note-cards note-cards-3">
+        <div class="sticky-note sticky-note-card note-d">
+          <span class="stat-number i18n-en">Visuals Attract</span>
+          <span class="stat-number i18n-zh">畫面吸引目光</span>
+          <p class="i18n-en">Users notice visuals first. Employers need room to stand out through branding and culture.</p>
+          <p class="i18n-zh">使用者最先注意到的是畫面，雇主需要能透過品牌與文化脫穎而出的空間。</p>
+        </div>
+        <div class="sticky-note sticky-note-card note-b">
+          <span class="stat-number i18n-en">Simple Works</span>
+          <span class="stat-number i18n-zh">簡單就好</span>
+          <p class="i18n-en">No need to reinvent the wheel — just make existing features intuitive and easy to use.</p>
+          <p class="i18n-zh">不需要重新發明輪子，把既有功能做得直覺好用就夠了。</p>
+        </div>
+        <div class="sticky-note sticky-note-card note-c">
+          <span class="stat-number i18n-en">Navigation</span>
+          <span class="stat-number i18n-zh">路徑設計</span>
+          <p class="i18n-en">Some useful features already existed — they were just hidden. Bring them forward.</p>
+          <p class="i18n-zh">有些好用的功能其實早就存在，只是被藏了起來，該把它們帶到檯面上。</p>
+        </div>
+      </div>
+
+      <h3><span class="i18n-en">Ideate</span><span class="i18n-zh">發想</span></h3>
+      <p class="i18n-en">With the research and key insights in hand, we jumped into brainstorming the app design, pulling inspiration from work we found online before putting our own ideas down on paper.</p>
+      <p class="i18n-zh">有了研究與重點洞察，我們開始腦力激盪整體設計方向——先參考網路上找到的案例，再落實成自己的想法。</p>
+      <figure>
+        <img src="img/hiredly-app-revamp-ideate.png" alt="Brainstorming and inspiration references for the app redesign" loading="lazy">
+      </figure>
+      <p class="i18n-en">All of it pointed to one goal:</p>
+      <p class="i18n-zh">而這一切，最終都指向同一個目標：</p>
+
+      <div class="callout">
+        <div>
+          <p class="callout-title"><strong><span class="i18n-en">Design Goal</span><span class="i18n-zh">設計目標</span></strong></p>
+          <p class="i18n-en">To ensure users get support and a good experience even before and after making applications.</p>
+          <p class="i18n-zh">確保使用者在應徵前後，都能獲得支持與良好的體驗。</p>
+        </div>
+      </div>
+
+      <h3><span class="i18n-en">Design</span><span class="i18n-zh">設計</span></h3>
+      <p class="i18n-en">With that goal set, sketches turned into prototypes, developers involved from the start — a few of the interaction ideas were actually theirs.</p>
+      <p class="i18n-zh">確立目標後，草圖進入原型階段，工程師也從一開始就參與其中——有些互動的想法其實是他們提出來的。</p>
+      <figure>
+        <div class="figure-placeholder">
+          <p><strong><span class="i18n-en">Design prototypes</span><span class="i18n-zh">設計原型</span></strong><br>
+          <span class="i18n-en">Key screens from the working prototype — not yet added.</span><span class="i18n-zh">原型中的重點畫面——尚未補上。</span></p>
+        </div>
+      </figure>
+
+      <!-- <h3><span class="i18n-en">What We Learned</span><span class="i18n-zh">我們學到的事</span></h3>
+
+      <div class="feature-row align-start">
+        <figure>
+          <div class="figure-placeholder">
+            <p><strong><span class="i18n-en">Employer branding</span><span class="i18n-zh">雇主品牌</span></strong><br>
+            <span class="i18n-en">Where company branding needed to surface earlier in the flow — not yet added.</span><span class="i18n-zh">品牌資訊在流程中應該更早出現的位置——尚未補上。</span></p>
+          </div>
+        </figure>
+        <div class="feature-row-prose">
+          <h4><span class="i18n-en">Visuals do the deciding</span><span class="i18n-zh">畫面本身就是決定因素</span></h4>
+          <p class="i18n-en">Employer branding needed to surface earlier than the detail page.</p>
+          <p class="i18n-zh">雇主品牌的呈現，需要比職缺詳情頁更早出現。</p>
+        </div>
+      </div>
+
+      <div class="feature-row align-start">
+        <div class="feature-row-prose">
+          <h4><span class="i18n-en">Familiar beats clever</span><span class="i18n-zh">熟悉感勝過巧思</span></h4>
+          <p class="i18n-en">The swipe was our differentiator and our blocker.</p>
+          <p class="i18n-zh">滑動式介面曾是我們的差異化賣點，也是我們的絆腳石。</p>
+        </div>
+        <figure>
+          <div class="figure-placeholder">
+            <p><strong><span class="i18n-en">Swipe vs. list</span><span class="i18n-zh">滑動 vs. 清單</span></strong><br>
+            <span class="i18n-en">Side-by-side comparison of the two interaction patterns — not yet added.</span><span class="i18n-zh">兩種互動模式的並排比較——尚未補上。</span></p>
+          </div>
+        </figure>
+      </div>
+
+      <div class="feature-row align-start">
+        <figure>
+          <div class="figure-placeholder">
+            <p><strong><span class="i18n-en">Undo, filters, notifications</span><span class="i18n-zh">復原、篩選、通知</span></strong><br>
+            <span class="i18n-en">The existing features nobody noticed — not yet added.</span><span class="i18n-zh">那些沒人注意到的既有功能——尚未補上。</span></p>
+          </div>
+        </figure>
+        <div class="feature-row-prose">
+          <h4><span class="i18n-en">Half our features were invisible</span><span class="i18n-zh">有一半的功能形同隱形</span></h4>
+          <p class="i18n-en">Undo, filters, and notifications were already built and nobody knew.</p>
+          <p class="i18n-zh">復原、篩選、通知其實都早就做好了，只是沒人知道。</p>
+        </div>
+      </div> -->
+
+      <h2><span class="i18n-en">The Outcome</span><span class="i18n-zh">我們設計了什麼</span></h2>
+      <h3><span class="i18n-en">New Design Direction</span><span class="i18n-zh">歡迎畫面</span></h3>
+      <p class="i18n-en">This is the direction we landed on in the charrette, reviewed with the wider design and engineering team and signed off before a single production screen was built.</p>
+      <p class="i18n-zh">這是我們在工作坊中定調的視覺方向，經過更大範圍的設計與工程團隊審視並拍板後，才開始正式製作任何畫面。</p>
+      <figure>
+        <div class="figure-placeholder">
+          <p><strong><span class="i18n-en">Design direction</span><span class="i18n-zh">視覺方向</span></strong><br>
+          <span class="i18n-en">Moodboard or style tile from the charrette — not yet added.</span><span class="i18n-zh">工作坊中的情緒板或風格參考——尚未補上。</span></p>
+        </div>
+      </figure>
+      <p class="i18n-en">Everything below follows that direction, starting with the first thing users see.</p>
+      <p class="i18n-zh">以下所有畫面都依循著這個方向而生——從使用者看到的第一個畫面開始。</p>
+
+      <h3><span class="i18n-en">Welcome Screen</span><span class="i18n-zh">歡迎畫面</span></h3>
+      <p class="i18n-en">An animated intro that sets the new look and feel.</p>
+      <p class="i18n-zh">一段動畫式的開場，為新的視覺風格定調。</p>
+      <figure>
+        <div class="figure-placeholder">
+          <p><strong><span class="i18n-en">Welcome screen</span><span class="i18n-zh">歡迎畫面</span></strong><br>
+          <span class="i18n-en">Static frames, plus the Lottie animation as a GIF — not yet exported.</span><span class="i18n-zh">靜態畫面，以及尚未匯出的 Lottie 動畫 GIF。</span></p>
+        </div>
+      </figure>
+
+      <h3><span class="i18n-en">Onboarding</span><span class="i18n-zh">新手導覽</span></h3>
+      <p class="i18n-en">Longer than before, and clearer about why. You finish with a profile you can actually apply with.</p>
+      <p class="i18n-zh">比之前更長，也把原因說得更清楚。填完之後，你手上就是一份真的能拿去應徵的個人檔案。</p>
+      <figure>
+        <div class="figure-placeholder">
+          <p><strong><span class="i18n-en">Onboarding flow</span><span class="i18n-zh">新手導覽流程</span></strong><br>
+          <span class="i18n-en">Three or four steps in sequence — screens not yet added.</span><span class="i18n-zh">三到四個步驟依序呈現——畫面尚未補上。</span></p>
+        </div>
+      </figure>
+
+      <h3><span class="i18n-en">Homepage</span><span class="i18n-zh">首頁</span></h3>
+      <p class="i18n-en">An actual landing page. Job matches and quick access to what matters, built for both logged-in users and visitors, so it works before it knows anything about you.</p>
+      <p class="i18n-zh">一個真正的到達頁。展示媒合的職缺並提供常用功能的快速入口；不論是已登入的使用者還是訪客都能使用，就算 App 還不認識你，也一樣好用。</p>
+      <figure>
+        <div class="figure-placeholder">
+          <p><strong><span class="i18n-en">Homepage, both states</span><span class="i18n-zh">首頁，兩種狀態</span></strong><br>
+          <span class="i18n-en">Logged-in and visitor states, side by side — not yet added.</span><span class="i18n-zh">已登入與訪客兩種狀態並列——畫面尚未補上。</span></p>
+        </div>
+      </figure>
+
+      <h3><span class="i18n-en">List Instead of Swipe</span><span class="i18n-zh">用清單取代滑動</span></h3>
+      <p class="i18n-en">Job summaries and company media on the list itself, filters and undo where people can find them. Nothing disappears permanently.</p>
+      <p class="i18n-zh">職缺摘要與公司相關素材直接放在列表上，篩選與復原功能也放在使用者找得到的地方，沒有任何東西會真的消失。</p>
+      <figure>
+        <div class="figure-placeholder">
+          <p><strong><span class="i18n-en">Job list</span><span class="i18n-zh">職缺列表</span></strong><br>
+          <span class="i18n-en">Filters and undo visible, company media on the card — not yet added.</span><span class="i18n-zh">篩選與復原清楚可見，卡片上也有公司相關素材——尚未補上。</span></p>
+        </div>
+      </figure>
+
+      <h3><span class="i18n-en">Readable Detail Pages</span><span class="i18n-zh">好讀的詳情頁</span></h3>
+      <p class="i18n-en">Sticky tabs between job and company info, and a profile that generates a downloadable resume.</p>
+      <p class="i18n-zh">職缺與公司資訊之間用了 Sticky 分頁切換，個人檔案也能直接產生可下載的履歷。</p>
+      <figure>
+        <div class="figure-placeholder">
+          <p><strong><span class="i18n-en">Detail page and resume</span><span class="i18n-zh">詳情頁與履歷</span></strong><br>
+          <span class="i18n-en">Sticky tabs, plus the generated resume — not yet added.</span><span class="i18n-zh">Sticky 分頁，以及自動產生的履歷——尚未補上。</span></p>
+        </div>
+      </figure>
+
+      <h2><span class="i18n-en">Results</span><span class="i18n-zh">成果</span></h2>
+      <p class="i18n-en">Across the full revamp, on iOS and Android.</p>
+      <p class="i18n-zh">整個改版上線後，涵蓋 iOS 與 Android 兩個平台的成果：</p>
+
+      <div class="stats-grid">
+        <div class="stat">
+          <span class="stat-number">+40%</span>
+          <span class="stat-label i18n-en">Job applications per user</span>
+          <span class="stat-label i18n-zh">每位使用者的應徵數</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number">+19%</span>
+          <span class="stat-label i18n-en">Average high-intent monthly active users</span>
+          <span class="stat-label i18n-zh">高意圖月活躍使用者平均數</span>
+        </div>
+      </div>
+
+      <h2><span class="i18n-en">Next Steps</span><span class="i18n-zh">下一步</span></h2>
+      <p class="i18n-en">Application rate got us this far, but it only tells us so much. Profile completion and time-to-first-application are next up to track, so we know where users are still getting stuck rather than just whether they got through.</p>
+      <p class="i18n-zh">應徵率讓我們走到了這一步，但它只能說明一部分。接下來要追蹤的是個人檔案完成度與從註冊到第一次應徵的時間，這樣才知道使用者卡在哪裡，而不只是有沒有走完流程。</p>
+      <p class="i18n-en">A few habits from this project are also going with me to the next one: agree on one direction before anyone draws a screen, bring developers in early, and check what's already built before designing something new.</p>
+      <p class="i18n-zh">這次專案養成的幾個習慣，也會帶到下一個專案裡：在任何人畫出畫面之前先定調方向、盡早找工程師加入、在設計新東西之前先確認手上已經有什麼。</p>
+    </article>
+
+    <nav class="case-nav" aria-label="Project navigation">
+      <a href="hiredly-onboarding.html" class="prev">
+        <span class="label"><span class="i18n-en">← Previous</span><span class="i18n-zh">← 上一篇</span></span>
+        <div class="title-caption">
+          <h3><span class="i18n-en">Onboarding flow redesign</span><span class="i18n-zh">新手導覽流程改版</span></h3>
+          <p class="case-nav-desc">Hiredly</p>
+        </div>
+      </a>
+      <a href="funhub-design-system.html" class="next">
+        <span class="label"><span class="i18n-en">Next →</span><span class="i18n-zh">下一篇 →</span></span>
+        <div class="title-caption">
+          <h3><span class="i18n-en">Design system rebuild</span><span class="i18n-zh">設計系統重建</span></h3>
+          <p class="case-nav-desc">Funhub TV</p>
+        </div>
+      </a>
+    </nav>
+  </main>
+
+  <div id="footer-mount"></div>
+
+</body>
+</html>
