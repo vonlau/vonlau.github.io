@@ -1340,8 +1340,22 @@ body.lightbox-open { overflow: hidden; }
   padding: 0 1.5rem clamp(3rem, 6vw, 5rem);
 }
 
+.case-body h1 {
+  margin: clamp(3.5rem, 8vh, 5rem) 0 1rem;
+  font-size: clamp(1.8rem, 3.2vw, 2.25rem);
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  line-height: 1.2;
+}
+
+/* a consistent divider marks the start of every main section but the first */
+.case-body h1:not(:first-of-type) {
+  padding-top: clamp(2rem, 5vh, 3rem);
+  border-top: 1px solid var(--line);
+}
+
 .case-body h2 {
-  margin: clamp(2.75rem, 6vw, 4rem) 0 1rem;
+  margin: clamp(2.5rem, 6vh, 3.5rem) 0 1rem;
   font-size: clamp(1.4rem, 2.4vw, 1.75rem);
   font-weight: 600;
   letter-spacing: 0.01em;
@@ -1528,6 +1542,17 @@ body.lightbox-open { overflow: hidden; }
 .feature-row ul { padding-left: 1.3em; }
 
 .feature-row.align-start { align-items: start; }
+
+/* stack image above text instead of side-by-side; DOM order controls the title/text-first placement */
+.feature-row.feature-row-stacked {
+  grid-template-columns: 1fr;
+  row-gap: 1.75rem;
+  margin: 1.5rem 0 2.25rem;
+}
+
+/* breathing room between separate problems; the pull-quote callout stays close to the problem it supports */
+.feature-row.feature-row-stacked + .feature-row.feature-row-stacked,
+.callout + .feature-row.feature-row-stacked { margin-top: 3.5rem; }
 
 /* full-size body copy for a feature-row whose text is the main narrative, not a short caption */
 .feature-row .feature-row-prose p {
