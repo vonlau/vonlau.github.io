@@ -119,6 +119,12 @@
         ],
         "createdAt": "2026-09-19T11:44:10.806Z",
         "reason": "site-wide case study template pattern, already suppressed on hiredly-mobile-app.html/funhub-deals.html; edit was a class-name addition only"
+      },
+      {
+        "rule": "overused-font",
+        "value": "inter",
+        "createdAt": "2026-09-20T05:38:26.378Z",
+        "reason": "user confirmed: explicitly requested changing body font to Inter"
       }
     ]
   }
