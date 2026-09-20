@@ -1,0 +1,131 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "gray-on-color",
+        "value": "*",
+        "files": [
+          "work/hiredly-mobile-app.html"
+        ],
+        "createdAt": "2026-09-08T03:45:21.535Z",
+        "reason": "finding-attrib on callout yellow-soft bg: contrast computed ~5.9:1 (#545b66 on #f9eec3), passes WCAG AA; same class already used on blue-soft bg elsewhere in codebase (imoney-user-research.html)"
+      },
+      {
+        "rule": "tight-leading",
+        "value": "*",
+        "files": [
+          "work/hiredly-onboarding.html"
+        ],
+        "createdAt": "2026-09-08T03:52:19.200Z",
+        "reason": "case-nav .title-caption h3 line-height:1.35 is a short heading caption, not body text; identical shared class used unchanged across every case study's prev/next nav (funhub-design-system, funhub-deals, imoney-user-research, this new file too) — pre-existing intentional heading style, not introduced by this edit"
+      },
+      {
+        "rule": "skipped-heading",
+        "value": "*",
+        "files": [
+          "work/hiredly-mobile-app.html"
+        ],
+        "createdAt": "2026-09-18T06:27:48.772Z",
+        "reason": "pre-existing sitewide pattern: every case-study page uses multiple h1s as section markers (Overview, The Problem, The Process, etc.), confirmed present identically in funhub-deals, hiredly-resume, imoney-user-research; unrelated to this video-swap edit"
+      },
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          "work/hiredly-mobile-app.html"
+        ],
+        "createdAt": "2026-09-18T06:27:48.818Z",
+        "reason": "pre-existing .case-hero .category pill (css/style.css:1201-1210), 0.4rem/0.95rem padding on a small 0.78rem pill badge used identically across all case-study pages; unrelated to this video-swap edit"
+      },
+      {
+        "rule": "tight-leading",
+        "value": "*",
+        "files": [
+          "work/funhub-deals.html"
+        ],
+        "createdAt": "2026-09-19T10:54:31.587Z",
+        "reason": "site-wide case study template pattern, already suppressed on hiredly-onboarding.html; edit was text-only"
+      },
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          "work/funhub-deals.html"
+        ],
+        "createdAt": "2026-09-19T10:54:31.620Z",
+        "reason": "site-wide case study template pattern, already suppressed on hiredly-mobile-app.html; edit was text-only"
+      },
+      {
+        "rule": "skipped-heading",
+        "value": "*",
+        "files": [
+          "work/funhub-deals.html"
+        ],
+        "createdAt": "2026-09-19T10:54:31.650Z",
+        "reason": "site-wide case study template pattern, already suppressed on hiredly-mobile-app.html; edit was text-only"
+      },
+      {
+        "rule": "tight-leading",
+        "value": "*",
+        "files": [
+          "work/imoney-user-research.html"
+        ],
+        "createdAt": "2026-09-19T11:43:51.207Z",
+        "reason": "site-wide case study template pattern, already suppressed on hiredly-mobile-app.html/funhub-deals.html; edit was a class-name addition only"
+      },
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          "work/imoney-user-research.html"
+        ],
+        "createdAt": "2026-09-19T11:43:51.235Z",
+        "reason": "site-wide case study template pattern, already suppressed on hiredly-mobile-app.html/funhub-deals.html; edit was a class-name addition only"
+      },
+      {
+        "rule": "skipped-heading",
+        "value": "*",
+        "files": [
+          "work/imoney-user-research.html"
+        ],
+        "createdAt": "2026-09-19T11:43:51.263Z",
+        "reason": "site-wide case study template pattern, already suppressed on hiredly-mobile-app.html/funhub-deals.html; edit was a class-name addition only"
+      },
+      {
+        "rule": "tight-leading",
+        "value": "*",
+        "files": [
+          "work/funhub-design-system.html"
+        ],
+        "createdAt": "2026-09-19T11:44:10.745Z",
+        "reason": "site-wide case study template pattern, already suppressed on hiredly-mobile-app.html/funhub-deals.html; edit was a class-name addition only"
+      },
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          "work/funhub-design-system.html"
+        ],
+        "createdAt": "2026-09-19T11:44:10.775Z",
+        "reason": "site-wide case study template pattern, already suppressed on hiredly-mobile-app.html/funhub-deals.html; edit was a class-name addition only"
+      },
+      {
+        "rule": "skipped-heading",
+        "value": "*",
+        "files": [
+          "work/funhub-design-system.html"
+        ],
+        "createdAt": "2026-09-19T11:44:10.806Z",
+        "reason": "site-wide case study template pattern, already suppressed on hiredly-mobile-app.html/funhub-deals.html; edit was a class-name addition only"
+      },
+      {
+        "rule": "overused-font",
+        "value": "inter",
+        "createdAt": "2026-09-20T05:38:26.378Z",
+        "reason": "user confirmed: explicitly requested changing body font to Inter"
+      }
+    ]
+  }
+}

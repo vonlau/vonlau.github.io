@@ -73,7 +73,7 @@
   /* ---------- scroll reveals ---------- */
 
   var revealTargets = document.querySelectorAll(
-    "[data-reveal], .case-body figure, .case-body h2, .meta, .callout, .feature-row"
+    "[data-reveal], .case-body figure, .case-body h1, .case-body h2, .meta, .callout, .feature-row"
   );
 
   if (!reducedMotion && "IntersectionObserver" in window && revealTargets.length) {
@@ -264,7 +264,10 @@
   var caseBody = document.querySelector(".case-body");
 
   if (caseCover && caseBody) {
-    var sectionHeadings = caseBody.querySelectorAll("h2");
+    var sectionHeadings = caseBody.querySelectorAll("h1");
+    if (!sectionHeadings.length) {
+      sectionHeadings = caseBody.querySelectorAll("h2");
+    }
 
     if (sectionHeadings.length && "IntersectionObserver" in window) {
       var usedIds = {};
