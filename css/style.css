@@ -30,6 +30,22 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: "Satoshi Variable";
+  src: url("../font/Satoshi-Variable.ttf") format("truetype-variations");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter Variable";
+  src: url("../font/Inter-VariableFont_opsz%2Cwght.ttf") format("truetype-variations");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --white: #ffffff;
   --ink: #14161b;
@@ -47,7 +63,8 @@
 
   --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
 
-  --font: "General Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font: "Inter Variable", "General Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-heading: "Satoshi Variable", "General Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 
   --radius-lg: 28px;
   --radius-md: 18px;
@@ -79,7 +96,7 @@ body {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.7;
-  letter-spacing: 0.01em;
+  letter-spacing: 0.005em;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
@@ -99,6 +116,11 @@ body.page-sub {
 }
 
 h1, h2, h3 { text-wrap: balance; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+}
 
 /* ---------- pills & buttons ---------- */
 
@@ -392,9 +414,8 @@ html:not([data-lang="zh"]) .i18n-zh { display: none; }
 .hero h1 {
   margin: 0 0 1.4rem;
   font-size: clamp(2.1rem, 5.4vw, 4.2rem);
-  font-weight: 600;
+  font-weight: 700;
   line-height: 1.08;
-  letter-spacing: 0.01em;
 }
 
 /* Chinese hero heading: the 依雯 brush signature stands in for the text headline.
@@ -557,7 +578,6 @@ html:not([data-lang="zh"]) .i18n-zh { display: none; }
   font-size: clamp(2.8rem, 7.5vw, 5.5rem);
   font-weight: 600;
   line-height: 1.2;
-  letter-spacing: 0.01em;
 }
 
 .statement-text p {
@@ -617,8 +637,7 @@ html:not([data-lang="zh"]) .i18n-zh { display: none; }
   /* max-width: 68rem; */
   margin: 0 auto clamp(1.5rem, 3vw, 2.5rem);
   font-size: clamp(1.5rem, 2.6vw, 2rem);
-  font-weight: 600;
-  letter-spacing: 0.01em;
+  font-weight: 700;
 }
 
 .experience-table-wrap {
@@ -650,7 +669,6 @@ html:not([data-lang="zh"]) .i18n-zh { display: none; }
   border-top: 1px solid var(--line);
   font-size: 0.72rem;
   font-weight: 700;
-  letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--muted);
 }
@@ -748,7 +766,6 @@ html:not([data-lang="zh"]) .i18n-zh { display: none; }
   pointer-events: none;
 }
 
-.note-label { letter-spacing: 0.01em; }
 
 .sticky-note:hover,
 .sticky-note:focus-visible {
@@ -783,6 +800,13 @@ html:not([data-lang="zh"]) .i18n-zh { display: none; }
   grid-template-columns: repeat(2, 1fr);
   gap: 1.75rem;
   margin: 2.25rem 0 2rem;
+}
+
+.note-cards-3 { grid-template-columns: repeat(3, 1fr); }
+
+.note-cards .stat-number {
+  text-align: left;
+  font-size: clamp(1.9rem, 4vw, 2.3rem);
 }
 
 .sticky-note.sticky-note-card {
@@ -832,11 +856,12 @@ html:not([data-lang="zh"]) .i18n-zh { display: none; }
 
 .case-body .sticky-note-card p {
   margin: 0;
-  font-size: 0.95rem;
+  font-size: 1rem;
 }
 
 @media (max-width: 700px) {
-  .note-cards { grid-template-columns: 1fr; gap: 2rem; }
+  .note-cards,
+  .note-cards-3 { grid-template-columns: 1fr; gap: 2rem; }
 }
 
 /* ---------- section stubs (About / Photography / Side Projects) ---------- */
@@ -862,8 +887,7 @@ html:not([data-lang="zh"]) .i18n-zh { display: none; }
 .section-stub h2 {
   margin: 0;
   font-size: clamp(1.5rem, 2.6vw, 2rem);
-  font-weight: 600;
-  letter-spacing: 0.01em;
+  font-weight: 700;
 }
 
 /* ---------- photography page ---------- */
@@ -1057,8 +1081,7 @@ body.lightbox-open { overflow: hidden; }
 .work > h2 {
   margin: 0 0 clamp(1.5rem, 3vw, 2.5rem);
   font-size: clamp(1.5rem, 2.6vw, 2rem);
-  font-weight: 600;
-  letter-spacing: 0.01em;
+  font-weight: 700;
 }
 
 .work-grid {
@@ -1142,7 +1165,6 @@ body.lightbox-open { overflow: hidden; }
   border: 1px solid var(--line);
   font-size: 0.72rem;
   font-weight: 600;
-  letter-spacing: 0.01em;
   color: var(--ink);
 }
 
@@ -1157,9 +1179,8 @@ body.lightbox-open { overflow: hidden; }
 .tile-caption h3 {
   margin: 0;
   font-size: clamp(0.95rem, 1.4vw, 1.1rem);
-  font-weight: 600;
+  font-weight: 700;
   line-height: 1.35;
-  letter-spacing: 0.01em;
 }
 
 .tile-arrow {
@@ -1204,9 +1225,8 @@ body.lightbox-open { overflow: hidden; }
 .case-hero h1 {
   margin: 1.1rem 0 1rem;
   font-size: 2.6rem;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 1.15;
-  letter-spacing: 0.01em;
 }
 
 .case-hero .lede {
@@ -1227,9 +1247,11 @@ body.lightbox-open { overflow: hidden; }
   width: 100%;
   height: auto;
   display: block;
-  border-radius: var(--radius-lg);
+  border-radius: 32px;
   /* box-shadow: var(--shadow-tile); */
 }
+
+.case-cover .figure-placeholder { border-radius: 32px; }
 
 /* ---------- case study sticky side nav ---------- */
 
@@ -1310,7 +1332,6 @@ body.lightbox-open { overflow: hidden; }
 .meta dt {
   font-size: 0.72rem;
   font-weight: 700;
-  letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--muted);
   margin-bottom: 0.3rem;
@@ -1330,25 +1351,59 @@ body.lightbox-open { overflow: hidden; }
   padding: 0 1.5rem clamp(3rem, 6vw, 5rem);
 }
 
+.case-body h1 {
+  margin: clamp(3.5rem, 8vh, 5rem) 0 1rem;
+  font-size: clamp(1.8rem, 3.2vw, 2.25rem);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* a consistent divider marks the start of every main section but the first */
+.case-body h1:not(:first-of-type) {
+  padding-top: clamp(2rem, 5vh, 3rem);
+  border-top: 1px solid var(--line);
+}
+
+/* small, safe default — covers h2/h3 nested inside cards, grids, and rows,
+   where a large top margin gets trapped instead of collapsing with the page flow */
 .case-body h2 {
-  margin: clamp(2.75rem, 6vw, 4rem) 0 1rem;
+  margin: 0 0 0.5rem;
   font-size: clamp(1.4rem, 2.4vw, 1.75rem);
-  font-weight: 600;
-  letter-spacing: 0.01em;
+  font-weight: 700;
   line-height: 1.25;
 }
 
 .case-body h3 {
-  margin: 2.25rem 0 0.9rem;
+  margin: 0 0 0.5rem;
   font-size: 1.15rem;
-  font-weight: 600;
-  letter-spacing: 0.01em;
+  font-weight: 700;
+}
+
+/* breathing room restored only for headings sitting directly in the article flow —
+   i.e. real subsection titles, not ones nested inside a container */
+.case-body > h2 {
+  margin: clamp(2.5rem, 6vh, 3.5rem) 0 1rem;
+}
+
+.case-body > h3 {
+  margin: 2.25rem 0 0.9rem;
+}
+
+/* solution-phase: small eyebrow label above each solution title (e.g. "Before
+   Applying"), living inside .feature-row-prose alongside the problems, so
+   solutions get the same consistent row-to-row spacing as problems do */
+.feature-row .feature-row-prose .solution-phase {
+  margin: 0 0 0.4rem;
+  font-size: 0.96rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #512ACC;
 }
 
 .case-body h4 {
-  margin: 1.75rem 0 0.75rem;
+  margin: 3.75rem 0 0.75rem;
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .case-body p {
@@ -1378,11 +1433,12 @@ body.lightbox-open { overflow: hidden; }
 
 .case-body figure { margin: 1.6rem 0 2.2rem; }
 
-.case-body figure img {
+.case-body figure img,
+.case-body figure video {
   width: 100%;
   height: auto;
   display: block;
-  border-radius: var(--radius-md);
+  border-radius: 32px;
   border: 1px solid var(--line);
 }
 
@@ -1391,6 +1447,43 @@ body.lightbox-open { overflow: hidden; }
   color: var(--muted);
   margin-top: 0.6rem;
   text-align: center;
+}
+
+.figure-duo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+
+.figure-duo > * {
+  min-width: 0;
+}
+
+.figure-duo img,
+.figure-duo video {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 32px;
+  border: 1px solid var(--line);
+}
+
+.figure-duo-compact img,
+.figure-duo-compact video {
+  width: 80%!important;
+  margin: 0 auto;
+}
+
+@media (max-width: 640px) {
+  .figure-duo {
+    grid-template-columns: 1fr;
+  }
+
+  .figure-duo-compact img,
+.figure-duo-compact video {
+  width: 50%!important;
+  margin: 0 auto;
+}
 }
 
 .case-body hr {
@@ -1423,6 +1516,27 @@ body.lightbox-open { overflow: hidden; }
 .callout .callout-title {
   font-size: 1.25rem;
   line-height: 1.35;
+}
+
+/* callout-statement: for punchy single-line callouts (How Might We, Design Goal) —
+   small eyebrow title, bold and large statement text */
+
+.callout-statement > div {
+  text-align: center;
+}
+
+.callout-statement .callout-title {
+  font-size: 0.864rem;
+  font-weight: 700;
+  color: #a1791b;
+  margin-bottom: 0.3rem;
+}
+
+.callout-statement p:not(.callout-title) {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.4;
+  color: var(--ink);
 }
 
 /* doodle + speech bubble, used to voice a quote attributed to someone off-page */
@@ -1504,18 +1618,41 @@ body.lightbox-open { overflow: hidden; }
 
 .feature-row figure { margin: 0; }
 
+/* h2 for rows nested directly under an h1 section, h3 under an h2, h4 under an h3 */
+.feature-row h2,
+.feature-row h3,
 .feature-row h4 { margin: 0 0 0.5rem; }
 
 .feature-row p,
 .feature-row ul {
   margin: 0;
   color: var(--muted);
-  font-size: 0.92rem;
+  font-size: 1rem;
 }
 
 .feature-row ul { padding-left: 1.3em; }
 
 .feature-row.align-start { align-items: start; }
+
+/* stack image above text instead of side-by-side; DOM order controls the title/text-first placement */
+.feature-row.feature-row-stacked {
+  grid-template-columns: 1fr;
+  row-gap: 1.75rem;
+  margin: 1.5rem 0 2.25rem;
+}
+
+/* breathing room between separate problems; the pull-quote callout stays close to the problem it supports */
+.feature-row.feature-row-stacked + .feature-row.feature-row-stacked,
+.callout + .feature-row.feature-row-stacked { margin-top: 3.5rem; }
+
+/* full-size body copy for a feature-row whose text is the main narrative, not a short caption */
+.feature-row .feature-row-prose p {
+  margin: 0 0 1rem;
+  color: var(--ink);
+  font-size: 1rem;
+}
+
+.feature-row .feature-row-prose p:last-child { margin-bottom: 0; }
 
 /* list of light-grey boxed items, e.g. paired with an image in a feature-row */
 
@@ -1562,6 +1699,44 @@ body.lightbox-open { overflow: hidden; }
 .compare-card-outline {
   background: #ffffff;
   border: 1px solid var(--line-soft);
+}
+
+/* headline result stats */
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(12rem, 100%), 1fr));
+  gap: 1.5rem;
+  margin: 1.75rem 0 2.25rem;
+}
+
+.stat {
+  padding: 1.75rem 1.5rem;
+  border-radius: var(--radius-md);
+  background: var(--green-soft);
+  text-align: center;
+}
+
+.stat-doodle {
+  display: block;
+  height: auto;
+  width: 40%;
+  margin: 0 auto 0.75rem;
+}
+
+.stat-number {
+  display: block;
+  font-size: clamp(2.2rem, 5vw, 2.8rem);
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1.1;
+}
+
+.stat-label {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--ink);
 }
 
 /* finding cards */
@@ -1630,14 +1805,13 @@ body.lightbox-open { overflow: hidden; }
   margin-bottom: 0.25rem;
   font-size: 0.72rem;
   font-weight: 700;
-  letter-spacing: 0;
   text-transform: uppercase;
   color: var(--link);
 }
 
 .finding-block p {
   margin: 0;
-  font-size: 0.92rem;
+  font-size: 1rem;
   line-height: 1.55;
 }
 
@@ -1683,6 +1857,8 @@ body.lightbox-open { overflow: hidden; }
   justify-content: center;
 }
 
+/* h3 for steps nested directly under an h2, h4 when nested under an h3 section */
+.step-body h3,
 .step-body h4 {
   margin: 0.35rem 0 0.2rem;
   font-size: 1rem;
@@ -1773,7 +1949,7 @@ body.lightbox-open { overflow: hidden; }
 .takeaway h4 {
   margin: 0 0 0.5rem;
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 1.35;
 }
 
@@ -1793,7 +1969,7 @@ body.lightbox-open { overflow: hidden; }
 
 .takeaway p {
   margin: 0;
-  font-size: 0.92rem;
+  font-size: 1rem;
   line-height: 1.55;
 }
 
@@ -1903,7 +2079,7 @@ body.lightbox-open { overflow: hidden; }
 
 .figure-placeholder p {
   margin: 0;
-  font-size: 0.9rem;
+  font-size: 1rem;
   line-height: 1.5;
 }
 
@@ -1946,9 +2122,8 @@ body.lightbox-open { overflow: hidden; }
 .case-nav .title-caption h3 {
   margin: 0;
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 1.35;
-  letter-spacing: 0.01em;
   transition: color 200ms var(--ease-out);
 }
 
@@ -1957,7 +2132,7 @@ body.lightbox-open { overflow: hidden; }
 
 .case-nav .case-nav-desc {
   margin: 0.2rem 0 0;
-  font-size: 0.85rem;
+  font-size: 1rem;
   font-weight: 400;
   line-height: 1.45;
   color: var(--muted);
@@ -2037,7 +2212,6 @@ body.lightbox-open { overflow: hidden; }
   font-size: 0.9rem;
   font-weight: 600;
   /* text-transform: uppercase; */
-  letter-spacing: 0.06em;
 }
 
 .footer-links {
@@ -2192,6 +2366,18 @@ body.lightbox-open { overflow: hidden; }
     --triangle-y: -40px;
   }
 
+  /* body copy runs 2px smaller on mobile than its desktop size */
+  body,
+  .takeaway p,
+  .feature-row p,
+  .feature-row ul,
+  .finding-block p,
+  .case-body .sticky-note-card p,
+  .figure-placeholder p,
+  .case-nav .case-nav-desc {
+    font-size: 0.875rem;
+  }
+
   .site-header {
     gap: 0.5rem;
   }
@@ -2286,6 +2472,10 @@ body.lightbox-open { overflow: hidden; }
     padding: 0.85rem 0.75rem;
     font-size: 0.88rem;
     white-space: nowrap;
+  }
+
+  .experience-table td {
+    font-size: 0.875rem;
   }
 
   .about-tagline-row {
