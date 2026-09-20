@@ -30,6 +30,22 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: "Satoshi Variable";
+  src: url("../font/Satoshi-Variable.ttf") format("truetype-variations");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter Variable";
+  src: url("../font/Inter-VariableFont_opsz%2Cwght.ttf") format("truetype-variations");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --white: #ffffff;
   --ink: #14161b;
@@ -47,7 +63,8 @@
 
   --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
 
-  --font: "General Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font: "Inter Variable", "General Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-heading: "Satoshi Variable", "General Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 
   --radius-lg: 28px;
   --radius-md: 18px;
@@ -79,6 +96,7 @@ body {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.7;
+  letter-spacing: 0.005em;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
@@ -98,6 +116,11 @@ body.page-sub {
 }
 
 h1, h2, h3 { text-wrap: balance; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+}
 
 /* ---------- pills & buttons ---------- */
 
@@ -391,7 +414,7 @@ html:not([data-lang="zh"]) .i18n-zh { display: none; }
 .hero h1 {
   margin: 0 0 1.4rem;
   font-size: clamp(2.1rem, 5.4vw, 4.2rem);
-  font-weight: 600;
+  font-weight: 700;
   line-height: 1.08;
 }
 
@@ -614,7 +637,7 @@ html:not([data-lang="zh"]) .i18n-zh { display: none; }
   /* max-width: 68rem; */
   margin: 0 auto clamp(1.5rem, 3vw, 2.5rem);
   font-size: clamp(1.5rem, 2.6vw, 2rem);
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .experience-table-wrap {
@@ -833,7 +856,7 @@ html:not([data-lang="zh"]) .i18n-zh { display: none; }
 
 .case-body .sticky-note-card p {
   margin: 0;
-  font-size: 0.95rem;
+  font-size: 1rem;
 }
 
 @media (max-width: 700px) {
@@ -864,7 +887,7 @@ html:not([data-lang="zh"]) .i18n-zh { display: none; }
 .section-stub h2 {
   margin: 0;
   font-size: clamp(1.5rem, 2.6vw, 2rem);
-  font-weight: 600;
+  font-weight: 700;
 }
 
 /* ---------- photography page ---------- */
@@ -1058,7 +1081,7 @@ body.lightbox-open { overflow: hidden; }
 .work > h2 {
   margin: 0 0 clamp(1.5rem, 3vw, 2.5rem);
   font-size: clamp(1.5rem, 2.6vw, 2rem);
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .work-grid {
@@ -1156,7 +1179,7 @@ body.lightbox-open { overflow: hidden; }
 .tile-caption h3 {
   margin: 0;
   font-size: clamp(0.95rem, 1.4vw, 1.1rem);
-  font-weight: 600;
+  font-weight: 700;
   line-height: 1.35;
 }
 
@@ -1202,7 +1225,7 @@ body.lightbox-open { overflow: hidden; }
 .case-hero h1 {
   margin: 1.1rem 0 1rem;
   font-size: 2.6rem;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 1.15;
 }
 
@@ -1346,14 +1369,14 @@ body.lightbox-open { overflow: hidden; }
 .case-body h2 {
   margin: 0 0 0.5rem;
   font-size: clamp(1.4rem, 2.4vw, 1.75rem);
-  font-weight: 600;
+  font-weight: 700;
   line-height: 1.25;
 }
 
 .case-body h3 {
   margin: 0 0 0.5rem;
   font-size: 1.15rem;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 /* breathing room restored only for headings sitting directly in the article flow —
@@ -1380,7 +1403,7 @@ body.lightbox-open { overflow: hidden; }
 .case-body h4 {
   margin: 3.75rem 0 0.75rem;
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .case-body p {
@@ -1604,7 +1627,7 @@ body.lightbox-open { overflow: hidden; }
 .feature-row ul {
   margin: 0;
   color: var(--muted);
-  font-size: 0.92rem;
+  font-size: 1rem;
 }
 
 .feature-row ul { padding-left: 1.3em; }
@@ -1788,7 +1811,7 @@ body.lightbox-open { overflow: hidden; }
 
 .finding-block p {
   margin: 0;
-  font-size: 0.92rem;
+  font-size: 1rem;
   line-height: 1.55;
 }
 
@@ -1926,7 +1949,7 @@ body.lightbox-open { overflow: hidden; }
 .takeaway h4 {
   margin: 0 0 0.5rem;
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 1.35;
 }
 
@@ -1946,7 +1969,7 @@ body.lightbox-open { overflow: hidden; }
 
 .takeaway p {
   margin: 0;
-  font-size: 0.92rem;
+  font-size: 1rem;
   line-height: 1.55;
 }
 
@@ -2056,7 +2079,7 @@ body.lightbox-open { overflow: hidden; }
 
 .figure-placeholder p {
   margin: 0;
-  font-size: 0.9rem;
+  font-size: 1rem;
   line-height: 1.5;
 }
 
@@ -2099,7 +2122,7 @@ body.lightbox-open { overflow: hidden; }
 .case-nav .title-caption h3 {
   margin: 0;
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 1.35;
   transition: color 200ms var(--ease-out);
 }
@@ -2109,7 +2132,7 @@ body.lightbox-open { overflow: hidden; }
 
 .case-nav .case-nav-desc {
   margin: 0.2rem 0 0;
-  font-size: 0.85rem;
+  font-size: 1rem;
   font-weight: 400;
   line-height: 1.45;
   color: var(--muted);
@@ -2343,6 +2366,18 @@ body.lightbox-open { overflow: hidden; }
     --triangle-y: -40px;
   }
 
+  /* body copy runs 2px smaller on mobile than its desktop size */
+  body,
+  .takeaway p,
+  .feature-row p,
+  .feature-row ul,
+  .finding-block p,
+  .case-body .sticky-note-card p,
+  .figure-placeholder p,
+  .case-nav .case-nav-desc {
+    font-size: 0.875rem;
+  }
+
   .site-header {
     gap: 0.5rem;
   }
@@ -2437,6 +2472,10 @@ body.lightbox-open { overflow: hidden; }
     padding: 0.85rem 0.75rem;
     font-size: 0.88rem;
     white-space: nowrap;
+  }
+
+  .experience-table td {
+    font-size: 0.875rem;
   }
 
   .about-tagline-row {
